@@ -51,6 +51,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -135,6 +136,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -219,6 +221,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -303,6 +306,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -380,6 +384,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -463,6 +468,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -547,6 +553,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -631,6 +638,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -715,6 +723,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -799,6 +808,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -883,6 +893,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -966,6 +977,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1049,6 +1061,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1132,6 +1145,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1215,6 +1229,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1299,6 +1314,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1387,6 +1403,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1472,6 +1489,7 @@
      "poster_url": null
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [
      {
@@ -1558,6 +1576,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 60000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [
@@ -1640,6 +1662,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 55000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -1739,6 +1765,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 109000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -1850,6 +1880,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 100000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -1941,6 +1975,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 37500,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2026,6 +2064,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 50000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2110,6 +2152,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 4000,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -2180,6 +2226,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 100000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2272,6 +2322,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 140000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2350,6 +2404,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 54900,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2450,6 +2508,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 49900,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2549,6 +2611,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 84900,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2648,6 +2714,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 79900,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2746,6 +2816,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 55000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -2843,6 +2917,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 35000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -2920,6 +2998,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 149000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -3025,6 +3107,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 137500,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -3126,6 +3212,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 35000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -3202,6 +3292,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 58000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -3292,6 +3386,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 35000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -3370,6 +3468,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 79000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -3467,6 +3569,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 39000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -3542,6 +3648,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 39000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -3617,6 +3727,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 39000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -3688,6 +3802,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 79000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -3783,6 +3901,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 890000,
+    "currency": "HUF"
+   },
    "materials": {
     "gallery": [
      {
@@ -3875,6 +3997,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 69000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [
      {
@@ -3972,6 +4098,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 3080,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4050,6 +4180,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 39000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4128,6 +4262,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 39000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4204,6 +4342,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 39000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4279,6 +4421,7 @@
      }
     }
    ],
+   "price_hint": null,
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4354,6 +4497,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 5800,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4429,6 +4576,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 4900,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4504,6 +4655,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 4130,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4579,6 +4734,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 5360,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4654,6 +4813,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 3900,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4732,6 +4895,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 149000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4807,6 +4974,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 6400,
+    "currency": "EUR"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4882,6 +5053,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 1185000,
+    "currency": "HUF"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -4957,6 +5132,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 16500,
+    "currency": "PLN"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -5025,6 +5204,10 @@
      "poster_url": null
     }
    ],
+   "price_hint": {
+    "price_from": 15500,
+    "currency": "PLN"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
@@ -5100,6 +5283,10 @@
      }
     }
    ],
+   "price_hint": {
+    "price_from": 69000,
+    "currency": "CZK"
+   },
    "materials": {
     "gallery": [],
     "videos": [],
