@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Menu",
+    "language": "Language",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "loading": "Loading…",
+    "loadMore": "Show more",
+    "required": "Required",
+    "hoursShort": "h",
+    "minutesShort": "min"
+  },
+  "nav": {
+    "home": "Home",
+    "tickets": "Tickets",
+    "tours": "Our tours",
+    "pastEvents": "Past Events",
+    "partnerships": "Partnerships",
+    "aboutUs": "About Us",
+    "contacts": "Contacts",
+    "contactUs": "Contact Us",
+    "howToBuy": "How to buy",
+    "faq": "Frequently asked questions",
+    "sellTickets": "Sell tickets with us"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "terms": "Terms of use",
+    "forBuyers": "For ticket buyers",
+    "forOrganizers": "For organizers",
+    "processing": "Ticket processing by ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Our Events",
+    "empty": "No events are on sale right now. New dates will appear here soon."
+  },
+  "event": {
+    "tickets": "Tickets",
+    "buy": "Buy tickets",
+    "soldOut": "Sold out",
+    "soon": "Coming soon",
+    "past": "Took place",
+    "onSale": "On sale",
+    "priceFrom": "from %s",
+    "onMap": "on the map",
+    "promoter": "Promoter",
+    "organiser": "Organiser",
+    "venue": "Venue",
+    "address": "Address",
+    "date": "Date",
+    "dates": "Dates",
+    "doorsOpen": "Doors open at",
+    "cancelled": "Cancelled",
+    "salesClosed": "Sales closed",
+    "duration": "Duration",
+    "ageLimit": "Age limit"
+  },
+  "tour": {
+    "label": "Tour",
+    "cities": [
+      "%d city",
+      "%d cities",
+      "%d cities"
+    ],
+    "openIn": "Sales open in %s",
+    "next": "Next concert",
+    "choose": "Choose your city",
+    "hint": "The button opens the ticket office of that concert: our page or a partner site.",
+    "about": "About the tour",
+    "backAll": "All events",
+    "backTour": "Tour: %s",
+    "noDates": "Dates will be announced soon.",
+    "intro": "Concerts that travel: one programme, several cities. Pick the city and buy from that concert's own ticket office.",
+    "pastTours": "Past tours"
+  },
+  "pastEvents": {
+    "empty": "There are no past events yet.",
+    "photoReport": "Photo report",
+    "openPhoto": "Open photo"
+  },
+  "partners": {
+    "buyAt": "Buy tickets at %s",
+    "alsoOn": "Also on sale at %s",
+    "alsoLabel": "Also on sale at:",
+    "organiserSite": "the organiser's site",
+    "soldBy": "Tickets sold by %s",
+    "weSell": "Tickets on this site",
+    "buyAtOrganizer": "Buy at the organizer",
+    "forPartners": "For partners",
+    "cta": "Hotels, venues and promoters in the cities of our tours: we are open to barter and partnership.",
+    "ctaButton": "Propose a partnership"
+  },
+  "cookie": {
+    "text": "We use cookies for analytics and advertising (Google Analytics, Meta pixel). They are switched on only after you accept.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "settings": "Cookie settings",
+    "revoke": "Revoke consent"
+  },
+  "forms": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "fullName": "Full name",
+    "email": "E-mail",
+    "phone": "Phone",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending…",
+    "consent": "I accept: {terms}, {privacy}.",
+    "contact": {
+      "title": "Get in touch",
+      "sent": "Thank you! Your message has been sent. We will reply by e-mail soon."
+    },
+    "partnership": {
+      "title": "Propose a partnership",
+      "company": "Company or organisation",
+      "website": "Website",
+      "sent": "Thank you! We will review your proposal and reply by e-mail."
+    },
+    "errors": {
+      "invalidEmail": "Enter a valid e-mail address.",
+      "fillRequired": "Please fill in the required fields.",
+      "consentRequired": "Please accept the conditions to continue.",
+      "captcha": "The check was not passed. Please try again."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Your tickets: %s",
+      "greeting": "Hello %s!",
+      "body": "Thank you for your purchase. Your tickets for \"%s\" are attached to this email (PDF).",
+      "hint": "Open the file on your phone and show the barcode at the entrance — no need to print.",
+      "footer": "If you have any questions, just reply to this email.",
+      "defaultBody": "Thank you for your purchase. Tickets for “{event}” are attached. Date: {date}. Address: {venue_address}.",
+      "category": "Category",
+      "seat": "Seat",
+      "price": "Price",
+      "row": "row",
+      "seatWord": "seat",
+      "ticketNo": "Ticket #",
+      "order": "Order",
+      "organizer": "Organizer",
+      "keepNote": "Show the barcode at the entrance. Do not share your ticket publicly."
+    },
+    "refund": {
+      "done": "A refund of %s has been issued.",
+      "routeGateway": "The money goes back through %s, to the same method you paid with.",
+      "routeUnknown": "The money goes back to the same method you paid with.",
+      "timing": "It usually arrives within 5–10 working days — your bank decides the exact date."
+    },
+    "feedback": {
+      "body": "Hello {name}! Thank you for joining “{event}”. We would love to hear your feedback: {link}."
+    },
+    "invite": {
+      "subject": "Invitation: %s",
+      "label": "Complimentary",
+      "greeting": "Dear friend of %s!",
+      "body": "We are delighted to invite you to “{event}”. Your complimentary ticket is attached. Date: {date}. Address: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Back to tickets",
+    "title": "Ticket payment",
+    "hold": "Booking held for another",
+    "expired": "The booking has expired. Please choose your tickets again.",
+    "card": "Card",
+    "note": "PDF tickets go to %s right after payment.",
+    "total": "Total",
+    "pay": "Pay %s",
+    "secureShort": "Secure payment · Stripe",
+    "secure": "Card details are handled by Stripe. We never see or store them.",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "contacts": "Contacts",
+    "reserved": "Seats reserved for %d minutes while you complete the payment.",
+    "processing": "Processing…",
+    "promoToggle": "I have a promo code",
+    "promoPlaceholder": "Promo code",
+    "promoApply": "Apply",
+    "promoRemove": "Remove",
+    "promo": {
+      "empty": "Enter a promo code",
+      "noSession": "Could not start a ticket session. Reload the page and try again.",
+      "applyFailed": "The promo code could not be applied",
+      "applied": "Promo code applied",
+      "invalid": "Invalid promo code: %s",
+      "partial": "Promo code applied. Invalid codes: %s",
+      "accepted": "Promo code accepted — the discount will be applied at checkout",
+      "none": "No valid promo codes"
+    }
+  },
+  "thankyou": {
+    "title": "Payment successful",
+    "text": "Your tickets have been sent to the e-mail address you gave at checkout. If the letter does not arrive, check the spam folder.",
+    "accountText": "<strong>Your tickets are always at hand:</strong> besides the e-mail, you can download or re-send them from your account.",
+    "accountButton": "My tickets in my account",
+    "shareTitle": "More fun with friends",
+    "shareText": "Invite someone along — share the event.",
+    "shareMessage": "I am going to %s. Join me? %s",
+    "copyLink": "Copy link",
+    "copied": "Copied",
+    "shareEmail": "E-mail",
+    "failedTitle": "Payment failed",
+    "failedText": "No money was taken. You can try to pay again.",
+    "retry": "Try again",
+    "orderNumber": "Order number:",
+    "toEvents": "To the events"
+  },
+  "account": {
+    "title": "My account",
+    "back": "Back to the events",
+    "myTickets": "My tickets",
+    "intro": "Enter the e-mail address you used for your order. We will send you a sign-in link.",
+    "getLink": "Send me the link",
+    "linkSent": "Check your inbox. If tickets exist for this address, a sign-in link is on its way.",
+    "logout": "Log out",
+    "empty": "There are no paid tickets for this address yet.",
+    "orderNumber": "Order #%s",
+    "ticket": "Ticket %s",
+    "pdf": "Download tickets (PDF)",
+    "send": "E-mail my tickets",
+    "sent": "Tickets sent to %s. Check your inbox and the spam folder.",
+    "errBil24": "Could not verify the tickets with the ticketing system. Please try again in a minute.",
+    "errNone": "There are no active tickets in this order.",
+    "errCooldown": "Tickets were sent recently — please try again in %d min.",
+    "errMailer": "E-mail delivery is temporarily unavailable — download the PDF instead.",
+    "errForbidden": "Order not found.",
+    "statusRefunded": "Order refunded",
+    "statusCancelled": "Order cancelled",
+    "ticketInactive": "Ticket is no longer valid",
+    "eventCancelled": "The event is cancelled"
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "No connection to the server. Please try again.",
+    "rateLimited": "Too many attempts. Wait a minute and try again.",
+    "unavailable": "The service is temporarily unavailable. Please try again later.",
+    "ticketsGone": "Sorry, the tickets you picked are no longer available. Please refresh the page and try again.",
+    "notFoundTitle": "Page not found",
+    "notFoundText": "The page you are looking for does not exist or has moved.",
+    "notFoundLink": "Go to the home page"
+  }
+}

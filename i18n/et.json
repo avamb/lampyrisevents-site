@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Menüü",
+    "language": "Keel",
+    "close": "Sulge",
+    "back": "Tagasi",
+    "next": "Edasi",
+    "loading": "Laadimine…",
+    "loadMore": "Näita rohkem",
+    "required": "Kohustuslik",
+    "hoursShort": "h",
+    "minutesShort": "min"
+  },
+  "nav": {
+    "home": "Kodu",
+    "tickets": "Piletid",
+    "tours": "Meie tuurid",
+    "pastEvents": "Toimunud üritused",
+    "partnerships": "Partnerlus",
+    "aboutUs": "Meist",
+    "contacts": "Kontakt",
+    "contactUs": "Võtke meiega ühendust",
+    "howToBuy": "Kuidas osta",
+    "faq": "Korduma kippuvad küsimused",
+    "sellTickets": "Müü pileteid koos meiega"
+  },
+  "footer": {
+    "privacy": "Privaatsuspoliitika",
+    "terms": "Kasutustingimused",
+    "forBuyers": "Piletiostjatele",
+    "forOrganizers": "Korraldajatele",
+    "processing": "Piletite töötlemine: ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Meie sündmused",
+    "empty": "Praegu pole ühtegi üritust müügil. Uued kuupäevad ilmuvad siia peagi."
+  },
+  "event": {
+    "tickets": "Piletid",
+    "buy": "Osta piletid",
+    "soldOut": "Välja müüdud",
+    "soon": "Peagi müügil",
+    "past": "Toimus",
+    "onSale": "Müügil",
+    "priceFrom": "alates %s",
+    "onMap": "kaardil",
+    "promoter": "Korraldaja",
+    "organiser": "Korraldaja",
+    "venue": "Toimumiskoht",
+    "address": "Aadress",
+    "date": "Kuupäev",
+    "dates": "Kuupäevad",
+    "doorsOpen": "Uksed avatakse",
+    "cancelled": "Tühistatud",
+    "salesClosed": "Müük on lõppenud",
+    "duration": "Kestus",
+    "ageLimit": "Vanusepiirang"
+  },
+  "tour": {
+    "label": "Tuur",
+    "cities": [
+      "%d linn",
+      "%d linna",
+      "%d linna"
+    ],
+    "openIn": "Müük avatud: %s",
+    "next": "Järgmine kontsert",
+    "choose": "Vali oma linn",
+    "hint": "Nupp viib selle kontserdi piletikassasse: meie lehele või partneri saidile.",
+    "about": "Tuurist",
+    "backAll": "Kõik üritused",
+    "backTour": "Tuur: %s",
+    "noDates": "Kuupäevad teatame peagi.",
+    "intro": "Kontserdid, mis rändavad: üks programm, mitu linna. Vali linn ja osta pilet just selle kontserdi kassast.",
+    "pastTours": "Toimunud tuurid"
+  },
+  "pastEvents": {
+    "empty": "Toimunud üritusi veel ei ole.",
+    "photoReport": "Fotoreportaaž",
+    "openPhoto": "Ava foto"
+  },
+  "partners": {
+    "buyAt": "Osta piletid: %s",
+    "alsoOn": "Müügil ka: %s",
+    "alsoLabel": "Müügil ka:",
+    "organiserSite": "korraldaja saidil",
+    "soldBy": "Pileteid müüb %s",
+    "weSell": "Piletid sellel saidil",
+    "buyAtOrganizer": "Osta korraldajalt",
+    "forPartners": "Partneritele",
+    "cta": "Hotellid, kontserdipaigad ja korraldajad meie tuuride linnades: oleme avatud bartertehingutele ja koostööle.",
+    "ctaButton": "Paku koostööd"
+  },
+  "cookie": {
+    "text": "Kasutame küpsiseid analüütika ja reklaami jaoks (Google Analytics, Meta piksel). Need lülitatakse sisse alles pärast sinu nõusolekut.",
+    "accept": "Nõustun",
+    "decline": "Keeldun",
+    "settings": "Küpsiste seaded",
+    "revoke": "Võta nõusolek tagasi"
+  },
+  "forms": {
+    "firstName": "Eesnimi",
+    "lastName": "Perekonnanimi",
+    "fullName": "Täisnimi",
+    "email": "E-post",
+    "phone": "Telefon",
+    "message": "Sõnum",
+    "send": "Saada",
+    "sending": "Saatmine…",
+    "consent": "Nõustun: {terms}, {privacy}.",
+    "contact": {
+      "title": "Võta meiega ühendust",
+      "sent": "Aitäh! Sinu sõnum on saadetud. Vastame peagi e-posti teel."
+    },
+    "partnership": {
+      "title": "Paku koostööd",
+      "company": "Ettevõte või organisatsioon",
+      "website": "Veebisait",
+      "sent": "Aitäh! Vaatame sinu ettepaneku üle ja vastame e-posti teel."
+    },
+    "errors": {
+      "invalidEmail": "Sisesta kehtiv e-posti aadress.",
+      "fillRequired": "Palun täida kohustuslikud väljad.",
+      "consentRequired": "Jätkamiseks nõustu tingimustega.",
+      "captcha": "Kontroll ebaõnnestus. Proovi uuesti."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Sinu piletid: %s",
+      "greeting": "Tere, %s!",
+      "body": "Aitäh ostu eest. Sinu piletid üritusele „%s“ on selle kirja manuses (PDF).",
+      "hint": "Ava fail telefonis ja näita sissepääsu juures vöötkoodi — printida pole vaja.",
+      "footer": "Kui sul on küsimusi, vasta lihtsalt sellele kirjale.",
+      "defaultBody": "Aitäh ostu eest. Piletid üritusele „{event}“ on lisatud. Kuupäev: {date}. Aadress: {venue_address}.",
+      "category": "Kategooria",
+      "seat": "Koht",
+      "price": "Hind",
+      "row": "rida",
+      "seatWord": "koht",
+      "ticketNo": "Pilet nr",
+      "order": "Tellimus",
+      "organizer": "Korraldaja",
+      "keepNote": "Näita sissepääsu juures vöötkoodi. Ära avalda piletit avalikult."
+    },
+    "refund": {
+      "done": "Tagasimakse %s on tehtud.",
+      "routeGateway": "Raha läheb tagasi %s kaudu samale makseviisile, millega maksid.",
+      "routeUnknown": "Raha läheb tagasi samale makseviisile, millega maksid.",
+      "timing": "Tavaliselt jõuab see kohale 5–10 tööpäeva jooksul — täpse kuupäeva määrab sinu pank."
+    },
+    "feedback": {
+      "body": "Tere, {name}! Aitäh, et olid meiega üritusel „{event}“. Meil oleks hea meel sinu tagasisidet kuulda: {link}."
+    },
+    "invite": {
+      "subject": "Kutse: %s",
+      "label": "Kutsepilet",
+      "greeting": "Lugupeetud %s sõber!",
+      "body": "Kutsume sind üritusele „{event}“. Sinu kutsepilet on kirja manuses. Kuupäev: {date}. Aadress: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Tagasi piletite juurde",
+    "title": "Piletite eest tasumine",
+    "hold": "Broneering kehtib veel",
+    "expired": "Broneering on aegunud. Palun vali piletid uuesti.",
+    "card": "Kaart",
+    "note": "PDF-piletid saadetakse kohe pärast makset aadressile %s.",
+    "total": "Kokku",
+    "pay": "Maksa %s",
+    "secureShort": "Turvaline makse · Stripe",
+    "secure": "Kaardiandmeid töötleb Stripe. Meie neid ei näe ega salvesta.",
+    "terms": "Tingimused",
+    "privacy": "Privaatsus",
+    "contacts": "Kontakt",
+    "reserved": "Kohad on broneeritud %d minutiks, kuni makse lõpetad.",
+    "processing": "Töötlemine…",
+    "promoToggle": "Mul on promokood",
+    "promoPlaceholder": "Promokood",
+    "promoApply": "Rakenda",
+    "promoRemove": "Eemalda",
+    "promo": {
+      "empty": "Sisesta promokood",
+      "noSession": "Piletiseanssi ei õnnestunud alustada. Laadi leht uuesti ja proovi veel kord.",
+      "applyFailed": "Promokoodi ei õnnestunud rakendada",
+      "applied": "Promokood rakendatud",
+      "invalid": "Kehtetu promokood: %s",
+      "partial": "Promokood rakendatud. Kehtetud koodid: %s",
+      "accepted": "Promokood vastu võetud — allahindlus rakendatakse tellimuse vormistamisel",
+      "none": "Kehtivaid promokoode pole"
+    }
+  },
+  "thankyou": {
+    "title": "Makse õnnestus",
+    "text": "Piletid saadeti tellimusel antud e-posti aadressile. Kui kiri ei saabu, vaata rämpsposti kausta.",
+    "accountText": "<strong>Piletid on alati käepärast:</strong> lisaks e-kirjale saad need oma kontolt alla laadida või uuesti saata.",
+    "accountButton": "Minu piletid kontol",
+    "shareTitle": "Sõpradega on lõbusam",
+    "shareText": "Kutsu keegi kaasa — jaga üritust.",
+    "shareMessage": "Lähen üritusele %s. Tuled kaasa? %s",
+    "copyLink": "Kopeeri link",
+    "copied": "Kopeeritud",
+    "shareEmail": "E-post",
+    "failedTitle": "Makse ebaõnnestus",
+    "failedText": "Raha ei võetud maha. Võid proovida uuesti maksta.",
+    "retry": "Proovi uuesti",
+    "orderNumber": "Tellimuse number:",
+    "toEvents": "Ürituste juurde"
+  },
+  "account": {
+    "title": "Minu konto",
+    "back": "Tagasi ürituste juurde",
+    "myTickets": "Minu piletid",
+    "intro": "Sisesta tellimusel kasutatud e-posti aadress. Saadame sulle sisselogimise lingi.",
+    "getLink": "Saada link",
+    "linkSent": "Vaata postkasti. Kui sellel aadressil on piletid, on sisselogimise link teel.",
+    "logout": "Logi välja",
+    "empty": "Sellel aadressil pole veel makstud pileteid.",
+    "orderNumber": "Tellimus nr %s",
+    "ticket": "Pilet %s",
+    "pdf": "Laadi piletid alla (PDF)",
+    "send": "Saada piletid e-postiga",
+    "sent": "Piletid saadeti aadressile %s. Vaata postkasti ja rämpsposti kausta.",
+    "errBil24": "Pileteid ei õnnestunud piletisüsteemis kontrollida. Proovi minuti pärast uuesti.",
+    "errNone": "Selles tellimuses pole aktiivseid pileteid.",
+    "errCooldown": "Piletid saadeti hiljuti — proovi uuesti %d min pärast.",
+    "errMailer": "E-kirjade saatmine pole ajutiselt saadaval — laadi selle asemel PDF alla.",
+    "errForbidden": "Tellimust ei leitud.",
+    "statusRefunded": "Tellimus tagastatud",
+    "statusCancelled": "Tellimus tühistatud",
+    "ticketInactive": "Pilet ei ole enam kehtiv",
+    "eventCancelled": "Üritus on tühistatud"
+  },
+  "errors": {
+    "generic": "Midagi läks valesti. Proovi uuesti.",
+    "network": "Serveriga ei saa ühendust. Proovi uuesti.",
+    "rateLimited": "Liiga palju katseid. Oota minut ja proovi uuesti.",
+    "unavailable": "Teenus on ajutiselt kättesaamatu. Proovi hiljem uuesti.",
+    "ticketsGone": "Kahjuks pole valitud piletid enam saadaval. Värskenda lehte ja proovi uuesti.",
+    "notFoundTitle": "Lehte ei leitud",
+    "notFoundText": "Otsitavat lehte ei ole olemas või see on teisaldatud.",
+    "notFoundLink": "Mine avalehele"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Menü",
+    "language": "Nyelv",
+    "close": "Bezárás",
+    "back": "Vissza",
+    "next": "Tovább",
+    "loading": "Betöltés…",
+    "loadMore": "Továbbiak megjelenítése",
+    "required": "Kötelező",
+    "hoursShort": "ó",
+    "minutesShort": "perc"
+  },
+  "nav": {
+    "home": "Főoldal",
+    "tickets": "Jegyek",
+    "tours": "Turnéink",
+    "pastEvents": "Múltbeli események",
+    "partnerships": "Partnerség",
+    "aboutUs": "Rólunk",
+    "contacts": "Kapcsolat",
+    "contactUs": "Kapcsolatfelvétel",
+    "howToBuy": "Hogyan vásároljon",
+    "faq": "Gyakori kérdések",
+    "sellTickets": "Adjon el jegyeket velünk"
+  },
+  "footer": {
+    "privacy": "Adatvédelmi irányelvek",
+    "terms": "Felhasználási feltételek",
+    "forBuyers": "Jegyvásárlóknak",
+    "forOrganizers": "Szervezőknek",
+    "processing": "Jegykezelés: ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Eseményeink",
+    "empty": "Jelenleg nincs értékesítésben lévő esemény. Az új időpontok hamarosan megjelennek itt."
+  },
+  "event": {
+    "tickets": "Jegyek",
+    "buy": "Jegyvásárlás",
+    "soldOut": "Elfogyott",
+    "soon": "Hamarosan",
+    "past": "Lezajlott",
+    "onSale": "Kapható",
+    "priceFrom": "%s-tól",
+    "onMap": "a térképen",
+    "promoter": "Szervező",
+    "organiser": "Szervező",
+    "venue": "Helyszín",
+    "address": "Cím",
+    "date": "Dátum",
+    "dates": "Időpontok",
+    "doorsOpen": "Kapunyitás",
+    "cancelled": "Elmarad",
+    "salesClosed": "Az értékesítés lezárult",
+    "duration": "Időtartam",
+    "ageLimit": "Korhatár"
+  },
+  "tour": {
+    "label": "Turné",
+    "cities": [
+      "%d város",
+      "%d város",
+      "%d város"
+    ],
+    "openIn": "Jegyértékesítés nyitva: %s",
+    "next": "Következő koncert",
+    "choose": "Válassza ki a városát",
+    "hint": "A gomb az adott koncert jegypénztárába vezet: a mi oldalunkra vagy egy partnerhez.",
+    "about": "A turnéról",
+    "backAll": "Összes esemény",
+    "backTour": "Turné: %s",
+    "noDates": "Az időpontokat hamarosan közöljük.",
+    "intro": "Utazó koncertek: egy műsor, több város. Válassza ki a várost, és vegye meg a jegyet az adott koncert pénztárában.",
+    "pastTours": "Korábbi turnék"
+  },
+  "pastEvents": {
+    "empty": "Még nincsenek korábbi események.",
+    "photoReport": "Fotóriport",
+    "openPhoto": "Fotó megnyitása"
+  },
+  "partners": {
+    "buyAt": "Jegyvásárlás itt: %s",
+    "alsoOn": "Kapható itt is: %s",
+    "alsoLabel": "Kapható itt is:",
+    "organiserSite": "a szervező oldalán",
+    "soldBy": "Jegyek itt: %s",
+    "weSell": "Jegyek ezen az oldalon",
+    "buyAtOrganizer": "Vásárlás a szervezőnél",
+    "forPartners": "Partnereknek",
+    "cta": "Szállodák, helyszínek és promóterek turnéink városaiban: nyitottak vagyunk a barterre és a partnerségre.",
+    "ctaButton": "Partnerség ajánlása"
+  },
+  "cookie": {
+    "text": "Sütiket használunk elemzéshez és hirdetésekhez (Google Analytics, Meta-pixel). Ezek csak az Ön hozzájárulása után kapcsolnak be.",
+    "accept": "Elfogadom",
+    "decline": "Elutasítom",
+    "settings": "Süti-beállítások",
+    "revoke": "Hozzájárulás visszavonása"
+  },
+  "forms": {
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "fullName": "Teljes név",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "message": "Üzenet",
+    "send": "Küldés",
+    "sending": "Küldés…",
+    "consent": "Elfogadom: {terms}, {privacy}.",
+    "contact": {
+      "title": "Lépjen kapcsolatba velünk",
+      "sent": "Köszönjük! Üzenetét elküldtük. Hamarosan válaszolunk e-mailben."
+    },
+    "partnership": {
+      "title": "Partnerség ajánlása",
+      "company": "Cég vagy szervezet",
+      "website": "Weboldal",
+      "sent": "Köszönjük! Megvizsgáljuk javaslatát, és e-mailben válaszolunk."
+    },
+    "errors": {
+      "invalidEmail": "Adjon meg érvényes e-mail-címet.",
+      "fillRequired": "Kérjük, töltse ki a kötelező mezőket.",
+      "consentRequired": "A folytatáshoz fogadja el a feltételeket.",
+      "captcha": "Az ellenőrzés nem sikerült. Kérjük, próbálja újra."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Az Ön jegyei: %s",
+      "greeting": "Kedves %s!",
+      "body": "Köszönjük a vásárlást. A(z) „%s” jegyei ehhez a levélhez csatolva találhatók (PDF).",
+      "hint": "Nyissa meg a fájlt a telefonján, és a bejáratnál mutassa fel a vonalkódot — nyomtatni nem szükséges.",
+      "footer": "Ha kérdése van, egyszerűen válaszoljon erre a levélre.",
+      "defaultBody": "Köszönjük a vásárlást. A(z) „{event}” jegyei mellékelve. Dátum: {date}. Cím: {venue_address}.",
+      "category": "Kategória",
+      "seat": "Hely",
+      "price": "Ár",
+      "row": "sor",
+      "seatWord": "hely",
+      "ticketNo": "Jegy sz.",
+      "order": "Rendelés",
+      "organizer": "Szervező",
+      "keepNote": "A bejáratnál mutassa fel a vonalkódot. Ne tegye közzé a jegyét nyilvánosan."
+    },
+    "refund": {
+      "done": "%s összegű visszatérítés megtörtént.",
+      "routeGateway": "A pénz a(z) %s útján ugyanarra a fizetési módra érkezik vissza, amellyel fizetett.",
+      "routeUnknown": "A pénz ugyanarra a fizetési módra érkezik vissza, amellyel fizetett.",
+      "timing": "Általában 5–10 munkanapon belül megérkezik — a pontos időpontot az Ön bankja határozza meg."
+    },
+    "feedback": {
+      "body": "Kedves {name}! Köszönjük, hogy részt vett a(z) „{event}” eseményen. Szívesen meghallgatnánk a véleményét: {link}."
+    },
+    "invite": {
+      "subject": "Meghívó: %s",
+      "label": "Meghívójegy",
+      "greeting": "Kedves %s barátja!",
+      "body": "Szeretettel meghívjuk a(z) „{event}” eseményre. Meghívójegye mellékelve. Dátum: {date}. Cím: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Vissza a jegyekhez",
+    "title": "Jegyek fizetése",
+    "hold": "A foglalás még ennyi ideig érvényes:",
+    "expired": "A foglalás lejárt. Kérjük, válassza ki újra a jegyeket.",
+    "card": "Kártya",
+    "note": "A PDF-jegyeket a fizetés után azonnal ide küldjük: %s.",
+    "total": "Összesen",
+    "pay": "Fizetés: %s",
+    "secureShort": "Biztonságos fizetés · Stripe",
+    "secure": "A kártyaadatokat a Stripe kezeli. Mi soha nem látjuk és nem tároljuk őket.",
+    "terms": "Feltételek",
+    "privacy": "Adatvédelem",
+    "contacts": "Kapcsolat",
+    "reserved": "A helyeket %d percig tartjuk fenn, amíg befejezi a fizetést.",
+    "processing": "Feldolgozás…",
+    "promoToggle": "Van promóciós kódom",
+    "promoPlaceholder": "Promóciós kód",
+    "promoApply": "Alkalmaz",
+    "promoRemove": "Eltávolítás",
+    "promo": {
+      "empty": "Adja meg a promóciós kódot",
+      "noSession": "Nem sikerült elindítani a jegyvásárlási munkamenetet. Töltse újra az oldalt, és próbálja meg újra.",
+      "applyFailed": "A promóciós kódot nem sikerült alkalmazni",
+      "applied": "A promóciós kód alkalmazva",
+      "invalid": "Érvénytelen promóciós kód: %s",
+      "partial": "A promóciós kód alkalmazva. Érvénytelen kódok: %s",
+      "accepted": "A promóciós kódot elfogadtuk — a kedvezményt a fizetésnél érvényesítjük",
+      "none": "Nincs érvényes promóciós kód"
+    }
+  },
+  "thankyou": {
+    "title": "Sikeres fizetés",
+    "text": "A jegyeket a megrendeléskor megadott e-mail-címre elküldtük. Ha a levél nem érkezik meg, nézze meg a spam mappát.",
+    "accountText": "<strong>A jegyei mindig kéznél vannak:</strong> az e-mail mellett a fiókjából letöltheti vagy újra elküldheti őket.",
+    "accountButton": "Jegyeim a fiókomban",
+    "shareTitle": "Barátokkal jobb",
+    "shareText": "Hívjon el valakit — ossza meg az eseményt.",
+    "shareMessage": "Megyek a(z) %s eseményre. Velem tartasz? %s",
+    "copyLink": "Hivatkozás másolása",
+    "copied": "Másolva",
+    "shareEmail": "E-mail",
+    "failedTitle": "A fizetés sikertelen",
+    "failedText": "Nem vontunk le pénzt. Megpróbálhatja újra a fizetést.",
+    "retry": "Próbálja újra",
+    "orderNumber": "Rendelésszám:",
+    "toEvents": "Az eseményekhez"
+  },
+  "account": {
+    "title": "Fiókom",
+    "back": "Vissza az eseményekhez",
+    "myTickets": "Jegyeim",
+    "intro": "Adja meg a rendeléskor használt e-mail-címet. Elküldünk Önnek egy bejelentkezési hivatkozást.",
+    "getLink": "Hivatkozás küldése",
+    "linkSent": "Nézze meg a postafiókját. Ha ehhez a címhez tartoznak jegyek, a bejelentkezési hivatkozás úton van.",
+    "logout": "Kijelentkezés",
+    "empty": "Ehhez a címhez még nem tartoznak kifizetett jegyek.",
+    "orderNumber": "%s. sz. rendelés",
+    "ticket": "Jegy %s",
+    "pdf": "Jegyek letöltése (PDF)",
+    "send": "Jegyek küldése e-mailben",
+    "sent": "A jegyeket elküldtük a(z) %s címre. Nézze meg a postafiókját és a spam mappát.",
+    "errBil24": "A jegyeket nem sikerült ellenőrizni a jegyrendszerben. Próbálja újra egy perc múlva.",
+    "errNone": "Ebben a rendelésben nincs aktív jegy.",
+    "errCooldown": "A jegyeket nemrég elküldtük — próbálja újra %d perc múlva.",
+    "errMailer": "Az e-mail-küldés átmenetileg nem érhető el — töltse le helyette a PDF-et.",
+    "errForbidden": "A rendelés nem található.",
+    "statusRefunded": "A rendelés visszatérítve",
+    "statusCancelled": "A rendelés törölve",
+    "ticketInactive": "A jegy már nem érvényes",
+    "eventCancelled": "Az esemény elmarad"
+  },
+  "errors": {
+    "generic": "Hiba történt. Kérjük, próbálja újra.",
+    "network": "Nincs kapcsolat a szerverrel. Kérjük, próbálja újra.",
+    "rateLimited": "Túl sok próbálkozás. Várjon egy percet, és próbálja újra.",
+    "unavailable": "A szolgáltatás átmenetileg nem érhető el. Kérjük, próbálja később.",
+    "ticketsGone": "Sajnos a kiválasztott jegyek már nem elérhetők. Frissítse az oldalt, és próbálja újra.",
+    "notFoundTitle": "Az oldal nem található",
+    "notFoundText": "A keresett oldal nem létezik, vagy áthelyezték.",
+    "notFoundLink": "Ugrás a főoldalra"
+  }
+}

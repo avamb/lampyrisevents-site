@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Menu",
+    "language": "Jazyk",
+    "close": "Zavřít",
+    "back": "Zpět",
+    "next": "Další",
+    "loading": "Načítání…",
+    "loadMore": "Zobrazit více",
+    "required": "Povinné",
+    "hoursShort": "h",
+    "minutesShort": "min"
+  },
+  "nav": {
+    "home": "Domácí stránka",
+    "tickets": "Vstupenky",
+    "tours": "Naše turné",
+    "pastEvents": "Minulé události",
+    "partnerships": "Partnerství",
+    "aboutUs": "O nás",
+    "contacts": "Kontakty",
+    "contactUs": "Kontaktujte nás",
+    "howToBuy": "Jak nakupovat",
+    "faq": "Často kladené otázky",
+    "sellTickets": "Prodávejte s námi vstupenky"
+  },
+  "footer": {
+    "privacy": "Zásady ochrany osobních údajů",
+    "terms": "Podmínky použití",
+    "forBuyers": "Pro diváky",
+    "forOrganizers": "Pro pořadatele",
+    "processing": "Zpracování vstupenek: ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Naše akce",
+    "empty": "Právě teď nejsou v prodeji žádné akce. Nové termíny se tu brzy objeví."
+  },
+  "event": {
+    "tickets": "Vstupenky",
+    "buy": "Koupit vstupenky",
+    "soldOut": "Vyprodáno",
+    "soon": "Již brzy",
+    "past": "Proběhlo",
+    "onSale": "V prodeji",
+    "priceFrom": "od %s",
+    "onMap": "na mapě",
+    "promoter": "Pořadatel",
+    "organiser": "Pořadatel",
+    "venue": "Místo konání",
+    "address": "Adresa",
+    "date": "Datum",
+    "dates": "Termíny",
+    "doorsOpen": "Vstup od",
+    "cancelled": "Zrušeno",
+    "salesClosed": "Prodej ukončen",
+    "duration": "Délka",
+    "ageLimit": "Věkový limit"
+  },
+  "tour": {
+    "label": "Turné",
+    "cities": [
+      "%d město",
+      "%d města",
+      "%d měst"
+    ],
+    "openIn": "Prodej otevřen: %s",
+    "next": "Nejbližší koncert",
+    "choose": "Vyberte své město",
+    "hint": "Tlačítko vede do pokladny konkrétního koncertu: na naši stránku nebo k partnerovi.",
+    "about": "O turné",
+    "backAll": "Všechny akce",
+    "backTour": "Turné: %s",
+    "noDates": "Termíny oznámíme brzy.",
+    "intro": "Koncerty, které cestují: jeden program, více měst. Vyberte město a kupte vstupenku v pokladně právě tohoto koncertu.",
+    "pastTours": "Proběhlá turné"
+  },
+  "pastEvents": {
+    "empty": "Zatím nejsou žádné proběhlé akce.",
+    "photoReport": "Fotoreportáž",
+    "openPhoto": "Otevřít fotografii"
+  },
+  "partners": {
+    "buyAt": "Koupit vstupenky na %s",
+    "alsoOn": "V prodeji také na %s",
+    "alsoLabel": "V prodeji také:",
+    "organiserSite": "webu pořadatele",
+    "soldBy": "Vstupenky prodává %s",
+    "weSell": "Vstupenky na tomto webu",
+    "buyAtOrganizer": "Koupit u pořadatele",
+    "forPartners": "Pro partnery",
+    "cta": "Hotely, sály a pořadatelé v městech našich turné: jsme otevřeni barteru a partnerství.",
+    "ctaButton": "Navrhnout partnerství"
+  },
+  "cookie": {
+    "text": "Používáme cookies pro analytiku a reklamu (Google Analytics, Meta pixel). Zapnou se až po vašem souhlasu.",
+    "accept": "Přijmout",
+    "decline": "Odmítnout",
+    "settings": "Nastavení cookies",
+    "revoke": "Odvolat souhlas"
+  },
+  "forms": {
+    "firstName": "Jméno",
+    "lastName": "Příjmení",
+    "fullName": "Celé jméno",
+    "email": "E-mail",
+    "phone": "Telefon",
+    "message": "Zpráva",
+    "send": "Odeslat",
+    "sending": "Odesílání…",
+    "consent": "Přijímám: {terms}, {privacy}.",
+    "contact": {
+      "title": "Spojte se s námi",
+      "sent": "Děkujeme! Vaše zpráva byla odeslána. Brzy vám odpovíme e-mailem."
+    },
+    "partnership": {
+      "title": "Navrhnout partnerství",
+      "company": "Firma nebo organizace",
+      "website": "Web",
+      "sent": "Děkujeme! Váš návrh posoudíme a odpovíme e-mailem."
+    },
+    "errors": {
+      "invalidEmail": "Zadejte platnou e-mailovou adresu.",
+      "fillRequired": "Vyplňte prosím povinná pole.",
+      "consentRequired": "Pro pokračování přijměte prosím podmínky.",
+      "captcha": "Kontrola neproběhla. Zkuste to prosím znovu."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Vaše vstupenky: %s",
+      "greeting": "Dobrý den, %s!",
+      "body": "Děkujeme za nákup. Vaše vstupenky na „%s\" najdete v příloze tohoto e-mailu (PDF).",
+      "hint": "Otevřete soubor v telefonu a u vstupu ukažte čárový kód — tisk není nutný.",
+      "footer": "V případě dotazů jednoduše odpovězte na tento e-mail.",
+      "defaultBody": "Děkujeme za nákup. Vstupenky na „{event}“ jsou v příloze. Datum: {date}. Adresa: {venue_address}.",
+      "category": "Kategorie",
+      "seat": "Místo",
+      "price": "Cena",
+      "row": "řada",
+      "seatWord": "místo",
+      "ticketNo": "Vstupenka č.",
+      "order": "Objednávka",
+      "organizer": "Pořadatel",
+      "keepNote": "U vstupu předložte čárový kód. Vstupenku nikde nezveřejňujte."
+    },
+    "refund": {
+      "done": "Vrácení částky %s bylo provedeno.",
+      "routeGateway": "Peníze se vrátí přes %s stejnou cestou, jakou jste platili.",
+      "routeUnknown": "Peníze se vrátí stejnou cestou, jakou jste platili.",
+      "timing": "Obvykle dorazí do 5–10 pracovních dnů — přesný termín závisí na vaší bance."
+    },
+    "feedback": {
+      "body": "Dobrý den, {name}! Děkujeme, že jste byli s námi na „{event}“. Podělte se prosím o dojmy: {link}."
+    },
+    "invite": {
+      "subject": "Pozvánka: %s",
+      "label": "Pozvánka",
+      "greeting": "Vážený příteli společnosti %s!",
+      "body": "Zveme vás na „{event}“. Vaše pozvánka je v příloze. Datum: {date}. Adresa: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Zpět k vstupenkám",
+    "title": "Platba vstupenek",
+    "hold": "Rezervace platí ještě",
+    "expired": "Rezervace vypršela. Vyberte vstupenky znovu.",
+    "card": "Karta",
+    "note": "PDF vstupenky přijdou na %s hned po zaplacení.",
+    "total": "Celkem",
+    "pay": "Zaplatit %s",
+    "secureShort": "Bezpečná platba · Stripe",
+    "secure": "Údaje o kartě zpracovává Stripe. My je nevidíme ani neukládáme.",
+    "terms": "Podmínky",
+    "privacy": "Soukromí",
+    "contacts": "Kontakty",
+    "reserved": "Místa jsou rezervována %d min. po dobu platby.",
+    "processing": "Zpracování…",
+    "promoToggle": "Mám promo kód",
+    "promoPlaceholder": "Promo kód",
+    "promoApply": "Použít",
+    "promoRemove": "Odebrat",
+    "promo": {
+      "empty": "Zadejte promo kód",
+      "noSession": "Nepodařilo se zahájit relaci. Obnovte stránku a zkuste to znovu.",
+      "applyFailed": "Promo kód se nepodařilo použít",
+      "applied": "Promo kód použit",
+      "invalid": "Neplatný promo kód: %s",
+      "partial": "Promo kód použit. Neplatné kódy: %s",
+      "accepted": "Promo kód přijat — sleva se uplatní při dokončení objednávky",
+      "none": "Žádný platný promo kód"
+    }
+  },
+  "thankyou": {
+    "title": "Platba proběhla úspěšně",
+    "text": "Vstupenky jsme poslali na e-mail uvedený při objednávce. Pokud e-mail nedorazí, zkontrolujte složku se spamem.",
+    "accountText": "<strong>Vstupenky máte vždy po ruce:</strong> kromě e-mailu si je můžete stáhnout nebo znovu poslat ze svého účtu.",
+    "accountButton": "Moje vstupenky v účtu",
+    "shareTitle": "S přáteli je to lepší",
+    "shareText": "Pozvěte někoho s sebou — sdílejte akci.",
+    "shareMessage": "Jdu na %s. Půjdeš se mnou? %s",
+    "copyLink": "Kopírovat odkaz",
+    "copied": "Zkopírováno",
+    "shareEmail": "E-mail",
+    "failedTitle": "Platba se nezdařila",
+    "failedText": "Žádné peníze nebyly strženy. Můžete zkusit zaplatit znovu.",
+    "retry": "Zkusit znovu",
+    "orderNumber": "Číslo objednávky:",
+    "toEvents": "K akcím"
+  },
+  "account": {
+    "title": "Můj účet",
+    "back": "Zpět na program",
+    "myTickets": "Moje vstupenky",
+    "intro": "Zadejte e-mail, který jste uvedli při objednávce. Pošleme vám odkaz pro přihlášení.",
+    "getLink": "Poslat odkaz",
+    "linkSent": "Zkontrolujte schránku. Pokud k této adrese existují vstupenky, poslali jsme vám odkaz pro přihlášení.",
+    "logout": "Odhlásit se",
+    "empty": "K této adrese zatím nejsou žádné zaplacené vstupenky.",
+    "orderNumber": "Objednávka č. %s",
+    "ticket": "Vstupenka %s",
+    "pdf": "Stáhnout vstupenky (PDF)",
+    "send": "Poslat vstupenky e-mailem",
+    "sent": "Vstupenky byly odeslány na %s. Zkontrolujte schránku i složku „Spam“.",
+    "errBil24": "Vstupenky se nepodařilo ověřit v ticketingovém systému. Zkuste to prosím za minutu.",
+    "errNone": "V této objednávce nejsou žádné aktivní vstupenky.",
+    "errCooldown": "Vstupenky byly nedávno odeslány — zkuste to prosím za %d min.",
+    "errMailer": "Odesílání e-mailů je dočasně nedostupné — stáhněte si prosím PDF.",
+    "errForbidden": "Objednávka nebyla nalezena.",
+    "statusRefunded": "Objednávka vrácena",
+    "statusCancelled": "Objednávka zrušena",
+    "ticketInactive": "Vstupenka již neplatí",
+    "eventCancelled": "Akce byla zrušena"
+  },
+  "errors": {
+    "generic": "Něco se pokazilo. Zkuste to prosím znovu.",
+    "network": "Žádné spojení se serverem. Zkuste to prosím znovu.",
+    "rateLimited": "Příliš mnoho pokusů. Počkejte minutu a zkuste to znovu.",
+    "unavailable": "Služba je dočasně nedostupná. Zkuste to prosím později.",
+    "ticketsGone": "Vybrané vstupenky již bohužel nejsou k dispozici. Obnovte stránku a zkuste to znovu.",
+    "notFoundTitle": "Stránka nenalezena",
+    "notFoundText": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    "notFoundLink": "Přejít na úvodní stránku"
+  }
+}

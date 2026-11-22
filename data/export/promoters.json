@@ -1,0 +1,39 @@
+{
+    "generated": "2026-11-22T11:44:13+00:00",
+    "source": "wp-promoters-export.php",
+    "counts": {
+        "promoters": 1
+    },
+    "promoters": [
+        {
+            "id": 1,
+            "name": "Lampyris s.r.o.",
+            "address": "Závěrka 2367/9A, Břevnov, 169 00 Praha 6, Czech Republic",
+            "reg_no": "28816846",
+            "phone": "+420 733 642 795",
+            "email": "info@lampyrisevents.com",
+            "website": "https://lampyrisevents.com",
+            "event_post_ids": [
+                8247,
+                9247,
+                9251,
+                9262,
+                9264,
+                9266,
+                9269,
+                9271,
+                9514,
+                9515,
+                9516,
+                9517,
+                9533,
+                9534,
+                9844
+            ]
+        }
+    ],
+    "bil24_organizer_names": [
+        "Lampyris",
+        "Lampyris s.r.o."
+    ]
+}

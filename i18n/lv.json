@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Izvēlne",
+    "language": "Valoda",
+    "close": "Aizvērt",
+    "back": "Atpakaļ",
+    "next": "Tālāk",
+    "loading": "Ielāde…",
+    "loadMore": "Rādīt vairāk",
+    "required": "Obligāts",
+    "hoursShort": "h",
+    "minutesShort": "min"
+  },
+  "nav": {
+    "home": "Sākums",
+    "tickets": "Biļetes",
+    "tours": "Mūsu turnejas",
+    "pastEvents": "Notikušie pasākumi",
+    "partnerships": "Sadarbība",
+    "aboutUs": "Par mums",
+    "contacts": "Kontakti",
+    "contactUs": "Sazinieties ar mums",
+    "howToBuy": "Kā pirkt",
+    "faq": "Biežāk uzdotie jautājumi",
+    "sellTickets": "Pārdodiet biļetes ar mums"
+  },
+  "footer": {
+    "privacy": "Privātuma politika",
+    "terms": "Lietošanas noteikumi",
+    "forBuyers": "Biļešu pircējiem",
+    "forOrganizers": "Organizatoriem",
+    "processing": "Biļešu apstrāde: ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Mūsu pasākumi",
+    "empty": "Pašlaik pārdošanā nav neviena pasākuma. Jauni datumi drīz parādīsies šeit."
+  },
+  "event": {
+    "tickets": "Biļetes",
+    "buy": "Pirkt biļetes",
+    "soldOut": "Izpārdots",
+    "soon": "Drīzumā",
+    "past": "Notika",
+    "onSale": "Pārdošanā",
+    "priceFrom": "no %s",
+    "onMap": "kartē",
+    "promoter": "Organizators",
+    "organiser": "Organizators",
+    "venue": "Norises vieta",
+    "address": "Adrese",
+    "date": "Datums",
+    "dates": "Datumi",
+    "doorsOpen": "Durvis atver",
+    "cancelled": "Atcelts",
+    "salesClosed": "Pārdošana beigusies",
+    "duration": "Ilgums",
+    "ageLimit": "Vecuma ierobežojums"
+  },
+  "tour": {
+    "label": "Turneja",
+    "cities": [
+      "%d pilsēta",
+      "%d pilsētas",
+      "%d pilsētu"
+    ],
+    "openIn": "Biļešu tirdzniecība atvērta: %s",
+    "next": "Nākamais koncerts",
+    "choose": "Izvēlies savu pilsētu",
+    "hint": "Poga ved uz šī koncerta biļešu kasi: mūsu lapu vai partnera vietni.",
+    "about": "Par turneju",
+    "backAll": "Visi pasākumi",
+    "backTour": "Turneja: %s",
+    "noDates": "Datumus paziņosim drīzumā.",
+    "intro": "Koncerti, kas ceļo: viena programma, vairākas pilsētas. Izvēlies pilsētu un pērc biļeti tieši šī koncerta kasē.",
+    "pastTours": "Notikušās turnejas"
+  },
+  "pastEvents": {
+    "empty": "Notikušo pasākumu vēl nav.",
+    "photoReport": "Fotoreportāža",
+    "openPhoto": "Atvērt foto"
+  },
+  "partners": {
+    "buyAt": "Pirkt biļetes: %s",
+    "alsoOn": "Pārdošanā arī: %s",
+    "alsoLabel": "Pārdošanā arī:",
+    "organiserSite": "rīkotāja vietnē",
+    "soldBy": "Biļetes pārdod %s",
+    "weSell": "Biļetes šajā vietnē",
+    "buyAtOrganizer": "Pirkt pie organizatora",
+    "forPartners": "Partneriem",
+    "cta": "Viesnīcas, koncertvietas un rīkotāji mūsu turneju pilsētās: esam atvērti bartera darījumiem un sadarbībai.",
+    "ctaButton": "Piedāvāt sadarbību"
+  },
+  "cookie": {
+    "text": "Mēs izmantojam sīkdatnes analītikai un reklāmai (Google Analytics, Meta pikseli). Tās tiek ieslēgtas tikai pēc tavas piekrišanas.",
+    "accept": "Piekrītu",
+    "decline": "Noraidīt",
+    "settings": "Sīkdatņu iestatījumi",
+    "revoke": "Atsaukt piekrišanu"
+  },
+  "forms": {
+    "firstName": "Vārds",
+    "lastName": "Uzvārds",
+    "fullName": "Pilns vārds",
+    "email": "E-pasts",
+    "phone": "Tālrunis",
+    "message": "Ziņojums",
+    "send": "Nosūtīt",
+    "sending": "Sūta…",
+    "consent": "Piekrītu: {terms}, {privacy}.",
+    "contact": {
+      "title": "Sazinies ar mums",
+      "sent": "Paldies! Tava ziņa ir nosūtīta. Drīz atbildēsim pa e-pastu."
+    },
+    "partnership": {
+      "title": "Piedāvāt sadarbību",
+      "company": "Uzņēmums vai organizācija",
+      "website": "Tīmekļa vietne",
+      "sent": "Paldies! Izskatīsim tavu piedāvājumu un atbildēsim pa e-pastu."
+    },
+    "errors": {
+      "invalidEmail": "Ievadi derīgu e-pasta adresi.",
+      "fillRequired": "Lūdzu, aizpildi obligātos laukus.",
+      "consentRequired": "Lai turpinātu, piekrīti noteikumiem.",
+      "captcha": "Pārbaude netika izturēta. Mēģini vēlreiz."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Tavas biļetes: %s",
+      "greeting": "Labdien, %s!",
+      "body": "Paldies par pirkumu. Tavas biļetes uz „%s“ ir pievienotas šai vēstulei (PDF).",
+      "hint": "Atver failu telefonā un uzrādi svītrkodu ieejā — drukāt nav nepieciešams.",
+      "footer": "Ja ir jautājumi, vienkārši atbildi uz šo vēstuli.",
+      "defaultBody": "Paldies par pirkumu. Biļetes uz „{event}“ ir pielikumā. Datums: {date}. Adrese: {venue_address}.",
+      "category": "Kategorija",
+      "seat": "Vieta",
+      "price": "Cena",
+      "row": "rinda",
+      "seatWord": "vieta",
+      "ticketNo": "Biļete Nr.",
+      "order": "Pasūtījums",
+      "organizer": "Organizators",
+      "keepNote": "Uzrādi svītrkodu ieejā. Neizplati biļeti publiski."
+    },
+    "refund": {
+      "done": "Atmaksa %s ir veikta.",
+      "routeGateway": "Nauda atgriezīsies caur %s uz to pašu maksājuma veidu, ar kuru maksāji.",
+      "routeUnknown": "Nauda atgriezīsies uz to pašu maksājuma veidu, ar kuru maksāji.",
+      "timing": "Parasti tā pienāk 5–10 darba dienu laikā — precīzu datumu nosaka tava banka."
+    },
+    "feedback": {
+      "body": "Labdien, {name}! Paldies, ka bijāt kopā ar mums pasākumā „{event}“. Mums būtu prieks uzzināt jūsu atsauksmi: {link}."
+    },
+    "invite": {
+      "subject": "Ielūgums: %s",
+      "label": "Ielūgums",
+      "greeting": "Cienījamais %s draugs!",
+      "body": "Aicinām jūs uz „{event}“. Jūsu ielūgums ir pielikumā. Datums: {date}. Adrese: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Atpakaļ pie biļetēm",
+    "title": "Biļešu apmaksa",
+    "hold": "Rezervācija spēkā vēl",
+    "expired": "Rezervācijas laiks beidzies. Lūdzu, izvēlies biļetes vēlreiz.",
+    "card": "Karte",
+    "note": "PDF biļetes uzreiz pēc apmaksas nosūtīsim uz %s.",
+    "total": "Kopā",
+    "pay": "Maksāt %s",
+    "secureShort": "Drošs maksājums · Stripe",
+    "secure": "Kartes datus apstrādā Stripe. Mēs tos neredzam un neglabājam.",
+    "terms": "Noteikumi",
+    "privacy": "Privātums",
+    "contacts": "Kontakti",
+    "reserved": "Vietas rezervētas uz %d minūtēm, kamēr pabeidz maksājumu.",
+    "processing": "Apstrāde…",
+    "promoToggle": "Man ir promokods",
+    "promoPlaceholder": "Promokods",
+    "promoApply": "Lietot",
+    "promoRemove": "Noņemt",
+    "promo": {
+      "empty": "Ievadi promokodu",
+      "noSession": "Neizdevās sākt biļešu sesiju. Pārlādē lapu un mēģini vēlreiz.",
+      "applyFailed": "Neizdevās pielietot promokodu",
+      "applied": "Promokods pielietots",
+      "invalid": "Nederīgs promokods: %s",
+      "partial": "Promokods pielietots. Nederīgie kodi: %s",
+      "accepted": "Promokods pieņemts — atlaide tiks piemērota noformējot pasūtījumu",
+      "none": "Derīgu promokodu nav"
+    }
+  },
+  "thankyou": {
+    "title": "Maksājums veiksmīgs",
+    "text": "Biļetes nosūtītas uz pasūtījumā norādīto e-pasta adresi. Ja vēstule nepienāk, pārbaudi surogātpastu mapi.",
+    "accountText": "<strong>Biļetes vienmēr pie rokas:</strong> papildus e-pastam tās var lejupielādēt vai nosūtīt atkārtoti no sava konta.",
+    "accountButton": "Manas biļetes kontā",
+    "shareTitle": "Ar draugiem jautrāk",
+    "shareText": "Aicini kādu līdzi — dalies ar pasākumu.",
+    "shareMessage": "Es eju uz %s. Vai nāksi līdzi? %s",
+    "copyLink": "Kopēt saiti",
+    "copied": "Nokopēts",
+    "shareEmail": "E-pasts",
+    "failedTitle": "Maksājums neizdevās",
+    "failedText": "Nauda netika norakstīta. Vari mēģināt maksāt vēlreiz.",
+    "retry": "Mēģināt vēlreiz",
+    "orderNumber": "Pasūtījuma numurs:",
+    "toEvents": "Uz pasākumiem"
+  },
+  "account": {
+    "title": "Mans konts",
+    "back": "Atpakaļ uz pasākumiem",
+    "myTickets": "Manas biļetes",
+    "intro": "Ievadi pasūtījumā norādīto e-pasta adresi. Mēs nosūtīsim tev pieteikšanās saiti.",
+    "getLink": "Nosūtīt saiti",
+    "linkSent": "Pārbaudi pastkasti. Ja šai adresei ir biļetes, pieteikšanās saite ir nosūtīta.",
+    "logout": "Izrakstīties",
+    "empty": "Šai adresei vēl nav apmaksātu biļešu.",
+    "orderNumber": "Pasūtījums Nr. %s",
+    "ticket": "Biļete %s",
+    "pdf": "Lejupielādēt biļetes (PDF)",
+    "send": "Nosūtīt biļetes e-pastā",
+    "sent": "Biļetes nosūtītas uz %s. Pārbaudi pastkasti un surogātpastu mapi.",
+    "errBil24": "Neizdevās pārbaudīt biļetes biļešu sistēmā. Mēģini vēlreiz pēc minūtes.",
+    "errNone": "Šajā pasūtījumā nav aktīvu biļešu.",
+    "errCooldown": "Biļetes nesen tika nosūtītas — mēģini vēlreiz pēc %d min.",
+    "errMailer": "E-pasta sūtīšana īslaicīgi nav pieejama — lejupielādē PDF.",
+    "errForbidden": "Pasūtījums nav atrasts.",
+    "statusRefunded": "Pasūtījums atmaksāts",
+    "statusCancelled": "Pasūtījums atcelts",
+    "ticketInactive": "Biļete vairs nav derīga",
+    "eventCancelled": "Pasākums ir atcelts"
+  },
+  "errors": {
+    "generic": "Kaut kas nogāja greizi. Mēģini vēlreiz.",
+    "network": "Nav savienojuma ar serveri. Mēģini vēlreiz.",
+    "rateLimited": "Pārāk daudz mēģinājumu. Uzgaidi minūti un mēģini vēlreiz.",
+    "unavailable": "Pakalpojums īslaicīgi nav pieejams. Mēģini vēlāk.",
+    "ticketsGone": "Diemžēl izvēlētās biļetes vairs nav pieejamas. Atsvaidzini lapu un mēģini vēlreiz.",
+    "notFoundTitle": "Lapa nav atrasta",
+    "notFoundText": "Meklētā lapa neeksistē vai ir pārvietota.",
+    "notFoundLink": "Doties uz sākumlapu"
+  }
+}

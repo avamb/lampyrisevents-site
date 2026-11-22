@@ -1,0 +1,15 @@
+{
+  "name": "lampyrisevents-site",
+  "private": true,
+  "type": "module",
+  "description": "Content, dictionaries, redirects and design tokens exported from the lampyrisevents.com WordPress site",
+  "scripts": {
+    "export:media": "node tools/build-media-manifest.mjs && node tools/download-media.mjs",
+    "fetch:pages": "node tools/fetch-pages.mjs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "js-yaml": "^5.5.0",
+    "playwright": "^1.65.1"
+  }
+}

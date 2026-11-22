@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Menü",
+    "language": "Sprache",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "loading": "Wird geladen…",
+    "loadMore": "Mehr anzeigen",
+    "required": "Pflichtfeld",
+    "hoursShort": "Std.",
+    "minutesShort": "Min."
+  },
+  "nav": {
+    "home": "Startseite",
+    "tickets": "Tickets",
+    "tours": "Unsere Touren",
+    "pastEvents": "Vergangene Ereignisse",
+    "partnerships": "Partnerschaften",
+    "aboutUs": "Über uns",
+    "contacts": "Kontakte",
+    "contactUs": "Kontaktieren Sie uns",
+    "howToBuy": "Wie Sie kaufen",
+    "faq": "Häufig gestellte Fragen",
+    "sellTickets": "Verkaufen Sie Tickets mit uns"
+  },
+  "footer": {
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "forBuyers": "Für Ticketkäufer",
+    "forOrganizers": "Für Veranstalter",
+    "processing": "Ticketabwicklung durch ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Unsere Veranstaltungen",
+    "empty": "Derzeit sind keine Veranstaltungen im Verkauf. Neue Termine erscheinen hier in Kürze."
+  },
+  "event": {
+    "tickets": "Tickets",
+    "buy": "Tickets kaufen",
+    "soldOut": "Ausverkauft",
+    "soon": "Demnächst",
+    "past": "Fand statt",
+    "onSale": "Im Verkauf",
+    "priceFrom": "ab %s",
+    "onMap": "auf der Karte",
+    "promoter": "Veranstalter",
+    "organiser": "Veranstalter",
+    "venue": "Veranstaltungsort",
+    "address": "Adresse",
+    "date": "Datum",
+    "dates": "Termine",
+    "doorsOpen": "Einlass ab",
+    "cancelled": "Abgesagt",
+    "salesClosed": "Verkauf beendet",
+    "duration": "Dauer",
+    "ageLimit": "Altersfreigabe"
+  },
+  "tour": {
+    "label": "Tour",
+    "cities": [
+      "%d Stadt",
+      "%d Städte",
+      "%d Städte"
+    ],
+    "openIn": "Verkauf offen: %s",
+    "next": "Nächstes Konzert",
+    "choose": "Wählen Sie Ihre Stadt",
+    "hint": "Der Button führt zur Kasse des jeweiligen Konzerts: unsere Seite oder ein Partner.",
+    "about": "Über die Tour",
+    "backAll": "Alle Veranstaltungen",
+    "backTour": "Tour: %s",
+    "noDates": "Termine folgen in Kürze.",
+    "intro": "Konzerte auf Reisen: ein Programm, mehrere Städte. Wählen Sie die Stadt und kaufen Sie an der Kasse dieses Konzerts.",
+    "pastTours": "Vergangene Touren"
+  },
+  "pastEvents": {
+    "empty": "Es gibt noch keine vergangenen Veranstaltungen.",
+    "photoReport": "Fotobericht",
+    "openPhoto": "Foto öffnen"
+  },
+  "partners": {
+    "buyAt": "Tickets kaufen bei %s",
+    "alsoOn": "Auch erhältlich bei %s",
+    "alsoLabel": "Auch erhältlich bei:",
+    "organiserSite": "der Seite des Veranstalters",
+    "soldBy": "Tickets bei %s",
+    "weSell": "Tickets auf dieser Seite",
+    "buyAtOrganizer": "Beim Veranstalter kaufen",
+    "forPartners": "Für Partner",
+    "cta": "Hotels, Veranstaltungsorte und Promoter in den Städten unserer Touren: wir sind offen für Tausch und Partnerschaft.",
+    "ctaButton": "Partnerschaft vorschlagen"
+  },
+  "cookie": {
+    "text": "Wir verwenden Cookies für Analyse und Werbung (Google Analytics, Meta-Pixel). Sie werden erst nach Ihrer Zustimmung aktiviert.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "settings": "Cookie-Einstellungen",
+    "revoke": "Einwilligung widerrufen"
+  },
+  "forms": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "fullName": "Vollständiger Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sending": "Wird gesendet…",
+    "consent": "Ich akzeptiere: {terms}, {privacy}.",
+    "contact": {
+      "title": "Kontakt aufnehmen",
+      "sent": "Danke! Ihre Nachricht wurde gesendet. Wir antworten Ihnen bald per E-Mail."
+    },
+    "partnership": {
+      "title": "Partnerschaft vorschlagen",
+      "company": "Unternehmen oder Organisation",
+      "website": "Website",
+      "sent": "Danke! Wir prüfen Ihren Vorschlag und antworten per E-Mail."
+    },
+    "errors": {
+      "invalidEmail": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "fillRequired": "Bitte füllen Sie die Pflichtfelder aus.",
+      "consentRequired": "Bitte akzeptieren Sie die Bedingungen, um fortzufahren.",
+      "captcha": "Die Prüfung wurde nicht bestanden. Bitte versuchen Sie es erneut."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Ihre Tickets: %s",
+      "greeting": "Guten Tag, %s!",
+      "body": "Vielen Dank für Ihren Kauf. Ihre Tickets für „%s\" finden Sie im Anhang dieser E-Mail (PDF).",
+      "hint": "Öffnen Sie die Datei auf dem Handy und zeigen Sie den Barcode am Eingang — ausdrucken ist nicht nötig.",
+      "footer": "Bei Fragen antworten Sie einfach auf diese E-Mail.",
+      "defaultBody": "Vielen Dank für Ihren Kauf. Die Tickets für „{event}“ sind angehängt. Datum: {date}. Adresse: {venue_address}.",
+      "category": "Kategorie",
+      "seat": "Platz",
+      "price": "Preis",
+      "row": "Reihe",
+      "seatWord": "Platz",
+      "ticketNo": "Ticket Nr.",
+      "order": "Bestellung",
+      "organizer": "Veranstalter",
+      "keepNote": "Zeigen Sie den Barcode am Eingang. Teilen Sie Ihr Ticket nicht öffentlich."
+    },
+    "refund": {
+      "done": "Eine Rückerstattung über %s wurde veranlasst.",
+      "routeGateway": "Das Geld geht über %s zurück, auf dasselbe Zahlungsmittel, mit dem Sie bezahlt haben.",
+      "routeUnknown": "Das Geld geht auf dasselbe Zahlungsmittel zurück, mit dem Sie bezahlt haben.",
+      "timing": "Üblicherweise ist es in 5–10 Werktagen da — das genaue Datum bestimmt Ihre Bank."
+    },
+    "feedback": {
+      "body": "Guten Tag, {name}! Danke, dass Sie bei „{event}“ dabei waren. Wir freuen uns über Ihr Feedback: {link}."
+    },
+    "invite": {
+      "subject": "Einladung: %s",
+      "label": "Freikarte",
+      "greeting": "Lieber Freund von %s!",
+      "body": "Wir laden Sie herzlich zu „{event}“ ein. Ihre Einladung finden Sie im Anhang. Datum: {date}. Adresse: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Zurück zu den Tickets",
+    "title": "Ticketzahlung",
+    "hold": "Reservierung gilt noch",
+    "expired": "Die Reservierung ist abgelaufen. Bitte Tickets erneut auswählen.",
+    "card": "Karte",
+    "note": "Die PDF-Tickets gehen sofort nach der Zahlung an %s.",
+    "total": "Gesamt",
+    "pay": "%s bezahlen",
+    "secureShort": "Sichere Zahlung · Stripe",
+    "secure": "Kartendaten verarbeitet Stripe. Wir sehen und speichern sie nicht.",
+    "terms": "AGB",
+    "privacy": "Datenschutz",
+    "contacts": "Kontakt",
+    "reserved": "Die Plätze bleiben %d Min. lang für die Zahlung reserviert.",
+    "processing": "Wird verarbeitet…",
+    "promoToggle": "Ich habe einen Promo-Code",
+    "promoPlaceholder": "Promo-Code",
+    "promoApply": "Anwenden",
+    "promoRemove": "Entfernen",
+    "promo": {
+      "empty": "Promo-Code eingeben",
+      "noSession": "Sitzung konnte nicht gestartet werden. Seite neu laden und erneut versuchen.",
+      "applyFailed": "Der Promo-Code konnte nicht angewendet werden",
+      "applied": "Promo-Code angewendet",
+      "invalid": "Ungültiger Promo-Code: %s",
+      "partial": "Promo-Code angewendet. Ungültige Codes: %s",
+      "accepted": "Promo-Code akzeptiert — der Rabatt wird beim Bezahlen angewendet",
+      "none": "Keine gültigen Promo-Codes"
+    }
+  },
+  "thankyou": {
+    "title": "Zahlung erfolgreich",
+    "text": "Die Tickets wurden an die bei der Bestellung angegebene E-Mail-Adresse gesendet. Kommt die E-Mail nicht an, prüfen Sie den Spam-Ordner.",
+    "accountText": "<strong>Ihre Tickets immer griffbereit:</strong> neben der E-Mail können Sie sie in Ihrem Konto herunterladen oder erneut senden lassen.",
+    "accountButton": "Meine Tickets im Konto",
+    "shareTitle": "Mit Freunden macht es mehr Spaß",
+    "shareText": "Nehmen Sie jemanden mit — teilen Sie die Veranstaltung.",
+    "shareMessage": "Ich gehe zu %s. Kommst du mit? %s",
+    "copyLink": "Link kopieren",
+    "copied": "Kopiert",
+    "shareEmail": "E-Mail",
+    "failedTitle": "Zahlung fehlgeschlagen",
+    "failedText": "Es wurde kein Geld abgebucht. Sie können die Zahlung erneut versuchen.",
+    "retry": "Erneut versuchen",
+    "orderNumber": "Bestellnummer:",
+    "toEvents": "Zu den Veranstaltungen"
+  },
+  "account": {
+    "title": "Mein Konto",
+    "back": "Zurück zum Programm",
+    "myTickets": "Meine Tickets",
+    "intro": "Geben Sie die E-Mail-Adresse Ihrer Bestellung ein. Wir senden Ihnen einen Anmeldelink.",
+    "getLink": "Link senden",
+    "linkSent": "Prüfen Sie Ihren Posteingang. Gibt es Tickets zu dieser Adresse, haben wir einen Anmeldelink gesendet.",
+    "logout": "Abmelden",
+    "empty": "Zu dieser Adresse gibt es noch keine bezahlten Tickets.",
+    "orderNumber": "Bestellung Nr. %s",
+    "ticket": "Ticket %s",
+    "pdf": "Tickets herunterladen (PDF)",
+    "send": "Tickets per E-Mail senden",
+    "sent": "Tickets an %s gesendet. Prüfen Sie Ihren Posteingang und den Spam-Ordner.",
+    "errBil24": "Die Tickets konnten im Ticketsystem nicht geprüft werden. Bitte in einer Minute erneut versuchen.",
+    "errNone": "In dieser Bestellung gibt es keine aktiven Tickets.",
+    "errCooldown": "Die Tickets wurden gerade erst gesendet — bitte in %d Min. erneut versuchen.",
+    "errMailer": "Der E-Mail-Versand ist vorübergehend nicht verfügbar — laden Sie das PDF herunter.",
+    "errForbidden": "Bestellung nicht gefunden.",
+    "statusRefunded": "Bestellung erstattet",
+    "statusCancelled": "Bestellung storniert",
+    "ticketInactive": "Das Ticket ist nicht mehr gültig",
+    "eventCancelled": "Die Veranstaltung wurde abgesagt"
+  },
+  "errors": {
+    "generic": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+    "network": "Keine Verbindung zum Server. Bitte versuchen Sie es erneut.",
+    "rateLimited": "Zu viele Versuche. Warten Sie eine Minute und versuchen Sie es erneut.",
+    "unavailable": "Der Dienst ist vorübergehend nicht verfügbar. Bitte versuchen Sie es später erneut.",
+    "ticketsGone": "Leider sind die gewählten Tickets nicht mehr verfügbar. Laden Sie die Seite neu und versuchen Sie es erneut.",
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundText": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "notFoundLink": "Zur Startseite"
+  }
+}

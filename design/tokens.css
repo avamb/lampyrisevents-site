@@ -1,0 +1,40 @@
+/* Design tokens of lampyrisevents.com (WordPress, Elementor kit + lampyris mu-plugins), read 2026-11-22.
+   Source: design/tokens.json (live computed styles) and lampyris-purchase-theme.css. 1:1 values. */
+:root {
+  /* colour */
+  --lp-yellow: #FCDC54;        /* accent: buttons, badges, footer rule */
+  --lp-yellow-hover: #F5D23A;
+  --lp-ink: #101010;           /* header, footer, headings on light */
+  --lp-text: #292F33;          /* body text */
+  --lp-muted: #5F6E77;
+  --lp-link: #0B57D0;
+  --lp-bg: #F7F7F7;            /* page background */
+  --lp-soft-bg: #F5F5F2;
+  --lp-soft-bg-hover: #ECECE8;
+  --lp-border: #E4E7E3;
+  --lp-white: #FFFFFF;
+  --lp-green: #0CB959;
+  --lp-orange: #FD7E14;
+  --lp-error: #C4483E;
+  --lp-error-bg: #F9E3E1;
+  --lp-teal: #00A99D;          /* Elementor default button on content pages */
+  /* type: Manrope variable font, weights 200-800 */
+  --lp-font: "Manrope", "Segoe UI", Arial, sans-serif;
+  --lp-fs-body: 16px;  --lp-lh-body: 24px;  --lp-fw-body: 400;
+  --lp-fs-h1: 50px;    --lp-lh-h1: 57.5px;  --lp-fw-h1: 700;
+  --lp-fs-lead: 22px;  --lp-fw-lead: 600;
+  --lp-fs-sub: 20px;   --lp-fs-accent: 18px; --lp-fw-accent: 500;
+  --lp-fs-small: 13px;
+  /* shape and layout */
+  --lp-radius: 12px;
+  --lp-radius-card: 8px;
+  --lp-radius-pill: 32px;
+  --lp-radius-field: 4px;
+  --lp-container: 1140px;
+  --lp-gap: 24px;
+  /* breakpoints (Elementor kit: mobile 767, tablet 1024; tours add 860 and 560) */
+  --lp-bp-mobile: 767px;
+  --lp-bp-tablet: 1024px;
+  --lp-bp-tour-two: 860px;
+  --lp-bp-tour-narrow: 560px;
+}

@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Meniu",
+    "language": "Kalba",
+    "close": "Uždaryti",
+    "back": "Atgal",
+    "next": "Toliau",
+    "loading": "Įkeliama…",
+    "loadMore": "Rodyti daugiau",
+    "required": "Privaloma",
+    "hoursShort": "val.",
+    "minutesShort": "min."
+  },
+  "nav": {
+    "home": "Pagrindinis",
+    "tickets": "Bilietai",
+    "tours": "Mūsų turai",
+    "pastEvents": "Įvykę renginiai",
+    "partnerships": "Partnerystė",
+    "aboutUs": "Apie mus",
+    "contacts": "Kontaktai",
+    "contactUs": "Susisiekite su mumis",
+    "howToBuy": "Kaip pirkti",
+    "faq": "Dažnai užduodami klausimai",
+    "sellTickets": "Parduokite bilietus su mumis"
+  },
+  "footer": {
+    "privacy": "Privatumo politika",
+    "terms": "Naudojimo sąlygos",
+    "forBuyers": "Bilietų pirkėjams",
+    "forOrganizers": "Organizatoriams",
+    "processing": "Bilietų apdorojimas: ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Mūsų renginiai",
+    "empty": "Šiuo metu nėra parduodamų renginių. Naujos datos netrukus atsiras čia."
+  },
+  "event": {
+    "tickets": "Bilietai",
+    "buy": "Pirkti bilietus",
+    "soldOut": "Parduota",
+    "soon": "Netrukus",
+    "past": "Įvyko",
+    "onSale": "Parduodama",
+    "priceFrom": "nuo %s",
+    "onMap": "žemėlapyje",
+    "promoter": "Organizatorius",
+    "organiser": "Organizatorius",
+    "venue": "Renginio vieta",
+    "address": "Adresas",
+    "date": "Data",
+    "dates": "Datos",
+    "doorsOpen": "Durys atidaromos",
+    "cancelled": "Atšaukta",
+    "salesClosed": "Prekyba baigta",
+    "duration": "Trukmė",
+    "ageLimit": "Amžiaus cenzas"
+  },
+  "tour": {
+    "label": "Turas",
+    "cities": [
+      "%d miestas",
+      "%d miestai",
+      "%d miestų"
+    ],
+    "openIn": "Bilietų prekyba atidaryta: %s",
+    "next": "Artimiausias koncertas",
+    "choose": "Pasirinkite savo miestą",
+    "hint": "Mygtukas veda į šio koncerto bilietų kasą: mūsų puslapį arba partnerio svetainę.",
+    "about": "Apie turą",
+    "backAll": "Visi renginiai",
+    "backTour": "Turas: %s",
+    "noDates": "Datas paskelbsime netrukus.",
+    "intro": "Keliaujantys koncertai: viena programa, keli miestai. Pasirinkite miestą ir pirkite bilietą būtent to koncerto kasoje.",
+    "pastTours": "Įvykę turai"
+  },
+  "pastEvents": {
+    "empty": "Įvykusių renginių dar nėra.",
+    "photoReport": "Fotoreportažas",
+    "openPhoto": "Atidaryti nuotrauką"
+  },
+  "partners": {
+    "buyAt": "Pirkti bilietus: %s",
+    "alsoOn": "Taip pat parduodama: %s",
+    "alsoLabel": "Taip pat parduodama:",
+    "organiserSite": "organizatoriaus svetainėje",
+    "soldBy": "Bilietus parduoda %s",
+    "weSell": "Bilietai šioje svetainėje",
+    "buyAtOrganizer": "Pirkti pas organizatorių",
+    "forPartners": "Partneriams",
+    "cta": "Viešbučiai, koncertų salės ir organizatoriai mūsų turų miestuose: esame atviri barteriui ir partnerystei.",
+    "ctaButton": "Pasiūlyti partnerystę"
+  },
+  "cookie": {
+    "text": "Naudojame slapukus analitikai ir reklamai (Google Analytics, Meta pikselis). Jie įjungiami tik jums sutikus.",
+    "accept": "Sutinku",
+    "decline": "Atmesti",
+    "settings": "Slapukų nustatymai",
+    "revoke": "Atšaukti sutikimą"
+  },
+  "forms": {
+    "firstName": "Vardas",
+    "lastName": "Pavardė",
+    "fullName": "Vardas ir pavardė",
+    "email": "El. paštas",
+    "phone": "Telefonas",
+    "message": "Žinutė",
+    "send": "Siųsti",
+    "sending": "Siunčiama…",
+    "consent": "Sutinku: {terms}, {privacy}.",
+    "contact": {
+      "title": "Susisiekite su mumis",
+      "sent": "Ačiū! Jūsų žinutė išsiųsta. Netrukus atsakysime el. paštu."
+    },
+    "partnership": {
+      "title": "Pasiūlyti partnerystę",
+      "company": "Įmonė arba organizacija",
+      "website": "Svetainė",
+      "sent": "Ačiū! Apsvarstysime jūsų pasiūlymą ir atsakysime el. paštu."
+    },
+    "errors": {
+      "invalidEmail": "Įveskite galiojantį el. pašto adresą.",
+      "fillRequired": "Užpildykite privalomus laukus.",
+      "consentRequired": "Norėdami tęsti, sutikite su sąlygomis.",
+      "captcha": "Patikra nepavyko. Bandykite dar kartą."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Jūsų bilietai: %s",
+      "greeting": "Sveiki, %s!",
+      "body": "Dėkojame už pirkinį. Jūsų bilietai į „%s“ pridėti prie šio laiško (PDF).",
+      "hint": "Atidarykite failą telefone ir prie įėjimo parodykite brūkšninį kodą — spausdinti nereikia.",
+      "footer": "Jei turite klausimų, tiesiog atsakykite į šį laišką.",
+      "defaultBody": "Dėkojame už pirkinį. Bilietai į „{event}“ pridėti. Data: {date}. Adresas: {venue_address}.",
+      "category": "Kategorija",
+      "seat": "Vieta",
+      "price": "Kaina",
+      "row": "eilė",
+      "seatWord": "vieta",
+      "ticketNo": "Bilietas Nr.",
+      "order": "Užsakymas",
+      "organizer": "Organizatorius",
+      "keepNote": "Prie įėjimo parodykite brūkšninį kodą. Neskelbkite bilieto viešai."
+    },
+    "refund": {
+      "done": "Grąžinimas %s atliktas.",
+      "routeGateway": "Pinigai grįš per %s tuo pačiu būdu, kuriuo mokėjote.",
+      "routeUnknown": "Pinigai grįš tuo pačiu būdu, kuriuo mokėjote.",
+      "timing": "Paprastai jie pasiekia per 5–10 darbo dienų — tikslią datą nustato jūsų bankas."
+    },
+    "feedback": {
+      "body": "Sveiki, {name}! Dėkojame, kad dalyvavote renginyje „{event}“. Mielai išgirstume jūsų atsiliepimą: {link}."
+    },
+    "invite": {
+      "subject": "Kvietimas: %s",
+      "label": "Kvietimas",
+      "greeting": "Gerbiamas %s drauge!",
+      "body": "Kviečiame jus į „{event}“. Jūsų kvietimas pridėtas. Data: {date}. Adresas: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Atgal į bilietus",
+    "title": "Bilietų apmokėjimas",
+    "hold": "Rezervacija galioja dar",
+    "expired": "Rezervacija baigėsi. Pasirinkite bilietus iš naujo.",
+    "card": "Kortelė",
+    "note": "PDF bilietai iškart po apmokėjimo bus išsiųsti adresu %s.",
+    "total": "Iš viso",
+    "pay": "Mokėti %s",
+    "secureShort": "Saugus mokėjimas · Stripe",
+    "secure": "Kortelės duomenis tvarko Stripe. Mes jų nematome ir nesaugome.",
+    "terms": "Sąlygos",
+    "privacy": "Privatumas",
+    "contacts": "Kontaktai",
+    "reserved": "Vietos rezervuotos %d min., kol užbaigsite mokėjimą.",
+    "processing": "Apdorojama…",
+    "promoToggle": "Turiu nuolaidos kodą",
+    "promoPlaceholder": "Nuolaidos kodas",
+    "promoApply": "Taikyti",
+    "promoRemove": "Pašalinti",
+    "promo": {
+      "empty": "Įveskite nuolaidos kodą",
+      "noSession": "Nepavyko pradėti bilietų sesijos. Perkraukite puslapį ir bandykite dar kartą.",
+      "applyFailed": "Nepavyko pritaikyti nuolaidos kodo",
+      "applied": "Nuolaidos kodas pritaikytas",
+      "invalid": "Neteisingas nuolaidos kodas: %s",
+      "partial": "Nuolaidos kodas pritaikytas. Neteisingi kodai: %s",
+      "accepted": "Nuolaidos kodas priimtas — nuolaida bus pritaikyta užsakymo metu",
+      "none": "Galiojančių nuolaidos kodų nėra"
+    }
+  },
+  "thankyou": {
+    "title": "Mokėjimas sėkmingas",
+    "text": "Bilietai išsiųsti el. pašto adresu, nurodytu pateikiant užsakymą. Jei laiškas neatkeliauja, patikrinkite šlamšto aplanką.",
+    "accountText": "<strong>Bilietai visada po ranka:</strong> be el. laiško, juos galite atsisiųsti arba išsiųsti dar kartą iš savo paskyros.",
+    "accountButton": "Mano bilietai paskyroje",
+    "shareTitle": "Su draugais smagiau",
+    "shareText": "Pakvieskite ką nors kartu — pasidalykite renginiu.",
+    "shareMessage": "Einu į %s. Eisi su manimi? %s",
+    "copyLink": "Kopijuoti nuorodą",
+    "copied": "Nukopijuota",
+    "shareEmail": "El. paštas",
+    "failedTitle": "Mokėjimas nepavyko",
+    "failedText": "Pinigai nenuskaičiuoti. Galite bandyti mokėti dar kartą.",
+    "retry": "Bandyti dar kartą",
+    "orderNumber": "Užsakymo numeris:",
+    "toEvents": "Į renginius"
+  },
+  "account": {
+    "title": "Mano paskyra",
+    "back": "Atgal į renginius",
+    "myTickets": "Mano bilietai",
+    "intro": "Įveskite užsakyme nurodytą el. pašto adresą. Atsiųsime jums prisijungimo nuorodą.",
+    "getLink": "Siųsti nuorodą",
+    "linkSent": "Patikrinkite pašto dėžutę. Jei šiuo adresu yra bilietų, prisijungimo nuoroda jau išsiųsta.",
+    "logout": "Atsijungti",
+    "empty": "Šiuo adresu dar nėra apmokėtų bilietų.",
+    "orderNumber": "Užsakymas Nr. %s",
+    "ticket": "Bilietas %s",
+    "pdf": "Atsisiųsti bilietus (PDF)",
+    "send": "Siųsti bilietus el. paštu",
+    "sent": "Bilietai išsiųsti adresu %s. Patikrinkite pašto dėžutę ir šlamšto aplanką.",
+    "errBil24": "Nepavyko patikrinti bilietų bilietų sistemoje. Bandykite po minutės.",
+    "errNone": "Šiame užsakyme nėra aktyvių bilietų.",
+    "errCooldown": "Bilietai neseniai buvo išsiųsti — bandykite dar kartą po %d min.",
+    "errMailer": "El. laiškų siuntimas laikinai nepasiekiamas — atsisiųskite PDF.",
+    "errForbidden": "Užsakymas nerastas.",
+    "statusRefunded": "Užsakymas grąžintas",
+    "statusCancelled": "Užsakymas atšauktas",
+    "ticketInactive": "Bilietas nebegalioja",
+    "eventCancelled": "Renginys atšauktas"
+  },
+  "errors": {
+    "generic": "Kažkas nepavyko. Bandykite dar kartą.",
+    "network": "Nėra ryšio su serveriu. Bandykite dar kartą.",
+    "rateLimited": "Per daug bandymų. Palaukite minutę ir bandykite dar kartą.",
+    "unavailable": "Paslauga laikinai neveikia. Bandykite vėliau.",
+    "ticketsGone": "Deja, pasirinkti bilietai nebeprieinami. Atnaujinkite puslapį ir bandykite dar kartą.",
+    "notFoundTitle": "Puslapis nerastas",
+    "notFoundText": "Ieškomo puslapio nėra arba jis perkeltas.",
+    "notFoundLink": "Eiti į pagrindinį puslapį"
+  }
+}

@@ -1,0 +1,2091 @@
+{
+    "generated": "2026-11-22T12:24:41+00:00",
+    "source": "wp-redirect-sources-export.php",
+    "products": [
+        {
+            "id": 7866,
+            "slug": "ivo-dimchev-in-prague",
+            "title": "IVO DIMCHEV in Prague",
+            "url": "https://lampyrisevents.com/product/ivo-dimchev-in-prague/",
+            "meta": {
+                "bil24_action_event_id": "7040243",
+                "bil24_action_id": "267438"
+            }
+        },
+        {
+            "id": 7867,
+            "slug": "james-lavelle-unkle-mowax-skalpel-omnion",
+            "title": "James Lavelle (UNKLE / Mo'Wax) + Skalpel + Omnion in Prague",
+            "url": "https://lampyrisevents.com/product/james-lavelle-unkle-mowax-skalpel-omnion/",
+            "meta": {
+                "bil24_action_event_id": "7040276",
+                "bil24_action_id": "267448"
+            }
+        },
+        {
+            "id": 7868,
+            "slug": "variation-7867-cat-93923162-default-tariff",
+            "title": "James Lavelle (UNKLE / Mo'Wax) + Skalpel + Omnion in Prague - GA",
+            "url": "https://lampyrisevents.com/product/james-lavelle-unkle-mowax-skalpel-omnion/?attribute_pa_ticket_category=cat-93923162&attribute_pa_ticket_tariff=default-tariff",
+            "meta": {
+                "_sku": "BIL24-7040276-93923162"
+            }
+        }
+    ],
+    "tags": [
+        {
+            "term_id": "273",
+            "slug": "past",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "274",
+            "slug": "actual",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "275",
+            "slug": "minulost",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "276",
+            "slug": "passe",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "277",
+            "slug": "proshloe",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "278",
+            "slug": "przeszlosc",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "283",
+            "slug": "vergangenheit",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "284",
+            "slug": "pasado",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "290",
+            "slug": "actual-uk",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "291",
+            "slug": "actual-ru",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "292",
+            "slug": "actual-cs",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "294",
+            "slug": "rzeczywisty",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "298",
+            "slug": "tegelik",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "299",
+            "slug": "todellinen",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "300",
+            "slug": "past",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/past/"
+        },
+        {
+            "term_id": "301",
+            "slug": "tenyleges",
+            "taxonomy": "post_tag",
+            "url": "https://lampyrisevents.com/tag/actual/"
+        },
+        {
+            "term_id": "295",
+            "slug": "upcoming",
+            "taxonomy": "product_tag",
+            "url": "https://lampyrisevents.com/product-tag/upcoming/"
+        }
+    ],
+    "post_urls": [
+        {
+            "id": 2,
+            "type": "page",
+            "url": "https://lampyrisevents.com/sample-page/"
+        },
+        {
+            "id": 3,
+            "type": "page",
+            "url": "https://lampyrisevents.com/privacy-policy/"
+        },
+        {
+            "id": 8307,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/privacy-policy/"
+        },
+        {
+            "id": 8420,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/privacy-policy/"
+        },
+        {
+            "id": 8422,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/privacy-policy/"
+        },
+        {
+            "id": 8424,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/privacy-policy/"
+        },
+        {
+            "id": 8426,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/privacy-policy/"
+        },
+        {
+            "id": 9,
+            "type": "page",
+            "url": "https://lampyrisevents.com/basket/"
+        },
+        {
+            "id": 10,
+            "type": "page",
+            "url": "https://lampyrisevents.com/checkout/"
+        },
+        {
+            "id": 11,
+            "type": "page",
+            "url": "https://lampyrisevents.com/my-account/"
+        },
+        {
+            "id": 7897,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/checkout/"
+        },
+        {
+            "id": 7898,
+            "type": "page",
+            "url": "https://lampyrisevents.com/checkout/"
+        },
+        {
+            "id": 7899,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/checkout/"
+        },
+        {
+            "id": 7900,
+            "type": "page",
+            "url": "https://lampyrisevents.com/checkout/"
+        },
+        {
+            "id": 7901,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/checkout/"
+        },
+        {
+            "id": 7902,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/checkout/"
+        },
+        {
+            "id": 7903,
+            "type": "page",
+            "url": "https://lampyrisevents.com/checkout/"
+        },
+        {
+            "id": 7904,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/checkout/"
+        },
+        {
+            "id": 7905,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/basket/"
+        },
+        {
+            "id": 7906,
+            "type": "page",
+            "url": "https://lampyrisevents.com/basket/"
+        },
+        {
+            "id": 7907,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/basket/"
+        },
+        {
+            "id": 7908,
+            "type": "page",
+            "url": "https://lampyrisevents.com/basket/"
+        },
+        {
+            "id": 7909,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/basket/"
+        },
+        {
+            "id": 7910,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/basket/"
+        },
+        {
+            "id": 7911,
+            "type": "page",
+            "url": "https://lampyrisevents.com/basket/"
+        },
+        {
+            "id": 7912,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/basket/"
+        },
+        {
+            "id": 21,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3069,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/home/"
+        },
+        {
+            "id": 3125,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/startseite/"
+        },
+        {
+            "id": 3127,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/strona-glowna/"
+        },
+        {
+            "id": 3129,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/glavnaya/"
+        },
+        {
+            "id": 3131,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3133,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/golovna/"
+        },
+        {
+            "id": 3135,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3137,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/home/"
+        },
+        {
+            "id": 3139,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3141,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3143,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/etusivu/"
+        },
+        {
+            "id": 3145,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3147,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3149,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3151,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3153,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3155,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3157,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3159,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/kodu/"
+        },
+        {
+            "id": 3161,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3163,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/sakums/"
+        },
+        {
+            "id": 3165,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/pagrindinis/"
+        },
+        {
+            "id": 3167,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3169,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 3171,
+            "type": "page",
+            "url": "https://lampyrisevents.com/home/"
+        },
+        {
+            "id": 160,
+            "type": "page",
+            "url": "https://lampyrisevents.com/about-us/"
+        },
+        {
+            "id": 3077,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/o-nas/"
+        },
+        {
+            "id": 5976,
+            "type": "page",
+            "url": "https://lampyrisevents.com/about-us/"
+        },
+        {
+            "id": 5978,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/ueber-uns/"
+        },
+        {
+            "id": 5980,
+            "type": "page",
+            "url": "https://lampyrisevents.com/about-us/"
+        },
+        {
+            "id": 5982,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/o-nas/"
+        },
+        {
+            "id": 5984,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/o-nas/"
+        },
+        {
+            "id": 5986,
+            "type": "page",
+            "url": "https://lampyrisevents.com/about-us/"
+        },
+        {
+            "id": 5988,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/pro-nas/"
+        },
+        {
+            "id": 8315,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/about-us/"
+        },
+        {
+            "id": 8452,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/about-us/"
+        },
+        {
+            "id": 8454,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/about-us/"
+        },
+        {
+            "id": 8456,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/about-us/"
+        },
+        {
+            "id": 8458,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/about-us/"
+        },
+        {
+            "id": 162,
+            "type": "page",
+            "url": "https://lampyrisevents.com/contacts/"
+        },
+        {
+            "id": 3075,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/kontakty/"
+        },
+        {
+            "id": 5962,
+            "type": "page",
+            "url": "https://lampyrisevents.com/contacts/"
+        },
+        {
+            "id": 5964,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/kontakte/"
+        },
+        {
+            "id": 5966,
+            "type": "page",
+            "url": "https://lampyrisevents.com/contacts/"
+        },
+        {
+            "id": 5968,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/kontakty/"
+        },
+        {
+            "id": 5970,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/kontakty/"
+        },
+        {
+            "id": 5972,
+            "type": "page",
+            "url": "https://lampyrisevents.com/contacts/"
+        },
+        {
+            "id": 5974,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/kontakty/"
+        },
+        {
+            "id": 8317,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/contacts/"
+        },
+        {
+            "id": 8460,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/contacts/"
+        },
+        {
+            "id": 8462,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/contacts/"
+        },
+        {
+            "id": 8464,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/contacts/"
+        },
+        {
+            "id": 8466,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/contacts/"
+        },
+        {
+            "id": 166,
+            "type": "page",
+            "url": "https://lampyrisevents.com/how-to-buy/"
+        },
+        {
+            "id": 3073,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/jak-nakupovat/"
+        },
+        {
+            "id": 6021,
+            "type": "page",
+            "url": "https://lampyrisevents.com/how-to-buy/"
+        },
+        {
+            "id": 6023,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/wie-sie-kaufen/"
+        },
+        {
+            "id": 6025,
+            "type": "page",
+            "url": "https://lampyrisevents.com/how-to-buy/"
+        },
+        {
+            "id": 6027,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/jak-kupic/"
+        },
+        {
+            "id": 6029,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/kak-kupit/"
+        },
+        {
+            "id": 6031,
+            "type": "page",
+            "url": "https://lampyrisevents.com/how-to-buy/"
+        },
+        {
+            "id": 6033,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/yak-kupyty/"
+        },
+        {
+            "id": 8301,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/how-to-buy/"
+        },
+        {
+            "id": 8396,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/how-to-buy/"
+        },
+        {
+            "id": 8398,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/how-to-buy/"
+        },
+        {
+            "id": 8400,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/how-to-buy/"
+        },
+        {
+            "id": 8402,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/how-to-buy/"
+        },
+        {
+            "id": 168,
+            "type": "page",
+            "url": "https://lampyrisevents.com/frequently-asked-questions/"
+        },
+        {
+            "id": 3079,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/casto-kladene-otazky/"
+        },
+        {
+            "id": 6007,
+            "type": "page",
+            "url": "https://lampyrisevents.com/frequently-asked-questions/"
+        },
+        {
+            "id": 6009,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/haeufig-gestellte-fragen/"
+        },
+        {
+            "id": 6011,
+            "type": "page",
+            "url": "https://lampyrisevents.com/frequently-asked-questions/"
+        },
+        {
+            "id": 6013,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/czesto-zadawane-pytania/"
+        },
+        {
+            "id": 6015,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/chasto-zadavaemye-voprosy/"
+        },
+        {
+            "id": 6017,
+            "type": "page",
+            "url": "https://lampyrisevents.com/frequently-asked-questions/"
+        },
+        {
+            "id": 6019,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/poshyreni-zapytannya/"
+        },
+        {
+            "id": 8303,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/frequently-asked-questions/"
+        },
+        {
+            "id": 8404,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/frequently-asked-questions/"
+        },
+        {
+            "id": 8406,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/frequently-asked-questions/"
+        },
+        {
+            "id": 8408,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/frequently-asked-questions/"
+        },
+        {
+            "id": 8410,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/frequently-asked-questions/"
+        },
+        {
+            "id": 170,
+            "type": "page",
+            "url": "https://lampyrisevents.com/terms-of-use/"
+        },
+        {
+            "id": 5903,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/podminky-pouziti/"
+        },
+        {
+            "id": 8305,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/terms-of-use/"
+        },
+        {
+            "id": 8412,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/terms-of-use/"
+        },
+        {
+            "id": 8414,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/terms-of-use/"
+        },
+        {
+            "id": 8416,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/terms-of-use/"
+        },
+        {
+            "id": 8418,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/terms-of-use/"
+        },
+        {
+            "id": 172,
+            "type": "page",
+            "url": "https://lampyrisevents.com/payment-success/"
+        },
+        {
+            "id": 173,
+            "type": "page",
+            "url": "https://lampyrisevents.com/payment-failed/"
+        },
+        {
+            "id": 178,
+            "type": "page",
+            "url": "https://lampyrisevents.com/sell-tickets-with-us/"
+        },
+        {
+            "id": 3089,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/prodavejte-s-nami-vstupenky/"
+        },
+        {
+            "id": 3173,
+            "type": "page",
+            "url": "https://lampyrisevents.com/sell-tickets-with-us/"
+        },
+        {
+            "id": 3175,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/verkaufen-sie-tickets-mit-uns/"
+        },
+        {
+            "id": 3177,
+            "type": "page",
+            "url": "https://lampyrisevents.com/sell-tickets-with-us/"
+        },
+        {
+            "id": 3179,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/sprzedawaj-z-nami-bilety/"
+        },
+        {
+            "id": 3181,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/prodavajte-bilety-vmeste-s-nami/"
+        },
+        {
+            "id": 3183,
+            "type": "page",
+            "url": "https://lampyrisevents.com/sell-tickets-with-us/"
+        },
+        {
+            "id": 3185,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/prodavajte-kvytky-razom-z-namy/"
+        },
+        {
+            "id": 8309,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/sell-tickets-with-us/"
+        },
+        {
+            "id": 8428,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/sell-tickets-with-us/"
+        },
+        {
+            "id": 8430,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/sell-tickets-with-us/"
+        },
+        {
+            "id": 8432,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/sell-tickets-with-us/"
+        },
+        {
+            "id": 8434,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/sell-tickets-with-us/"
+        },
+        {
+            "id": 182,
+            "type": "page",
+            "url": "https://lampyrisevents.com/create-event/"
+        },
+        {
+            "id": 3085,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/vytvorit-udalost/"
+        },
+        {
+            "id": 3187,
+            "type": "page",
+            "url": "https://lampyrisevents.com/create-event/"
+        },
+        {
+            "id": 3189,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/ereignis-erstellen/"
+        },
+        {
+            "id": 3191,
+            "type": "page",
+            "url": "https://lampyrisevents.com/create-event/"
+        },
+        {
+            "id": 3193,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/utworz-zdarzenie/"
+        },
+        {
+            "id": 3195,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/sozdajte-sobytie/"
+        },
+        {
+            "id": 3197,
+            "type": "page",
+            "url": "https://lampyrisevents.com/create-event/"
+        },
+        {
+            "id": 3199,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/stvoryty-podiyu/"
+        },
+        {
+            "id": 8311,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/create-event/"
+        },
+        {
+            "id": 8436,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/create-event/"
+        },
+        {
+            "id": 8438,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/create-event/"
+        },
+        {
+            "id": 8440,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/create-event/"
+        },
+        {
+            "id": 8442,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/create-event/"
+        },
+        {
+            "id": 184,
+            "type": "page",
+            "url": "https://lampyrisevents.com/partnerships/"
+        },
+        {
+            "id": 3087,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/partnerstvi/"
+        },
+        {
+            "id": 5948,
+            "type": "page",
+            "url": "https://lampyrisevents.com/partnerships/"
+        },
+        {
+            "id": 5950,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/partnerschaften/"
+        },
+        {
+            "id": 5952,
+            "type": "page",
+            "url": "https://lampyrisevents.com/partnerships/"
+        },
+        {
+            "id": 5954,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/partnerstwa/"
+        },
+        {
+            "id": 5956,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/partnerskie-otnosheniya/"
+        },
+        {
+            "id": 5958,
+            "type": "page",
+            "url": "https://lampyrisevents.com/partnerships/"
+        },
+        {
+            "id": 5960,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/partnerstva/"
+        },
+        {
+            "id": 8313,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/partnerships/"
+        },
+        {
+            "id": 8444,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/partnerships/"
+        },
+        {
+            "id": 8446,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/partnerships/"
+        },
+        {
+            "id": 8448,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/partnerships/"
+        },
+        {
+            "id": 8450,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/partnerships/"
+        },
+        {
+            "id": 186,
+            "type": "page",
+            "url": "https://lampyrisevents.com/past-events/"
+        },
+        {
+            "id": 5901,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/projekty/"
+        },
+        {
+            "id": 5934,
+            "type": "page",
+            "url": "https://lampyrisevents.com/past-events/"
+        },
+        {
+            "id": 5936,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/projekte/"
+        },
+        {
+            "id": 5938,
+            "type": "page",
+            "url": "https://lampyrisevents.com/past-events/"
+        },
+        {
+            "id": 5940,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/projekty/"
+        },
+        {
+            "id": 5942,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/proekty/"
+        },
+        {
+            "id": 5944,
+            "type": "page",
+            "url": "https://lampyrisevents.com/past-events/"
+        },
+        {
+            "id": 5946,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/proekty/"
+        },
+        {
+            "id": 8299,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/past-events/"
+        },
+        {
+            "id": 8388,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/past-events/"
+        },
+        {
+            "id": 8390,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/past-events/"
+        },
+        {
+            "id": 8392,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/past-events/"
+        },
+        {
+            "id": 8394,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/past-events/"
+        },
+        {
+            "id": 2768,
+            "type": "page",
+            "url": "https://lampyrisevents.com/downloads/"
+        },
+        {
+            "id": 3083,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/ke-stazeni-na/"
+        },
+        {
+            "id": 5920,
+            "type": "page",
+            "url": "https://lampyrisevents.com/downloads/"
+        },
+        {
+            "id": 5922,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/downloads/"
+        },
+        {
+            "id": 5924,
+            "type": "page",
+            "url": "https://lampyrisevents.com/downloads/"
+        },
+        {
+            "id": 5926,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/pliki-do-pobrania/"
+        },
+        {
+            "id": 5928,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/skachat/"
+        },
+        {
+            "id": 5930,
+            "type": "page",
+            "url": "https://lampyrisevents.com/downloads/"
+        },
+        {
+            "id": 5932,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/zavantazhennya/"
+        },
+        {
+            "id": 2968,
+            "type": "page",
+            "url": "https://lampyrisevents.com/connect-to-stripe/"
+        },
+        {
+            "id": 3081,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/pripojeni-ke-sluzbe-stripe/"
+        },
+        {
+            "id": 5906,
+            "type": "page",
+            "url": "https://lampyrisevents.com/connect-to-stripe/"
+        },
+        {
+            "id": 5908,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/mit-stripe-verbinden/"
+        },
+        {
+            "id": 5910,
+            "type": "page",
+            "url": "https://lampyrisevents.com/connect-to-stripe/"
+        },
+        {
+            "id": 5912,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/polaczenie-ze-stripe/"
+        },
+        {
+            "id": 5914,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/podklyuchenie-k-stripe/"
+        },
+        {
+            "id": 5916,
+            "type": "page",
+            "url": "https://lampyrisevents.com/connect-to-stripe/"
+        },
+        {
+            "id": 5918,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/pidklyuchitsya-do-stripe/"
+        },
+        {
+            "id": 6325,
+            "type": "page",
+            "url": "https://lampyrisevents.com/"
+        },
+        {
+            "id": 6559,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/"
+        },
+        {
+            "id": 6562,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/"
+        },
+        {
+            "id": 6565,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/"
+        },
+        {
+            "id": 6567,
+            "type": "page",
+            "url": "https://lampyrisevents.com/"
+        },
+        {
+            "id": 6569,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/"
+        },
+        {
+            "id": 6571,
+            "type": "page",
+            "url": "https://lampyrisevents.com/"
+        },
+        {
+            "id": 6573,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/"
+        },
+        {
+            "id": 6579,
+            "type": "page",
+            "url": "https://lampyrisevents.com/"
+        },
+        {
+            "id": 8297,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/"
+        },
+        {
+            "id": 8380,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/"
+        },
+        {
+            "id": 8382,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/"
+        },
+        {
+            "id": 8384,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/"
+        },
+        {
+            "id": 8386,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/"
+        },
+        {
+            "id": 7865,
+            "type": "page",
+            "url": "https://lampyrisevents.com/payment-successful/"
+        },
+        {
+            "id": 7913,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/payment-successful/"
+        },
+        {
+            "id": 7914,
+            "type": "page",
+            "url": "https://lampyrisevents.com/payment-successful/"
+        },
+        {
+            "id": 7915,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/payment-successful/"
+        },
+        {
+            "id": 7916,
+            "type": "page",
+            "url": "https://lampyrisevents.com/payment-successful/"
+        },
+        {
+            "id": 7917,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/payment-successful/"
+        },
+        {
+            "id": 7918,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/payment-successful/"
+        },
+        {
+            "id": 7919,
+            "type": "page",
+            "url": "https://lampyrisevents.com/payment-successful/"
+        },
+        {
+            "id": 7920,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/payment-successful/"
+        },
+        {
+            "id": 9274,
+            "type": "page",
+            "url": "https://lampyrisevents.com/tours/"
+        },
+        {
+            "id": 9276,
+            "type": "page",
+            "url": "https://lampyrisevents.com/cs/tours/"
+        },
+        {
+            "id": 9279,
+            "type": "page",
+            "url": "https://lampyrisevents.com/et/tours/"
+        },
+        {
+            "id": 9282,
+            "type": "page",
+            "url": "https://lampyrisevents.com/fi/tours/"
+        },
+        {
+            "id": 9285,
+            "type": "page",
+            "url": "https://lampyrisevents.com/de/tours/"
+        },
+        {
+            "id": 9288,
+            "type": "page",
+            "url": "https://lampyrisevents.com/hu/tours/"
+        },
+        {
+            "id": 9291,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lv/tours/"
+        },
+        {
+            "id": 9294,
+            "type": "page",
+            "url": "https://lampyrisevents.com/lt/tours/"
+        },
+        {
+            "id": 9297,
+            "type": "page",
+            "url": "https://lampyrisevents.com/pl/tours/"
+        },
+        {
+            "id": 9300,
+            "type": "page",
+            "url": "https://lampyrisevents.com/ru/tours/"
+        },
+        {
+            "id": 9303,
+            "type": "page",
+            "url": "https://lampyrisevents.com/uk/tours/"
+        },
+        {
+            "id": 6360,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-dolin-oskar-2024-ocekavani-a-zklamani-sezony-marbella/"
+        },
+        {
+            "id": 6357,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-dolin-oskar-2024-ocekavani-a-zklamani-sezony-barcelona/"
+        },
+        {
+            "id": 6359,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-dolin-oskar-2024-ocekavani-a-zklamani-sezony-alicante/"
+        },
+        {
+            "id": 6358,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-dolin-oskar-2024-ocekavani-a-zklamani-sezony-valencia/"
+        },
+        {
+            "id": 2353,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/boris-grebenshikov/"
+        },
+        {
+            "id": 6366,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/boris-grebenshikov-a-bg-prague/"
+        },
+        {
+            "id": 2354,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-praga/"
+        },
+        {
+            "id": 6364,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prehlidka-zabavnych-balonku-cz-tour-praga/"
+        },
+        {
+            "id": 3204,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-first-soap-bubble-theater-happiness-bubbles-formula-pardubice/"
+        },
+        {
+            "id": 6607,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prvni-divadlo-s-mydlovymi-bublinami-vzorec-bublin-stesti-pardubice/"
+        },
+        {
+            "id": 3205,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/tequilajazzz-family-in-exile-tour-prague/"
+        },
+        {
+            "id": 6356,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/tequilajazzz-family-in-exile-tour-praha/"
+        },
+        {
+            "id": 3206,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-first-soap-bubble-theater-happiness-bubbles-formula-prague/"
+        },
+        {
+            "id": 6608,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prvni-divadlo-s-mydlovymi-bublinami-vzorec-bublinek-stesti-praha/"
+        },
+        {
+            "id": 6367,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-dolin-kino-2-valecneho-roku-praha/"
+        },
+        {
+            "id": 3210,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/boris-grebenshchikov-and-akvarium-band-prague/"
+        },
+        {
+            "id": 6369,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/boris-grebenshchikov-a-skupina-akvarium-praha/"
+        },
+        {
+            "id": 3209,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/tequilajazzz-prague/"
+        },
+        {
+            "id": 6368,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/tequilajazzz-praha/"
+        },
+        {
+            "id": 3533,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/anton-batagov-selected-letters-of-sergei-racmaninoff-prague/"
+        },
+        {
+            "id": 6365,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-batagov-vybrane-dopisy-sergeje-racmaninova-praha/"
+        },
+        {
+            "id": 6341,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-batagov-bach-praha/"
+        },
+        {
+            "id": 6342,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/fr/events/anton-batagov-bach-prague/"
+        },
+        {
+            "id": 6343,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/anton-batagov-bah-praga/"
+        },
+        {
+            "id": 6344,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/pl/events/anton-batagov-bach-praga/"
+        },
+        {
+            "id": 6604,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/de/events/anton-batagov-bach-prag/"
+        },
+        {
+            "id": 6605,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/es/events/anton-batagov-bach-praga/"
+        },
+        {
+            "id": 5414,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-cz-tour-karlovy-vary/"
+        },
+        {
+            "id": 6363,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prehlidka-zabavnych-balonku-cz-tour-karlovy-vary/"
+        },
+        {
+            "id": 5442,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-cz-tour-pardubice/"
+        },
+        {
+            "id": 6362,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prehlidka-zabavnych-balonku-cz-tour-pardubice/"
+        },
+        {
+            "id": 5443,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-cz-tour-jaromer/"
+        },
+        {
+            "id": 6355,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prehlidka-zabavnych-balonku-cz-tour-jaromer/"
+        },
+        {
+            "id": 6606,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/pl/events/funny-balloons-show-cz-tour-jaromer/"
+        },
+        {
+            "id": 5444,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-cz-tour-brno/"
+        },
+        {
+            "id": 6361,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/prehlidka-zabavnych-balonku-cz-tour-brno/"
+        },
+        {
+            "id": 6615,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/anton-batagov-in-prague-premiere-of-the-album-ocean-samsara-solo-concert/"
+        },
+        {
+            "id": 6824,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/anton-batagov-v-praze-premiera-alba-ocean-samsara-solovy-koncert/"
+        },
+        {
+            "id": 6825,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/anton-batagov-v-prage-premera-alboma-ocean-samsara-solnyj-konczert/"
+        },
+        {
+            "id": 6827,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/anton-batagov-u-prazi-premyera-albomu-okean-samsara-solnyj-konczert/"
+        },
+        {
+            "id": 6667,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/aphkhazeti-dance-georgian-state-ballet-choir-and-orchestra-in-prague/"
+        },
+        {
+            "id": 6707,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/aphkhazeti-dance-gruzinsky-statni-balet-sbor-a-orchestr-v-praze/"
+        },
+        {
+            "id": 6826,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/afhazetskij-tanecz-gruzinskij-gosudarstvennyj-balet-hor-i-orkestr-v-prage/"
+        },
+        {
+            "id": 6822,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/moj-otecz-solnaya-pesa-aleksandrasa-rubinovasa-v-prage/"
+        },
+        {
+            "id": 6823,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/muj-otec-solova-hra-alexandry-rubinovas-v-praze/"
+        },
+        {
+            "id": 6910,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/dance-in-dreams-and-reality-prague-music-for-cello-and-piano/"
+        },
+        {
+            "id": 6986,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/tanec-ve-snech-a-realite-praha-hudba-pro-violoncello-a-klavir-tatana-cigorska-klavir-kirill-varyash-violoncello/"
+        },
+        {
+            "id": 6989,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/tanczy-vo-sne-i-nayavu-praga-muzyka-dlya-violoncheli-i-fortepiano-tatyana-chigorskaya-fortepiano-kirill-varyash-violonchel/"
+        },
+        {
+            "id": 6956,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/dance-in-dreams-and-reality-brno-music-for-cello-and-piano/"
+        },
+        {
+            "id": 6987,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/tanec-ve-snech-a-realite-brno-hudba-pro-violoncello-a-klavir-tatana-cigorska-klavir-kirill-varyash-violoncello/"
+        },
+        {
+            "id": 6988,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/tanczy-v-mechtah-i-realnosti-brno-muzyka-dlya-violoncheli-i-fortepiano-tatyana-chigorskaya-fortepiano-kirill-varyash-violonchel/"
+        },
+        {
+            "id": 6990,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/boris-grebenshchikov-and-bg-plus-in-prague/"
+        },
+        {
+            "id": 7036,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/boris-grebenshhikov-i-bg-v-prage/"
+        },
+        {
+            "id": 7037,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/borys-grebenshhykov-ta-bg-u-prazi/"
+        },
+        {
+            "id": 7085,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/boris-grebenscikov-a-bg-v-praze/"
+        },
+        {
+            "id": 7126,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/setkani-s-filmovym-kritikem-antonem-dolinem-v-madridu-zivot-po-oscarovi/"
+        },
+        {
+            "id": 7127,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/vstrecha-s-kinokritikom-antonom-dolinym-v-madride-zhizn-posle-oskara/"
+        },
+        {
+            "id": 7132,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/tequilajazzz-in-prague/"
+        },
+        {
+            "id": 7160,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/tequilajazzz-v-prage/"
+        },
+        {
+            "id": 7161,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/tequilajazzz-v-praze/"
+        },
+        {
+            "id": 7164,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-the-solo-experience-prague/"
+        },
+        {
+            "id": 7193,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/cory-henry-solovy-zazitek-praha/"
+        },
+        {
+            "id": 7194,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/cory-henry-the-solo-experience-praga/"
+        },
+        {
+            "id": 7211,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-blues-brothers-soul-mission-tribute-show-prague/"
+        },
+        {
+            "id": 7221,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/the-blues-brothers-soul-mission-tribute-show-praha/"
+        },
+        {
+            "id": 7222,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/the-blues-brothers-soul-mission-tribute-show-praga/"
+        },
+        {
+            "id": 7223,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/the-blues-brothers-soul-mission-tribyut-shou-praga/"
+        },
+        {
+            "id": 7225,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-blues-brothers-soul-mission-tribute-show-brno/"
+        },
+        {
+            "id": 7236,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/the-blues-brothers-soul-mission-tribute-show-brno/"
+        },
+        {
+            "id": 7237,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/the-blues-brothers-soul-mission-tribute-show-brno/"
+        },
+        {
+            "id": 7238,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/the-blues-brothers-soul-mission-trybyut-shou-brno/"
+        },
+        {
+            "id": 7239,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/most-wonderful-fairy-tale-prague/"
+        },
+        {
+            "id": 7267,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/nejpodivuhodnejsi-pohadka-je-sam-zivot-literarne-hudebni-predstaveni-na-motivy-pohadek-hanse-christiana-andersena-praha/"
+        },
+        {
+            "id": 7268,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/samaya-chudesnaya-skazka-eto-sama-zhizn-literaturno-muzykalnyj-spektakl-po-motivam-skazok-gansa-hristiana-andersena-praga/"
+        },
+        {
+            "id": 7292,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-blues-brothers-soul-mission-tribute-show-hradec-kralove/"
+        },
+        {
+            "id": 7311,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/the-blues-brothers-soul-mission-tribute-show-hradec-kralove/"
+        },
+        {
+            "id": 7312,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/the-blues-brothers-soul-mission-tribute-show-gradecz-kralove/"
+        },
+        {
+            "id": 7315,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/the-blues-brothers-soul-mission-trybyut-shou-gradecz-kralove/"
+        },
+        {
+            "id": 7376,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/ame-live-in-prague/"
+        },
+        {
+            "id": 7387,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/ame-live-v-praze/"
+        },
+        {
+            "id": 7459,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/ame-live-v-prage/"
+        },
+        {
+            "id": 7498,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/goldie-in-prague-the-legend-is-back/"
+        },
+        {
+            "id": 7511,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/goldie-v-praze-legenda-je-zpet/"
+        },
+        {
+            "id": 7512,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/boris-grebenshikov-and-aquarium-in-prague/"
+        },
+        {
+            "id": 7523,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/boris-grebenshhikov-i-akvarium-v-prage/"
+        },
+        {
+            "id": 7524,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/boris-grebenshikov-a-akvarium-v-praze/"
+        },
+        {
+            "id": 7525,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/borys-grebenshhykov-ta-akvarium-u-prazi/"
+        },
+        {
+            "id": 7527,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/aphkhazeti-georgian-state-ballet-choir-orchestra-in-prague/"
+        },
+        {
+            "id": 7592,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/aphkhazeti-gruzinsky-statni-balet-sbor-a-orchestr-v-praze/"
+        },
+        {
+            "id": 7593,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/aphkhazeti-georgianskij-gosudarstvennyj-balet-hor-i-orkestr-v-prage/"
+        },
+        {
+            "id": 7638,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/literaturnyj-stand-up-stancziya-slov-s-ivanom-tolstym-vecher-vtoroj-kto-u-kogo-chto-ukral/"
+        },
+        {
+            "id": 7639,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/literarni-stand-up-stanice-slov-s-ivanem-tolstym-vecer-druhy-kdo-komu-co-ukradl/"
+        },
+        {
+            "id": 7671,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/literarni-stand-up-stanice-slov-s-ivanem-tolstym-tvurci-svoboda-a-stat-zadani-o-cem-ilf-a-petrov-mlceli/"
+        },
+        {
+            "id": 7672,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/literaturnyj-stendap-stancziya-slov-s-ivanom-tolstym-tvorcheskaya-svoboda-i-gosudarstvennoe-zadanie-o-chem-molchali-ilf-i-petrov/"
+        },
+        {
+            "id": 7684,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-trio/"
+        },
+        {
+            "id": 7695,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/cory-henry-trio-v-praze/"
+        },
+        {
+            "id": 7696,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/trio-kori-genri-v-prage/"
+        },
+        {
+            "id": 8296,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/pl/events/cory-henry-trio-w-pradze/"
+        },
+        {
+            "id": 7698,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/ivo-dimchev-in-prague/"
+        },
+        {
+            "id": 7754,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/ivo-dimchev-v-praze/"
+        },
+        {
+            "id": 7755,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/ivo-dimchev-v-prage/"
+        },
+        {
+            "id": 7756,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/ivo-dimchev-u-prazi/"
+        },
+        {
+            "id": 7785,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/literaturnyj-stendap-stancziya-slov-s-ivanom-tolstym-chto-dlya-nas-znachit-bastiliya-14-iyulya-gnev-krov-i-anekdoty/"
+        },
+        {
+            "id": 7786,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/literarni-stand-up-station-of-words-s-ivanem-tolstym-co-pro-nas-znamena-bastila-14-cervence-ve-znameni-hnevu-krve-a-anekdot/"
+        },
+        {
+            "id": 7819,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/james-lavelle-unkle-mowax-skalpel-omnion-in-prague/"
+        },
+        {
+            "id": 7858,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/james-lavelle-unkle-mowax-skalpel-omnion-v-praze/"
+        },
+        {
+            "id": 7859,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/dzhejms-lavell-unkle-mowax-skalpel-omnion-v-prage/"
+        },
+        {
+            "id": 7860,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/pl/events/james-lavelle-unkle-mowax-skalpel-omnion-w-pradze/"
+        },
+        {
+            "id": 8001,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-blues-brothers-soul-mission-tribute-show-prague-2/"
+        },
+        {
+            "id": 8133,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/the-blues-brothers-soul-mission-tribute-show-praha-2/"
+        },
+        {
+            "id": 8135,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/the-blues-brothers-soul-mission-tribute-show-praga-2/"
+        },
+        {
+            "id": 8137,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/ivo-dimchev-in-budapest/"
+        },
+        {
+            "id": 8247,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/ivo-dimchev-in-vilnius/"
+        },
+        {
+            "id": 8284,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/ivo-dimchev-european-tour/"
+        },
+        {
+            "id": 8294,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/evropsk%c3%a9-turn%c3%a9-iva-dimcheva/"
+        },
+        {
+            "id": 8295,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/evropejskoe-turne-ivo-dimcheva/"
+        },
+        {
+            "id": 9247,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/"
+        },
+        {
+            "id": 9248,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/divadlo-m%c3%bddlov%c3%bdch-bublin-tajemstv%c3%ad-bubliny-%c5%a1t%c4%9bst%c3%ad/"
+        },
+        {
+            "id": 9249,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/teatr-mylnyh-puzyrej-tajna-puzyrya-schastya/"
+        },
+        {
+            "id": 9250,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/teatr-mylnyh-bulbashok-tayemnyczya-bulbashky-shhastya/"
+        },
+        {
+            "id": 9251,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/"
+        },
+        {
+            "id": 9252,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/"
+        },
+        {
+            "id": 9253,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/teatr-mylnyh-puzyrej-tajna-puzyrya-schastya-2/"
+        },
+        {
+            "id": 9254,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/teatr-mylnyh-bulbashok-tayemnyczya-bulbashky-shhastya-2/"
+        },
+        {
+            "id": 9255,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness/"
+        },
+        {
+            "id": 9256,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/divadlo-mydlovych-bublin-turne-tajemstvi-bubliny-stesti/"
+        },
+        {
+            "id": 9257,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/teatr-mylnyh-bulbashok-gastroli-vystavy-tayemnyczya-bulbashky-shhastya/"
+        },
+        {
+            "id": 9258,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/teatr-mylnye-puzyri-gastrolnyj-tur-sekret-puzyrya-schastya/"
+        },
+        {
+            "id": 9262,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/"
+        },
+        {
+            "id": 9263,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/"
+        },
+        {
+            "id": 9264,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-3/"
+        },
+        {
+            "id": 9266,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show/"
+        },
+        {
+            "id": 9265,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-tour/"
+        },
+        {
+            "id": 9267,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/funny-balloons-show-tour/"
+        },
+        {
+            "id": 9268,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/gastroli-shou-zabavnyh-vozdushnyh-sharov/"
+        },
+        {
+            "id": 9269,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-2/"
+        },
+        {
+            "id": 9271,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/funny-balloons-show-4/"
+        },
+        {
+            "id": 9483,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-a-jam-good-time-tour/"
+        },
+        {
+            "id": 9535,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/turne-coryho-henryho-a-jam-good-time/"
+        },
+        {
+            "id": 9539,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/et/events/cory-henry-a-jam-good-time-tuur/"
+        },
+        {
+            "id": 9540,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/fi/events/cory-henryn-a-jam-good-time-kiertue/"
+        },
+        {
+            "id": 9541,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/pl/events/cory-henry-a-jam-good-time-tour/"
+        },
+        {
+            "id": 9542,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/gastrolnyj-tur-kori-genri-a-jam-good-time/"
+        },
+        {
+            "id": 9514,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-a-jam-good-time-in-tallinn/"
+        },
+        {
+            "id": 9515,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-a-jam-good-time-in-helsinki/"
+        },
+        {
+            "id": 9516,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-a-jam-good-time-in-warsaw/"
+        },
+        {
+            "id": 9517,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-a-jam-good-time-in-katowice/"
+        },
+        {
+            "id": 9532,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-music-from-the-heart-tour/"
+        },
+        {
+            "id": 9536,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/lv/events/kori-henrijs-music-from-the-heart-koncertturneja/"
+        },
+        {
+            "id": 9537,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/de/events/cory-henry-music-from-the-heart-tour/"
+        },
+        {
+            "id": 9538,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/kori-genri-tur-music-from-the-heart/"
+        },
+        {
+            "id": 9533,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-music-from-the-heart-in-jurmala/"
+        },
+        {
+            "id": 9534,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/cory-henry-music-from-the-heart-in-berlin/"
+        },
+        {
+            "id": 9844,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/esencia-flamenca-budapest-22-02-2027/"
+        },
+        {
+            "id": 9772,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/esencia-flamenca-europa-tour/"
+        },
+        {
+            "id": 9904,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/cs/events/esencia-flamenca-turne-po-evrope/"
+        },
+        {
+            "id": 9905,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/pl/events/trasa-koncertowa-esencia-flamenca-po-europie/"
+        },
+        {
+            "id": 9906,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/ru/events/gastrolnoe-turne-esencia-flamenca-po-evrope/"
+        },
+        {
+            "id": 9907,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/uk/events/esencia-flamenca-yevropejskyj-tur/"
+        },
+        {
+            "id": 9908,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/hu/events/esencia-flamenca-europa-turne/"
+        },
+        {
+            "id": 9901,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/esencia-flamenca-krakow-23-02-2027/"
+        },
+        {
+            "id": 9902,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/esencia-flamenca-praha-25-02-2027/"
+        },
+        {
+            "id": 9903,
+            "type": "past-event",
+            "url": "https://lampyrisevents.com/events/esencia-flamenca-warszawa-24-02-2027/"
+        },
+        {
+            "id": 7866,
+            "type": "product",
+            "url": "https://lampyrisevents.com/product/ivo-dimchev-in-prague/"
+        },
+        {
+            "id": 7867,
+            "type": "product",
+            "url": "https://lampyrisevents.com/product/james-lavelle-unkle-mowax-skalpel-omnion/"
+        }
+    ]
+}

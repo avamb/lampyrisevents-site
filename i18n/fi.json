@@ -1,0 +1,245 @@
+{
+  "common": {
+    "menu": "Valikko",
+    "language": "Kieli",
+    "close": "Sulje",
+    "back": "Takaisin",
+    "next": "Seuraava",
+    "loading": "Ladataan…",
+    "loadMore": "Näytä lisää",
+    "required": "Pakollinen",
+    "hoursShort": "h",
+    "minutesShort": "min"
+  },
+  "nav": {
+    "home": "Etusivu",
+    "tickets": "Liput",
+    "tours": "Kiertueemme",
+    "pastEvents": "Menneet tapahtumat",
+    "partnerships": "Yhteistyö",
+    "aboutUs": "Meistä",
+    "contacts": "Yhteystiedot",
+    "contactUs": "Ota yhteyttä",
+    "howToBuy": "Näin ostat",
+    "faq": "Usein kysytyt kysymykset",
+    "sellTickets": "Myy lippuja kanssamme"
+  },
+  "footer": {
+    "privacy": "Tietosuojakäytäntö",
+    "terms": "Käyttöehdot",
+    "forBuyers": "Lipunostajille",
+    "forOrganizers": "Järjestäjille",
+    "processing": "Lippujen käsittely: ArenaSoldOut.com",
+    "copyright": "© 2010–{year} Lampyris s.r.o."
+  },
+  "home": {
+    "ourEvents": "Tapahtumamme",
+    "empty": "Tällä hetkellä ei ole myynnissä tapahtumia. Uudet päivämäärät ilmestyvät tänne pian."
+  },
+  "event": {
+    "tickets": "Liput",
+    "buy": "Osta liput",
+    "soldOut": "Loppuunmyyty",
+    "soon": "Tulossa myyntiin",
+    "past": "Pidetty",
+    "onSale": "Myynnissä",
+    "priceFrom": "alk. %s",
+    "onMap": "kartalla",
+    "promoter": "Järjestäjä",
+    "organiser": "Järjestäjä",
+    "venue": "Tapahtumapaikka",
+    "address": "Osoite",
+    "date": "Päivämäärä",
+    "dates": "Päivämäärät",
+    "doorsOpen": "Ovet aukeavat",
+    "cancelled": "Peruttu",
+    "salesClosed": "Myynti on päättynyt",
+    "duration": "Kesto",
+    "ageLimit": "Ikäraja"
+  },
+  "tour": {
+    "label": "Kiertue",
+    "cities": [
+      "%d kaupunki",
+      "%d kaupunkia",
+      "%d kaupunkia"
+    ],
+    "openIn": "Myynti avoinna: %s",
+    "next": "Seuraava konsertti",
+    "choose": "Valitse kaupunkisi",
+    "hint": "Painike vie kyseisen konsertin lipunmyyntiin: meidän sivullemme tai kumppanin sivustolle.",
+    "about": "Kiertueesta",
+    "backAll": "Kaikki tapahtumat",
+    "backTour": "Kiertue: %s",
+    "noDates": "Päivämäärät ilmoitetaan pian.",
+    "intro": "Konsertit, jotka kiertävät: yksi ohjelma, useita kaupunkeja. Valitse kaupunki ja osta lippu juuri sen konsertin lipunmyynnistä.",
+    "pastTours": "Menneet kiertueet"
+  },
+  "pastEvents": {
+    "empty": "Menneitä tapahtumia ei vielä ole.",
+    "photoReport": "Kuvareportaasi",
+    "openPhoto": "Avaa kuva"
+  },
+  "partners": {
+    "buyAt": "Osta liput: %s",
+    "alsoOn": "Myynnissä myös: %s",
+    "alsoLabel": "Myynnissä myös:",
+    "organiserSite": "järjestäjän sivustolla",
+    "soldBy": "Lippuja myy %s",
+    "weSell": "Liput tällä sivustolla",
+    "buyAtOrganizer": "Osta järjestäjältä",
+    "forPartners": "Kumppaneille",
+    "cta": "Hotellit, konserttipaikat ja promoottorit kiertuekaupungeissamme: olemme avoimia vaihtokaupalle ja yhteistyölle.",
+    "ctaButton": "Ehdota yhteistyötä"
+  },
+  "cookie": {
+    "text": "Käytämme evästeitä analytiikkaan ja mainontaan (Google Analytics, Meta-pikseli). Ne otetaan käyttöön vasta, kun hyväksyt ne.",
+    "accept": "Hyväksy",
+    "decline": "Hylkää",
+    "settings": "Evästeasetukset",
+    "revoke": "Peruuta suostumus"
+  },
+  "forms": {
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "fullName": "Koko nimi",
+    "email": "Sähköposti",
+    "phone": "Puhelin",
+    "message": "Viesti",
+    "send": "Lähetä",
+    "sending": "Lähetetään…",
+    "consent": "Hyväksyn: {terms}, {privacy}.",
+    "contact": {
+      "title": "Ota yhteyttä",
+      "sent": "Kiitos! Viestisi on lähetetty. Vastaamme pian sähköpostitse."
+    },
+    "partnership": {
+      "title": "Ehdota yhteistyötä",
+      "company": "Yritys tai organisaatio",
+      "website": "Verkkosivusto",
+      "sent": "Kiitos! Käymme ehdotuksesi läpi ja vastaamme sähköpostitse."
+    },
+    "errors": {
+      "invalidEmail": "Anna kelvollinen sähköpostiosoite.",
+      "fillRequired": "Täytä pakolliset kentät.",
+      "consentRequired": "Jatka hyväksymällä ehdot.",
+      "captcha": "Tarkistus epäonnistui. Yritä uudelleen."
+    }
+  },
+  "mailer": {
+    "ticket": {
+      "subject": "Lippusi: %s",
+      "greeting": "Hei %s!",
+      "body": "Kiitos ostoksestasi. Liput tapahtumaan ”%s” ovat tämän viestin liitteenä (PDF).",
+      "hint": "Avaa tiedosto puhelimella ja näytä viivakoodi sisäänkäynnillä — tulostaminen ei ole tarpeen.",
+      "footer": "Jos sinulla on kysyttävää, vastaa vain tähän viestiin.",
+      "defaultBody": "Kiitos ostoksestasi. Liput tapahtumaan ”{event}” ovat liitteenä. Päivämäärä: {date}. Osoite: {venue_address}.",
+      "category": "Kategoria",
+      "seat": "Paikka",
+      "price": "Hinta",
+      "row": "rivi",
+      "seatWord": "paikka",
+      "ticketNo": "Lippu nro",
+      "order": "Tilaus",
+      "organizer": "Järjestäjä",
+      "keepNote": "Näytä viivakoodi sisäänkäynnillä. Älä julkaise lippuasi julkisesti."
+    },
+    "refund": {
+      "done": "Hyvitys %s on tehty.",
+      "routeGateway": "Rahat palautuvat %s:n kautta samalle maksutavalle, jolla maksoit.",
+      "routeUnknown": "Rahat palautuvat samalle maksutavalle, jolla maksoit.",
+      "timing": "Se saapuu yleensä 5–10 arkipäivässä — tarkan päivän määrää pankkisi."
+    },
+    "feedback": {
+      "body": "Hei {name}! Kiitos, että olit mukana tapahtumassa ”{event}”. Kuulisimme mielellämme palautteesi: {link}."
+    },
+    "invite": {
+      "subject": "Kutsu: %s",
+      "label": "Kutsulippu",
+      "greeting": "Hyvä %s:n ystävä!",
+      "body": "Kutsumme sinut tapahtumaan ”{event}”. Kutsulippusi on liitteenä. Päivämäärä: {date}. Osoite: {venue_address}."
+    }
+  },
+  "pay": {
+    "back": "Takaisin lippuihin",
+    "title": "Lippujen maksu",
+    "hold": "Varaus on voimassa vielä",
+    "expired": "Varaus on vanhentunut. Valitse liput uudelleen.",
+    "card": "Kortti",
+    "note": "PDF-liput lähetetään heti maksun jälkeen osoitteeseen %s.",
+    "total": "Yhteensä",
+    "pay": "Maksa %s",
+    "secureShort": "Turvallinen maksu · Stripe",
+    "secure": "Korttitiedot käsittelee Stripe. Me emme näe emmekä tallenna niitä.",
+    "terms": "Ehdot",
+    "privacy": "Tietosuoja",
+    "contacts": "Yhteystiedot",
+    "reserved": "Paikat on varattu %d minuutiksi maksun ajaksi.",
+    "processing": "Käsitellään…",
+    "promoToggle": "Minulla on alennuskoodi",
+    "promoPlaceholder": "Alennuskoodi",
+    "promoApply": "Käytä",
+    "promoRemove": "Poista",
+    "promo": {
+      "empty": "Syötä alennuskoodi",
+      "noSession": "Lippuistuntoa ei voitu aloittaa. Lataa sivu uudelleen ja yritä uudestaan.",
+      "applyFailed": "Alennuskoodia ei voitu käyttää",
+      "applied": "Alennuskoodi käytössä",
+      "invalid": "Virheellinen alennuskoodi: %s",
+      "partial": "Alennuskoodi käytössä. Virheelliset koodit: %s",
+      "accepted": "Alennuskoodi hyväksytty — alennus lasketaan kassalla",
+      "none": "Ei voimassa olevia alennuskoodeja"
+    }
+  },
+  "thankyou": {
+    "title": "Maksu onnistui",
+    "text": "Liput on lähetetty tilauksessa antamaasi sähköpostiosoitteeseen. Jos viesti ei saavu, tarkista roskapostikansio.",
+    "accountText": "<strong>Liput ovat aina käsillä:</strong> sähköpostin lisäksi voit ladata ne tai lähettää ne itsellesi uudelleen tililtäsi.",
+    "accountButton": "Omat liput tilillä",
+    "shareTitle": "Kavereiden kanssa on hauskempaa",
+    "shareText": "Kutsu joku mukaan — jaa tapahtuma.",
+    "shareMessage": "Menen tapahtumaan %s. Tuletko mukaan? %s",
+    "copyLink": "Kopioi linkki",
+    "copied": "Kopioitu",
+    "shareEmail": "Sähköposti",
+    "failedTitle": "Maksu epäonnistui",
+    "failedText": "Rahaa ei veloitettu. Voit yrittää maksaa uudelleen.",
+    "retry": "Yritä uudelleen",
+    "orderNumber": "Tilausnumero:",
+    "toEvents": "Tapahtumiin"
+  },
+  "account": {
+    "title": "Oma tili",
+    "back": "Takaisin tapahtumiin",
+    "myTickets": "Omat liput",
+    "intro": "Anna tilauksessa käyttämäsi sähköpostiosoite. Lähetämme sinulle kirjautumislinkin.",
+    "getLink": "Lähetä linkki",
+    "linkSent": "Tarkista saapuneet. Jos osoitteella on lippuja, kirjautumislinkki on matkalla.",
+    "logout": "Kirjaudu ulos",
+    "empty": "Tällä osoitteella ei ole vielä maksettuja lippuja.",
+    "orderNumber": "Tilaus nro %s",
+    "ticket": "Lippu %s",
+    "pdf": "Lataa liput (PDF)",
+    "send": "Lähetä liput sähköpostiin",
+    "sent": "Liput lähetettiin osoitteeseen %s. Tarkista saapuneet ja roskapostikansio.",
+    "errBil24": "Lippuja ei voitu tarkistaa lippujärjestelmästä. Yritä minuutin kuluttua uudelleen.",
+    "errNone": "Tässä tilauksessa ei ole aktiivisia lippuja.",
+    "errCooldown": "Liput lähetettiin äskettäin — yritä uudelleen %d min kuluttua.",
+    "errMailer": "Sähköpostin lähetys ei ole tilapäisesti käytettävissä — lataa sen sijaan PDF.",
+    "errForbidden": "Tilausta ei löytynyt.",
+    "statusRefunded": "Tilaus hyvitetty",
+    "statusCancelled": "Tilaus peruttu",
+    "ticketInactive": "Lippu ei ole enää voimassa",
+    "eventCancelled": "Tapahtuma on peruttu"
+  },
+  "errors": {
+    "generic": "Jokin meni pieleen. Yritä uudelleen.",
+    "network": "Ei yhteyttä palvelimeen. Yritä uudelleen.",
+    "rateLimited": "Liian monta yritystä. Odota minuutti ja yritä uudelleen.",
+    "unavailable": "Palvelu ei ole tilapäisesti käytettävissä. Yritä myöhemmin uudelleen.",
+    "ticketsGone": "Valitettavasti valitsemasi liput eivät ole enää saatavilla. Päivitä sivu ja yritä uudelleen.",
+    "notFoundTitle": "Sivua ei löytynyt",
+    "notFoundText": "Etsimääsi sivua ei ole tai se on siirretty.",
+    "notFoundLink": "Siirry etusivulle"
+  }
+}
