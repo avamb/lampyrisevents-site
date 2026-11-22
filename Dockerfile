@@ -28,6 +28,13 @@ RUN npm run prepare:data && npm run build
 FROM nginx:1.27-alpine AS web
 ARG KIT=/app/node_modules/arena-site-kit
 COPY --from=deps ${KIT}/nginx/default.conf.template /etc/nginx/templates/default.conf.template
+# Embedded Stripe payment (spec 65 paragraphs 5 and 9): with EMBEDDED_PAYMENT=1 the CSP also allows Stripe and the Arena widget script. Off by default, so staging keeps the kit's strict CSP.
+ARG EMBEDDED_PAYMENT=
+RUN if [ "$EMBEDDED_PAYMENT" = "1" ]; then f=/etc/nginx/templates/default.conf.template \
+    && sed -i -e "s#script-src 'self' \$csp_script_hashes#script-src 'self' \$csp_script_hashes https://js.stripe.com https://tickets.arenasoldout.com#" \
+       -e "s#connect-src 'self' \$site_api#connect-src 'self' \$site_api https://api.stripe.com#" \
+       -e "s#frame-src https://challenges.cloudflare.com#frame-src https://js.stripe.com https://hooks.stripe.com https://challenges.cloudflare.com#" $f \
+    && grep -c 'js.stripe.com' $f && grep -c 'api.stripe.com' $f && grep -c 'hooks.stripe.com' $f; fi
 COPY --from=deps ${KIT}/nginx/headers.conf ${KIT}/nginx/headers-personal.conf /etc/nginx/snippets/
 COPY --from=deps ${KIT}/nginx/15-site-root.envsh ${KIT}/nginx/40-watch-release.sh /docker-entrypoint.d/
 RUN chmod +x /docker-entrypoint.d/15-site-root.envsh /docker-entrypoint.d/40-watch-release.sh

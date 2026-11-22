@@ -15,6 +15,7 @@ services:
         PUBLIC_GA4_ID: ${PUBLIC_GA4_ID:-}
         PUBLIC_TURNSTILE_SITE_KEY: ${PUBLIC_TURNSTILE_SITE_KEY:-}
         DATA_SOURCE: ${DATA_SOURCE:-fixture}
+        EMBEDDED_PAYMENT: ${EMBEDDED_PAYMENT:-}
     environment:
       ARENA_API_ORIGIN: ${PUBLIC_ARENA_API:-https://api.arenasoldout.com}
       SITE_INDEXING: ${SITE_INDEXING:-false}
