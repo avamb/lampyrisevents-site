@@ -1,0 +1,112 @@
+---
+/**
+ * Site form under the text of a page: the contact form (anchor #contact) and the partnership form
+ * (anchor #partnership). Sending goes to the platform through the kit with Cloudflare Turnstile
+ * (src/scripts/page-forms.ts). Without a Turnstile site key in the build the form says that it is
+ * unavailable and sends nothing.
+ */
+import '../styles/personal.css';
+import { ui } from '../lib/i18n.ts';
+import { pagePath } from '../lib/routes.ts';
+import { arena, turnstile } from '../../site.config.ts';
+
+interface Props {
+  lang: string;
+  kind: 'contact' | 'partnership';
+}
+const { lang, kind } = Astro.props;
+const t = ui(lang);
+const f = t.forms;
+const id = `lp-form-${kind}`;
+const errors = { ...t.errors, ...f.errors, invalid: f.errors.fillRequired, notAvailable: t.errors.unavailable };
+const texts = {
+  unavailable: t.errors.unavailable,
+  sending: f.sending,
+  sent: kind === 'contact' ? f.contact.sent : f.partnership.sent,
+  captchaWait: f.errors.captcha,
+  errors,
+};
+const title = kind === 'contact' ? f.contact.title : f.partnership.title;
+// "I accept: {terms}, {privacy}." with the two names turned into links.
+const consent = f.consent.split(/(\{terms\}|\{privacy\})/);
+const termsHref = pagePath('terms-of-use', lang);
+const privacyHref = pagePath('privacy-policy', lang);
+---
+<section class="lp-formbox" id={kind}>
+  <h2>{title}</h2>
+  <form
+    class="lp-form"
+    id={id}
+    data-form-kind={kind}
+    data-partnership={kind === 'partnership' ? 'true' : undefined}
+    data-lang={lang}
+    data-api={arena.apiBase}
+    data-feed={arena.feedToken}
+    data-sitekey={turnstile.siteKey}
+    data-texts={JSON.stringify(texts)}
+    novalidate
+  >
+    {kind === 'contact' ? (
+      <>
+        <div class="lp-form__field">
+          <label class="is-required" for={`${id}-first`}>{f.firstName}</label>
+          <input type="text" id={`${id}-first`} name="first_name" required autocomplete="given-name" />
+        </div>
+        <div class="lp-form__field">
+          <label class="is-required" for={`${id}-last`}>{f.lastName}</label>
+          <input type="text" id={`${id}-last`} name="last_name" required autocomplete="family-name" />
+        </div>
+      </>
+    ) : (
+      <>
+        <div class="lp-form__field">
+          <label class="is-required" for={`${id}-name`}>{f.fullName}</label>
+          <input type="text" id={`${id}-name`} name="name" required autocomplete="name" />
+        </div>
+        <div class="lp-form__field">
+          <label class="is-required" for={`${id}-company`}>{f.partnership.company}</label>
+          <input type="text" id={`${id}-company`} name="company" required autocomplete="organization" />
+        </div>
+      </>
+    )}
+    <div class="lp-form__field">
+      <label class="is-required" for={`${id}-email`}>{f.email}</label>
+      <input type="email" id={`${id}-email`} name="email" required autocomplete="email" />
+    </div>
+    <div class="lp-form__field">
+      <label class="is-required" for={`${id}-phone`}>{f.phone}</label>
+      <input type="tel" id={`${id}-phone`} name="phone" required autocomplete="tel" />
+    </div>
+    {kind === 'partnership' && (
+      <div class="lp-form__field lp-form__field--full">
+        <label for={`${id}-website`}>{f.partnership.website}</label>
+        <input type="url" id={`${id}-website`} name="website" autocomplete="url" />
+      </div>
+    )}
+    <div class="lp-form__field lp-form__field--full">
+      <label for={`${id}-message`}>{f.message}</label>
+      <textarea id={`${id}-message`} name="message" rows="5"></textarea>
+    </div>
+    <div class="lp-form__field lp-form__field--full lp-form__consent">
+      <label>
+        <input type="checkbox" name="consent" required />
+        <span>
+          {consent.map((part) =>
+            part === '{terms}' ? <a href={termsHref}>{t.footer.terms}</a> : part === '{privacy}' ? <a href={privacyHref}>{t.footer.privacy}</a> : part,
+          )}
+        </span>
+      </label>
+    </div>
+    <div class="lp-form__field lp-form__field--full lp-form__turnstile" data-turnstile></div>
+    <p class="lp-form__status lp-form__field--full" data-form-status role="status" hidden></p>
+    <div class="lp-form__field lp-form__field--full lp-form__actions">
+      <button type="submit" class="lp-button">{f.send}</button>
+    </div>
+  </form>
+</section>
+
+<script>
+  import { startPageForms } from '../scripts/page-forms.ts';
+
+  startPageForms();
+</script>

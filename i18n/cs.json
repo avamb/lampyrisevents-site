@@ -93,7 +93,7 @@
     "ctaButton": "Navrhnout partnerství"
   },
   "cookie": {
-    "text": "Používáme cookies pro analytiku a reklamu (Google Analytics, Meta pixel). Zapnou se až po vašem souhlasu.",
+    "text": "Používáme cookies pro analytiku a reklamu. Můžete je odmítnout.",
     "accept": "Přijmout",
     "decline": "Odmítnout",
     "settings": "Nastavení cookies",

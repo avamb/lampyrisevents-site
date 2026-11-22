@@ -56,3 +56,19 @@ Past events are normal events whose sessions are over (the kit separates them wi
 `description_html` is per locale, every event has `content_locale` and `available_locales`.
 `tools/prepare-media.mjs` resizes the files of `media/` (posters 800 px, hero and gallery 1600 px, webp) into
 `public/_site/media` (not committed); it downloads `media/` first when it is empty.
+
+### Deploy (container)
+
+`Dockerfile` (target `web`: node build, then nginx with the kit templates) and `docker-compose.yml` (service `web`, port `${WEB_PORT:-8080}`).
+Build args are public values only: `SITE_URL` (default https://new.lampyrisevents.com), `SITE_INDEXING=false`, `PUBLIC_*`.
+Routing, domains and secrets live in the deploy environment, never here.
+
+```
+docker build --target web -t lampyris-site .
+docker compose up --build -d web
+```
+
+The resized media is committed in `public/_site/media` (about 11 MB), so the image build never downloads originals.
+After a change of the media plan run `npm run prepare:data` and commit the new files. `tools/trim-csp-hashes.mjs` runs after the kit
+postbuild: it drops the hashes of JSON-LD blocks (data, not code), without it the CSP line passes the nginx word limit.
+Forms (contact, partnership) and the personal pages need `PUBLIC_TURNSTILE_SITE_KEY` and `PUBLIC_FEED_TOKEN`; without them they say the service is unavailable.

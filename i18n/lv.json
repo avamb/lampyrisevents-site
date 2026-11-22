@@ -93,7 +93,7 @@
     "ctaButton": "Piedāvāt sadarbību"
   },
   "cookie": {
-    "text": "Mēs izmantojam sīkdatnes analītikai un reklāmai (Google Analytics, Meta pikseli). Tās tiek ieslēgtas tikai pēc tavas piekrišanas.",
+    "text": "Mēs izmantojam sīkdatnes analītikai un reklāmai. Tu vari tās noraidīt.",
     "accept": "Piekrītu",
     "decline": "Noraidīt",
     "settings": "Sīkdatņu iestatījumi",

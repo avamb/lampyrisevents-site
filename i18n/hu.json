@@ -93,7 +93,7 @@
     "ctaButton": "Partnerség ajánlása"
   },
   "cookie": {
-    "text": "Sütiket használunk elemzéshez és hirdetésekhez (Google Analytics, Meta-pixel). Ezek csak az Ön hozzájárulása után kapcsolnak be.",
+    "text": "Sütiket használunk elemzéshez és hirdetésekhez. Elutasíthatja őket.",
     "accept": "Elfogadom",
     "decline": "Elutasítom",
     "settings": "Süti-beállítások",

@@ -13,17 +13,6 @@ pages:
   - { from: "/hu/privacy-policy/", code: 200 }
   - { from: "/lt/privacy-policy/", code: 200 }
   - { from: "/lv/privacy-policy/", code: 200 }
-  - { from: "/cs/home/", code: 301, to: "/cs/", note: "old front page copy" }
-  - { from: "/de/startseite/", code: 301, to: "/de/", note: "old front page copy" }
-  - { from: "/home/", code: 301, to: "/", note: "old front page copy" }
-  - { from: "/et/kodu/", code: 301, to: "/et/", note: "old front page copy" }
-  - { from: "/fi/etusivu/", code: 301, to: "/fi/", note: "old front page copy" }
-  - { from: "/hu/home/", code: 301, to: "/hu/", note: "old front page copy" }
-  - { from: "/lt/pagrindinis/", code: 301, to: "/lt/", note: "old front page copy" }
-  - { from: "/lv/sakums/", code: 301, to: "/lv/", note: "old front page copy" }
-  - { from: "/pl/strona-glowna/", code: 301, to: "/pl/", note: "old front page copy" }
-  - { from: "/ru/glavnaya/", code: 301, to: "/ru/", note: "old front page copy" }
-  - { from: "/uk/golovna/", code: 301, to: "/uk/", note: "old front page copy" }
   - { from: "/cs/o-nas/", code: 200 }
   - { from: "/de/ueber-uns/", code: 200 }
   - { from: "/about-us/", code: 200 }
@@ -175,9 +164,19 @@ pages:
   - { from: "/lt/my-tickets/", code: 200, note: "new site page" }
   - { from: "/hu/order-status/", code: 200, note: "new site page" }
   - { from: "/hu/my-tickets/", code: 200, note: "new site page" }
-  - { from: "/_site/", code: 200, note: "new site service page" }
 
 redirects:
+  - { from: "/cs/home/", code: 301, to: "/cs/", note: "old front page copy" }
+  - { from: "/de/startseite/", code: 301, to: "/de/", note: "old front page copy" }
+  - { from: "/home/", code: 301, to: "/", note: "old front page copy" }
+  - { from: "/et/kodu/", code: 301, to: "/et/", note: "old front page copy" }
+  - { from: "/fi/etusivu/", code: 301, to: "/fi/", note: "old front page copy" }
+  - { from: "/hu/home/", code: 301, to: "/hu/", note: "old front page copy" }
+  - { from: "/lt/pagrindinis/", code: 301, to: "/lt/", note: "old front page copy" }
+  - { from: "/lv/sakums/", code: 301, to: "/lv/", note: "old front page copy" }
+  - { from: "/pl/strona-glowna/", code: 301, to: "/pl/", note: "old front page copy" }
+  - { from: "/ru/glavnaya/", code: 301, to: "/ru/", note: "old front page copy" }
+  - { from: "/uk/golovna/", code: 301, to: "/uk/", note: "old front page copy" }
   - { from: "/product/ivo-dimchev-in-prague/", code: 301, to: "/events/ivo-dimchev-in-prague/", note: "WooCommerce product -> event" }
   - { from: "/product/james-lavelle-unkle-mowax-skalpel-omnion/", code: 301, to: "/events/james-lavelle-unkle-mowax-skalpel-omnion-in-prague/", note: "WooCommerce product -> event" }
   - { from: "/tickets/", code: 301, to: "/" }
@@ -561,17 +560,17 @@ query_p:
   - { p: 8422, to: "/et/privacy-policy/" }
   - { p: 8424, to: "/lv/privacy-policy/" }
   - { p: 8426, to: "/fi/privacy-policy/" }
-  - { p: 21, to: "/home/" }
-  - { p: 3069, to: "/cs/home/" }
-  - { p: 3125, to: "/de/startseite/" }
-  - { p: 3127, to: "/pl/strona-glowna/" }
-  - { p: 3129, to: "/ru/glavnaya/" }
-  - { p: 3133, to: "/uk/golovna/" }
-  - { p: 3137, to: "/hu/home/" }
-  - { p: 3143, to: "/fi/etusivu/" }
-  - { p: 3159, to: "/et/kodu/" }
-  - { p: 3163, to: "/lv/sakums/" }
-  - { p: 3165, to: "/lt/pagrindinis/" }
+  - { p: 21, to: "/" }
+  - { p: 3069, to: "/cs/" }
+  - { p: 3125, to: "/de/" }
+  - { p: 3127, to: "/pl/" }
+  - { p: 3129, to: "/ru/" }
+  - { p: 3133, to: "/uk/" }
+  - { p: 3137, to: "/hu/" }
+  - { p: 3143, to: "/fi/" }
+  - { p: 3159, to: "/et/" }
+  - { p: 3163, to: "/lv/" }
+  - { p: 3165, to: "/lt/" }
   - { p: 160, to: "/about-us/" }
   - { p: 3077, to: "/cs/o-nas/" }
   - { p: 5978, to: "/de/ueber-uns/" }

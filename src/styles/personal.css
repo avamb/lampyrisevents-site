@@ -1,0 +1,45 @@
+/* Personal pages (order status, my tickets) and the site forms (contact, partnership). Values from tokens.css. */
+.lp-personal { max-width: 720px; margin: 0 auto; }
+.lp-personal h1 { margin-bottom: 24px; }
+.lp-personal__box { background: var(--lp-white); border: 1px solid var(--lp-border); border-radius: var(--lp-radius); padding: 24px; }
+.lp-personal__status { font-weight: 600; }
+.lp-order__event { display: flex; flex-direction: column; gap: 2px; }
+.lp-order__tickets, .lp-order__share, .lp-mt__tickets { list-style: none; margin: 0 0 16px; padding: 0; }
+.lp-order__share { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.lp-mt__order { border-top: 1px solid var(--lp-border); padding-top: 16px; margin-top: 16px; }
+.lp-mt__order:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
+.lp-mt__tickets li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; }
+.lp-mt__tickets small { display: block; color: var(--lp-muted); }
+.lp-spinner { display: inline-block; width: 16px; height: 16px; margin-right: 8px; vertical-align: -2px; border: 2px solid var(--lp-border); border-top-color: var(--lp-ink); border-radius: 50%; animation: lp-spin .8s linear infinite; }
+@keyframes lp-spin { to { transform: rotate(360deg); } }
+.lp-linkbtn { background: none; border: 0; padding: 0; font: inherit; color: var(--lp-link); text-decoration: underline; cursor: pointer; }
+
+.lp-button { border: 0; cursor: pointer; font: 700 16px/1.2 var(--lp-font); display: inline-block; padding: 12px 24px; background: var(--lp-yellow); color: var(--lp-ink); border-radius: var(--lp-radius-card); text-decoration: none; }
+.lp-button:hover { background: var(--lp-yellow-hover); }
+.lp-button:disabled { opacity: .5; cursor: not-allowed; }
+.lp-prose a[href='#contact'], .lp-prose a[href='#partnership'] {
+  display: inline-block; padding: 12px 24px; background: var(--lp-yellow); color: var(--lp-ink); border-radius: var(--lp-radius-card);
+  font-weight: 700; text-decoration: none; box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+.lp-prose a[href='#contact']:hover, .lp-prose a[href='#partnership']:hover { background: var(--lp-yellow-hover); }
+
+.lp-formbox { margin-top: 40px; scroll-margin-top: 24px; }
+.lp-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 24px; }
+.lp-form__field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.lp-form__field--full { grid-column: 1 / -1; }
+.lp-form label { font-weight: 600; }
+.lp-form label.is-required::after { content: ' *'; color: var(--lp-error); }
+.lp-form input[type='text'], .lp-form input[type='email'], .lp-form input[type='tel'], .lp-form input[type='url'], .lp-form textarea {
+  width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--lp-border); border-radius: var(--lp-radius-field); background: var(--lp-white); color: var(--lp-text);
+}
+.lp-form input:disabled { background: var(--lp-soft-bg); }
+.lp-form__consent label { display: flex; align-items: flex-start; gap: 8px; font-weight: 400; }
+.lp-form__consent input { margin-top: 5px; }
+.lp-form__status { margin: 0; padding: 10px 12px; border-radius: var(--lp-radius-field); background: var(--lp-soft-bg); }
+.lp-form__status[data-state='error'] { background: var(--lp-error-bg); color: var(--lp-error); }
+.lp-form__status[data-state='ok'] { background: #E3F6EA; color: #0A6B35; }
+@media (max-width: 767px) {
+  .lp-form { grid-template-columns: minmax(0, 1fr); }
+  .lp-personal__box { padding: 16px; }
+  .lp-mt__tickets li { flex-direction: column; align-items: flex-start; }
+}

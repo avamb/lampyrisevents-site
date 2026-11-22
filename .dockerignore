@@ -1,0 +1,15 @@
+node_modules
+dist
+.astro
+.git
+.gitignore
+.github
+*.log
+# originals of the WordPress media (69 MB): the resized output in public/_site/media is what the build uses
+media
+docs
+design
+tools/wp-export
+.env
+.env.*
+.claude

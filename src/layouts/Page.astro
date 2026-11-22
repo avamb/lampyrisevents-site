@@ -5,6 +5,7 @@
  * Without an <h1> in the HTML the page title is shown as <h1>.
  */
 import Base from './Base.astro';
+import SiteForm from '../components/SiteForm.astro';
 import { genericPage } from '../lib/pages.ts';
 import { pageAlternatesMap, pageHreflang, pagePath, pageTitles } from '../lib/routes.ts';
 import { ui } from '../lib/i18n.ts';
@@ -16,6 +17,10 @@ const t = ui(lang);
 const current = Astro.url.pathname;
 const SIDEBAR = ['about-us'];
 const side = SIDEBAR.includes(pageKey);
+// The WordPress "#popup" buttons open a form: here it sits under the text, the buttons jump to it.
+const FORMS: Record<string, 'contact' | 'partnership'> = { contacts: 'contact', partnerships: 'partnership' };
+const formKind = FORMS[pageKey];
+const html = formKind ? page.html.replaceAll('href="#popup"', `href="#${formKind}"`) : page.html;
 const link = (key: string, label: string) => ({ href: pagePath(key, lang), label });
 const createLabel = pageTitles['create-event']?.[lang] || pageTitles['create-event']?.en || '';
 const menus = [
@@ -45,7 +50,8 @@ const menus = [
       )}
       <article class="lp-prose" lang={page.contentLang}>
         {!page.hasH1 && <h1>{page.title}</h1>}
-        <Fragment set:html={page.html} />
+        <Fragment set:html={html} />
+        {formKind && <SiteForm lang={lang} kind={formKind} />}
       </article>
     </div>
   </div>

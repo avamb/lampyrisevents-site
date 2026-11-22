@@ -1,0 +1,10 @@
+---
+import OrderStatusPage from '../../components/OrderStatusPage.astro';
+import { languages } from '../../../site.config.ts';
+
+export function getStaticPaths() {
+  return languages.filter((l) => l.prefix).map((l) => ({ params: { lang: l.code }, props: { lang: l.code } }));
+}
+const { lang } = Astro.props;
+---
+<OrderStatusPage lang={lang} />

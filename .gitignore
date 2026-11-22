@@ -1,6 +1,6 @@
 node_modules/
-media/
+/media/
 *.log
 dist/
 .astro/
-public/_site/media/
+# public/_site/media is committed (resized output of media/, about 11 MB)

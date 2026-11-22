@@ -1,0 +1,42 @@
+---
+/**
+ * Order status page (/order-status/ and /<lang>/order-status/). Personal page: noindex, no tracking.
+ * The island reads the checkout token from the address once and asks the platform for the state.
+ */
+import '../styles/personal.css';
+import Base from '../layouts/Base.astro';
+import OrderStatus from './islands/OrderStatus.svelte';
+import { ui, language } from '../lib/i18n.ts';
+import { pagePath, pageAlternatesMap } from '../lib/routes.ts';
+import { arena, brand, siteUrl } from '../../site.config.ts';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const t = ui(lang);
+const title = t.mailer.ticket.order;
+---
+<Base lang={lang} title={title} switcher={pageAlternatesMap('orderStatus')} personal>
+  <div class="lp-container lp-main">
+    <section class="lp-personal">
+      <h1>{title}</h1>
+      <div class="lp-personal__box">
+        <OrderStatus
+          client:load
+          t={t.thankyou}
+          errors={{ ...t.errors, ...t.forms.errors }}
+          orderLabel={title}
+          loading={t.common.loading}
+          cancelledLabel={t.account.statusCancelled}
+          refundedLabel={t.account.statusRefunded}
+          apiBase={arena.apiBase}
+          feedToken={arena.feedToken}
+          myTicketsPath={pagePath('myTickets', lang)}
+          homePath={pagePath('home', lang)}
+          shareUrl={new URL(pagePath('home', lang), siteUrl).href}
+          contactEmail={brand.email}
+          intl={language(lang).intl}
+        />
+      </div>
+    </section>
+  </div>
+</Base>

@@ -93,7 +93,7 @@
     "ctaButton": "Pasiūlyti partnerystę"
   },
   "cookie": {
-    "text": "Naudojame slapukus analitikai ir reklamai (Google Analytics, Meta pikselis). Jie įjungiami tik jums sutikus.",
+    "text": "Naudojame slapukus analitikai ir reklamai. Galite jų atsisakyti.",
     "accept": "Sutinku",
     "decline": "Atmesti",
     "settings": "Slapukų nustatymai",

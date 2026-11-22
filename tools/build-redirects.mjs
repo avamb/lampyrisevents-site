@@ -33,7 +33,9 @@ for (const p of pages) {
   pagePath.set(p.id, path);
   const o = { from: path, code: 200 };
   if (en.slug === 'home') { // /home/ is the old front-page copy: the home page lives at /
-    line('pages', { from: path, code: 301, to: p.lang === 'en' ? '/' : `/${p.lang}/`, note: 'old front page copy' });
+    const front = p.lang === 'en' ? '/' : `/${p.lang}/`;
+    pagePath.set(p.id, front); // ?p=<id> of the copy goes to the front page
+    line('redirects', { from: path, code: 301, to: front, note: 'old front page copy' }); // a rule, not a page: the nginx rules read `redirects`
     continue;
   }
   line('pages', o);
@@ -42,7 +44,7 @@ for (const p of pages) {
 for (const l of L11) { // pages that exist only on the new site (spec 63 §6.3), same prefix rule
   for (const n of ['order-status', 'my-tickets']) line('pages', { from: `${pre(l)}/${n}/`, code: 200, note: 'new site page' });
 }
-line('pages', { from: '/_site/', code: 200, note: 'new site service page' });
+// /_site/ (assets) is not a page: the server answers it, nothing to list.
 
 // 2. Events and tours: translated slugs -> platform slug.
 const eventPath = new Map(); // wp post id -> new path

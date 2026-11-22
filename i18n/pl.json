@@ -93,7 +93,7 @@
     "ctaButton": "Zaproponuj partnerstwo"
   },
   "cookie": {
-    "text": "Używamy plików cookie do analityki i reklamy (Google Analytics, piksel Meta). Włączą się dopiero po Twojej zgodzie.",
+    "text": "Używamy plików cookie do analityki i reklamy. Możesz je odrzucić.",
     "accept": "Akceptuję",
     "decline": "Odrzucam",
     "settings": "Ustawienia plików cookie",

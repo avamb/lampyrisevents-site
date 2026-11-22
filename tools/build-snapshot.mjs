@@ -177,9 +177,10 @@ function mediaFile(m) {
 function useMedia(m, kind) {
   if (!m || !m.url) return null;
   const src = mediaFile(m).replace(/\\/g, '/');
-  if (!existsSync(src)) { warn('media file missing, skipped:', src); return null; }
   const web = `/_site/media/${kind}/${m.id}.webp`;
   const dest = `public${web}`;
+  // The resized output is committed: a build without the originals (docker) keeps every file that already exists.
+  if (!existsSync(src) && !existsSync(dest)) { warn('media file missing, skipped:', src); return null; }
   if (!mediaPlan.has(dest)) mediaPlan.set(dest, { src, dest, kind, maxWidth: MAX[kind] });
   return web;
 }

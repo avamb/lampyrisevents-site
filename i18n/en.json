@@ -93,7 +93,7 @@
     "ctaButton": "Propose a partnership"
   },
   "cookie": {
-    "text": "We use cookies for analytics and advertising (Google Analytics, Meta pixel). They are switched on only after you accept.",
+    "text": "We use cookies for analytics and advertising. You can decline.",
     "accept": "Accept",
     "decline": "Decline",
     "settings": "Cookie settings",

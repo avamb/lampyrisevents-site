@@ -93,7 +93,7 @@
     "ctaButton": "Paku koostööd"
   },
   "cookie": {
-    "text": "Kasutame küpsiseid analüütika ja reklaami jaoks (Google Analytics, Meta piksel). Need lülitatakse sisse alles pärast sinu nõusolekut.",
+    "text": "Kasutame küpsiseid analüütika ja reklaami jaoks. Sa võid neist keelduda.",
     "accept": "Nõustun",
     "decline": "Keeldun",
     "settings": "Küpsiste seaded",

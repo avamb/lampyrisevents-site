@@ -93,7 +93,7 @@
     "ctaButton": "Ehdota yhteistyötä"
   },
   "cookie": {
-    "text": "Käytämme evästeitä analytiikkaan ja mainontaan (Google Analytics, Meta-pikseli). Ne otetaan käyttöön vasta, kun hyväksyt ne.",
+    "text": "Käytämme evästeitä analytiikkaan ja mainontaan. Voit hylätä ne.",
     "accept": "Hyväksy",
     "decline": "Hylkää",
     "settings": "Evästeasetukset",
