@@ -6,7 +6,7 @@
   "description": "lampyrisevents.com: Astro static site on arena-site-kit, content and dictionaries exported from WordPress",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && arena-site-kit postbuild && node tools/trim-csp-hashes.mjs",
+    "build": "astro build && arena-site-kit postbuild && node tools/postbuild-redirects-extra.mjs && node tools/trim-csp-hashes.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "prepare:data": "node tools/build-snapshot.mjs && node tools/prepare-media.mjs && node tools/prepare-fonts.mjs",

@@ -32,6 +32,9 @@ const range = starts.length ? dateRange(starts[0], starts[starts.length - 1], tz
 const cities = citiesOf(shown);
 const price = priceText(tour.events, intl, t.event.priceFrom);
 const next = live[0];
+const actionOf = (e: (typeof tour.events)[number]) => (e.primary ? sessionAction(e.primary) : { kind: 'past' as const });
+const openCities = live.filter((e) => actionOf(e).kind === 'partner').length;
+const openLine = openCities > 0 ? fmt(t.tour.openIn, citiesLabel(openCities, t.tour.cities, intl)) : '';
 const nextWhen = next?.primary ? dateLong(next.primary.start_at, next.timezone, intl).date : '';
 const wide = Boolean(series.hero_url || series.hero_video_url);
 const description = series.description_html ? sanitizeHtml(series.description_html) : '';
@@ -64,6 +67,7 @@ const stateOf = (past: boolean, kind: string) => (past ? ['', t.event.past] : ki
         <p class="lp-hero__facts">
           {next && <span><b>{t.tour.next}:</b> {next.venueCity}, {nextWhen}</span>}
           {price && <span>{price}</span>}
+          {openLine && <span>{openLine}</span>}
         </p>
         {live.length > 0 && <a class="lp-button" href="#cities">{t.tour.choose} ↓</a>}
       </div>
@@ -83,7 +87,10 @@ const stateOf = (past: boolean, kind: string) => (past ? ['', t.event.past] : ki
           const [stateClass, stateText] = stateOf(e.past, action.kind);
           const block = s ? dateBlock(s.start_at, e.timezone, intl) : null;
           const venue = e.raw.venues.find((v) => s && v.session_starts.includes(s.start_at)) ?? e.raw.venues[0];
-          const partnerPrice = action.kind === 'partner' && action.priceFrom !== null ? fmt(t.event.priceFrom, formatMoney(action.priceFrom, action.currency, intl)) : '';
+          const hint = (e.raw as { price_hint?: { price_from: number; currency: string } | null }).price_hint;
+          const partnerPrice = action.kind === 'partner' && action.priceFrom !== null
+            ? fmt(t.event.priceFrom, formatMoney(action.priceFrom, action.currency, intl))
+            : action.kind === 'soon' && hint ? fmt(t.event.priceFrom, formatMoney(hint.price_from, hint.currency, intl)) : '';
           return (
             <li class={`lp-city${e.past ? ' lp-city--past' : ''}${!e.past && idx === 0 ? ' lp-city--first' : ''}`}>
               <div class="lp-city__date">
@@ -101,7 +108,7 @@ const stateOf = (past: boolean, kind: string) => (past ? ['', t.event.past] : ki
                   {venue?.country && <span class="lp-city__country">{venue.country}</span>}
                 </h3>
                 {e.venueName && <p class="lp-city__venue">{e.venueName}</p>}
-                {action.kind === 'partner' && action.seller && <p class="lp-city__seller">{fmt(t.partners.soldBy, action.seller)}</p>}
+                {action.kind === 'partner' && action.seller && <p class="lp-city__seller">{action.seller === 'Lampyris Tickets' ? t.x.soldByOrganiser : fmt(t.partners.soldBy, action.seller)}</p>}
               </div>
               <div class="lp-city__side">
                 {partnerPrice && <span class="lp-city__price">{partnerPrice}</span>}

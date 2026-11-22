@@ -44,6 +44,9 @@ const url = new URL(eventPath(slug, lang), siteUrl).href;
 const ld = eventJsonLd(e, url, e.poster ? new URL(e.poster, siteUrl).href : null, lang);
 const metaDescription = e.descriptionText.replace(/\s+/g, ' ').trim().slice(0, 200) || [e.name, e.venueName, e.venueCity].filter(Boolean).join(', ');
 
+const hint = (e.raw as { price_hint?: { price_from: number; currency: string } | null }).price_hint;
+const soonPrice = hint ? fmt(t.event.priceFrom, formatMoney(hint.price_from, hint.currency, intl)) : '';
+
 function partnerPrice(a: { priceFrom: number | null; currency: string }): string {
   return a.priceFrom === null ? '' : fmt(t.event.priceFrom, formatMoney(a.priceFrom, a.currency, intl));
 }
@@ -83,6 +86,7 @@ function partnerPrice(a: { priceFrom: number | null; currency: string }): string
               <>
                 <span class="lp-button lp-button--disabled" aria-disabled="true">{t.event.soon}</span>
                 <p class="lp-note">{t.x.notOnSaleHere}</p>
+                {soonPrice && <p class="lp-note">{soonPrice}</p>}
               </>
             )}
             {single.kind === 'soldout' && <span class="lp-button lp-button--disabled" aria-disabled="true">{t.event.soldOut}</span>}

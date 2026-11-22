@@ -19,6 +19,8 @@ export interface UiExtra {
   pastDescription: string;
   /** Marker of a platform session that has no ticket office yet (fixture or not on sale). */
   notOnSaleHere: string;
+  /** Seller caption of a city whose tickets are sold by the organiser (WordPress: "Tickets sold by Organiser"). */
+  soldByOrganiser: string;
 }
 
 export const uiExtra: Record<string, UiExtra> = {
@@ -32,6 +34,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Concerts, shows and tours by Lampyris-Events: upcoming dates, cities and tickets.',
     pastDescription: 'Concerts and shows by Lampyris-Events that have already taken place.',
     notOnSaleHere: 'Tickets are not on sale on this site yet',
+    soldByOrganiser: 'Tickets sold by Organiser',
   },
   cs: {
     gallery: 'Galerie',
@@ -43,6 +46,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Koncerty, představení a turné Lampyris-Events: nejbližší termíny, města a vstupenky.',
     pastDescription: 'Koncerty a představení Lampyris-Events, která již proběhla.',
     notOnSaleHere: 'Vstupenky se na tomto webu zatím neprodávají',
+    soldByOrganiser: 'Vstupenky prodává pořadatel',
   },
   de: {
     gallery: 'Galerie',
@@ -54,6 +58,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Konzerte, Shows und Tourneen von Lampyris-Events: kommende Termine, Städte und Tickets.',
     pastDescription: 'Konzerte und Shows von Lampyris-Events, die bereits stattgefunden haben.',
     notOnSaleHere: 'Tickets werden auf dieser Seite noch nicht verkauft',
+    soldByOrganiser: 'Tickets beim Veranstalter',
   },
   et: {
     gallery: 'Galerii',
@@ -65,6 +70,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Lampyris-Eventsi kontserdid, etendused ja turneed: lähimad kuupäevad, linnad ja piletid.',
     pastDescription: 'Lampyris-Eventsi kontserdid ja etendused, mis on juba toimunud.',
     notOnSaleHere: 'Piletid ei ole sellel lehel veel müügil',
+    soldByOrganiser: 'Pileteid müüb korraldaja',
   },
   fi: {
     gallery: 'Galleria',
@@ -76,6 +82,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Lampyris-Eventsin konsertit, esitykset ja kiertueet: tulevat päivämäärät, kaupungit ja liput.',
     pastDescription: 'Lampyris-Eventsin jo pidetyt konsertit ja esitykset.',
     notOnSaleHere: 'Lippuja ei myydä vielä tällä sivustolla',
+    soldByOrganiser: 'Lippuja myy järjestäjä',
   },
   hu: {
     gallery: 'Galéria',
@@ -87,6 +94,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'A Lampyris-Events koncertjei, előadásai és turnéi: közelgő időpontok, városok és jegyek.',
     pastDescription: 'A Lampyris-Events már lezajlott koncertjei és előadásai.',
     notOnSaleHere: 'A jegyek ezen az oldalon még nem kaphatók',
+    soldByOrganiser: 'Jegyek itt: szervező',
   },
   lt: {
     gallery: 'Galerija',
@@ -98,6 +106,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Lampyris-Events koncertai, spektakliai ir turai: artimiausios datos, miestai ir bilietai.',
     pastDescription: 'Jau įvykę Lampyris-Events koncertai ir spektakliai.',
     notOnSaleHere: 'Bilietai šioje svetainėje dar neparduodami',
+    soldByOrganiser: 'Bilietus parduoda organizatorius',
   },
   lv: {
     gallery: 'Galerija',
@@ -109,6 +118,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Lampyris-Events koncerti, izrādes un tūres: tuvākie datumi, pilsētas un biļetes.',
     pastDescription: 'Lampyris-Events koncerti un izrādes, kas jau notikušas.',
     notOnSaleHere: 'Biļetes šajā vietnē vēl netiek pārdotas',
+    soldByOrganiser: 'Biļetes pārdod organizators',
   },
   pl: {
     gallery: 'Galeria',
@@ -120,6 +130,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Koncerty, spektakle i trasy Lampyris-Events: najbliższe terminy, miasta i bilety.',
     pastDescription: 'Koncerty i spektakle Lampyris-Events, które już się odbyły.',
     notOnSaleHere: 'Bilety nie są jeszcze w sprzedaży na tej stronie',
+    soldByOrganiser: 'Bilety sprzedaje organizator',
   },
   ru: {
     gallery: 'Галерея',
@@ -131,6 +142,7 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Концерты, шоу и туры Lampyris-Events: ближайшие даты, города и билеты.',
     pastDescription: 'Концерты и шоу Lampyris-Events, которые уже состоялись.',
     notOnSaleHere: 'Билеты на этом сайте пока не продаются',
+    soldByOrganiser: 'Билеты продаёт организатор',
   },
   uk: {
     gallery: 'Галерея',
@@ -142,5 +154,6 @@ export const uiExtra: Record<string, UiExtra> = {
     homeDescription: 'Концерти, шоу та тури Lampyris-Events: найближчі дати, міста й квитки.',
     pastDescription: 'Концерти та шоу Lampyris-Events, які вже відбулися.',
     notOnSaleHere: 'Квитки на цьому сайті поки не продаються',
+    soldByOrganiser: 'Квитки продає організатор',
   },
 };

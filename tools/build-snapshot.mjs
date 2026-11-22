@@ -289,6 +289,8 @@ function buildEvent(g, lang) {
     age_rating: null,
     short_description: null,
     sessions: [session],
+    // Site extra: the WordPress "from" price, kept for a city that has no partner office yet (state Coming soon).
+    price_hint: price.price_from === null ? null : { price_from: price.price_from, currency: price.currency },
     materials: {
       gallery,
       videos: videos.filter((v) => (seenVideo.has(v.url) ? false : seenVideo.add(v.url))),
