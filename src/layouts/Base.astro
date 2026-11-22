@@ -1,0 +1,78 @@
+---
+/**
+ * Page shell: <head> (title, description, canonical, hreflang, robots), header, footer, cookie banner
+ * and, outside personal pages, the consent-aware tracking loader.
+ *
+ * Props: lang, title, description, alternates (hreflang links from pageHreflang() or kit hreflangAlternates),
+ * switcher (this page's address per language, for the language switcher), noindex, personal, image.
+ * Slot "head": extra <head> content. Default slot: page content (put the <h1> in it).
+ */
+import '../styles/fonts.css';
+import '../styles/tokens.css';
+import '../styles/global.css';
+import type { HreflangAlternate } from 'arena-site-kit/lib/seo';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/islands/CookieBanner.svelte';
+import { indexing, siteUrl, tracking, brand } from '../../site.config.ts';
+import { language, ui } from '../lib/i18n.ts';
+
+interface Props {
+  lang: string;
+  title: string;
+  description?: string;
+  alternates?: HreflangAlternate[];
+  switcher?: Record<string, string>;
+  noindex?: boolean;
+  personal?: boolean;
+  image?: string | null;
+}
+const { lang, title, description = '', alternates = [], switcher = {}, noindex = false, personal = false, image = null } = Astro.props;
+const l = language(lang);
+const t = ui(lang);
+const current = Astro.url.pathname;
+const canonical = new URL(current, siteUrl).href;
+// Staging (SITE_INDEXING != true): every page is noindex.
+const robots = !indexing || noindex || personal ? 'noindex, nofollow' : 'index, follow';
+const hreflang = personal || noindex ? [] : alternates;
+const fullTitle = title.includes(brand.name) ? title : `${title} – ${brand.name}`;
+---
+<!doctype html>
+<html lang={l.code} dir={l.dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonical} />
+    {hreflang.map((h) => <link rel="alternate" hreflang={h.hreflang} href={h.href} />)}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={brand.name} />
+    <meta property="og:title" content={fullTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    {image && <meta property="og:image" content={new URL(image, siteUrl).href} />}
+    <meta property="og:locale" content={l.intl.replace('-', '_')} />
+    <link rel="icon" href="/_site/img/logo.svg" type="image/svg+xml" />
+    <link rel="preload" href="/_site/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
+    {(lang === 'ru' || lang === 'uk') && <link rel="preload" href="/_site/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin />}
+    <slot name="head" />
+  </head>
+  <body data-ga4-id={personal ? undefined : tracking.ga4Id || undefined} data-meta-pixel-id={personal ? undefined : tracking.metaPixelId || undefined}>
+    <Header lang={lang} current={current} switcher={switcher} />
+    <main id="content">
+      <slot />
+    </main>
+    <Footer lang={lang} current={current} />
+    <CookieBanner client:load text={t.cookie.text} accept={t.cookie.accept} decline={t.cookie.decline} label={t.cookie.settings} />
+    <script>
+      import '../scripts/menu.ts';
+    </script>
+    {!personal && (
+      <script>
+        import '../scripts/tracking.ts';
+      </script>
+    )}
+  </body>
+</html>

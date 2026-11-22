@@ -1,3 +1,6 @@
 node_modules/
 media/
 *.log
+dist/
+.astro/
+public/_site/media/

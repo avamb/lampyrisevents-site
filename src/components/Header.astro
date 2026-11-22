@@ -1,0 +1,55 @@
+---
+/**
+ * Site header: logo, main menu (actual events, tours, past events), language switcher, burger below 1025 px.
+ * `switcher` = address of this page in every language (default: the home page of that language).
+ */
+import { languages, brand } from '../../site.config.ts';
+import { pagePath } from '../lib/routes.ts';
+import { homeTitle } from '../lib/pages.ts';
+import { ui, language } from '../lib/i18n.ts';
+import Icon from './Icon.astro';
+
+interface Props {
+  lang: string;
+  current: string;
+  switcher?: Record<string, string>;
+}
+const { lang, current, switcher = {} } = Astro.props;
+const t = ui(lang);
+const items = [
+  { key: 'home', label: homeTitle(lang) },
+  { key: 'tours', label: t.nav.tours },
+  { key: 'past-events', label: t.nav.pastEvents },
+];
+const here = language(lang);
+const href = (code: string) => switcher[code] ?? pagePath('home', code);
+---
+<header class="lp-header">
+  <div class="lp-container lp-header__inner">
+    <a class="lp-header__logo" href={pagePath('home', lang)} aria-label={brand.name}>
+      <img src="/_site/img/logo.svg" alt={brand.name} width="160" height="40" />
+    </a>
+    <nav class="lp-nav" id="lp-nav" data-lp-nav aria-label={t.common.menu}>
+      <ul>
+        {items.map((i) => {
+          const to = pagePath(i.key, lang);
+          return <li><a class="lp-nav__link" href={to} aria-current={current === to ? 'page' : undefined}>{i.label}</a></li>;
+        })}
+        <li class="lp-lang" data-lp-lang>
+          <button type="button" class="lp-lang__button" aria-haspopup="true" aria-expanded="false" aria-label={t.common.language}>
+            <span>{here.name}</span><span class="lp-caret"></span>
+          </button>
+          <ul class="lp-lang__list">
+            {languages.filter((l) => l.code !== lang).map((l) => (
+              <li><a href={href(l.code)} hreflang={l.code} lang={l.code}><span class="lp-lang__code">{l.code}</span> {l.name}</a></li>
+            ))}
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <button class="lp-burger" type="button" aria-label={t.common.menu} aria-expanded="false" aria-controls="lp-nav" data-lp-burger>
+      <span data-icon-open><Icon name="menu" /></span>
+      <span data-icon-close><Icon name="close" /></span>
+    </button>
+  </div>
+</header>

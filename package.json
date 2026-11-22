@@ -1,15 +1,43 @@
 {
   "name": "lampyrisevents-site",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Content, dictionaries, redirects and design tokens exported from the lampyrisevents.com WordPress site",
+  "description": "lampyrisevents.com: Astro static site on arena-site-kit, content and dictionaries exported from WordPress",
   "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && arena-site-kit postbuild",
+    "preview": "astro preview",
+    "astro": "astro",
+    "prepare:data": "node tools/build-snapshot.mjs && node tools/prepare-media.mjs && node tools/prepare-fonts.mjs",
+    "gen:manifest": "node tools/gen-manifest.mjs",
+    "check": "npm run check:types && npm run check:dist",
+    "check:types": "astro check",
+    "check:dist": "arena-site-kit check-dist",
+    "check:i18n": "node tools/check-i18n.mjs",
+    "test": "vitest run",
     "export:media": "node tools/build-media-manifest.mjs && node tools/download-media.mjs",
     "fetch:pages": "node tools/fetch-pages.mjs"
   },
+  "dependencies": {
+    "@astrojs/svelte": "^7.2.5",
+    "@fontsource-variable/manrope": "^5.2.8",
+    "arena-site-kit": "github:avamb/arena-site-kit#v0.1.1",
+    "astro": "^5.18.2",
+    "sharp": "^0.34.5",
+    "svelte": "^5.57.2",
+    "yaml": "^2.9.1"
+  },
   "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@types/node": "^22.20.5",
     "cheerio": "^1.2.0",
     "js-yaml": "^5.5.0",
-    "playwright": "^1.65.1"
+    "playwright": "^1.65.1",
+    "typescript": "^5.9.0",
+    "vitest": "^3.2.7"
+  },
+  "engines": {
+    "node": ">=22"
   }
 }

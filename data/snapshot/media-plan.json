@@ -1,0 +1,614 @@
+[
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/screenshot_20240706_124845_com.google.android.apps_.photos-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/3668.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20230316_195831-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/3720.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/photo1718186284.jpg",
+  "dest": "public/_site/media/gallery/4058.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20211002_184324_339-2.jpg",
+  "dest": "public/_site/media/gallery/4111.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20211002_184339_477-2.jpg",
+  "dest": "public/_site/media/gallery/4137.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20240418_210414-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/4294.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20240418_223221-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/4320.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/alsusha-1-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/4348.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/alsusha-55-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/4374.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20240612_122350-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/4534.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20240612_122449-1.jpg",
+  "dest": "public/_site/media/gallery/4560.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/img_20240613_092018-scaled.jpg",
+  "dest": "public/_site/media/gallery/4622.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/screenshot_20240613_091820_com.hihonor.photos.jpg",
+  "dest": "public/_site/media/gallery/4648.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/screenshot_20240612_122648_com.hihonor.photos.jpg",
+  "dest": "public/_site/media/gallery/4738.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/screenshot_20240612_122713_com.hihonor.photos.jpg",
+  "dest": "public/_site/media/gallery/4764.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/img-20240327-wa0029.jpg",
+  "dest": "public/_site/media/gallery/4817.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/img-20240327-wa0032.jpg",
+  "dest": "public/_site/media/gallery/4843.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/img-20240328-wa0028.jpg",
+  "dest": "public/_site/media/gallery/4869.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/img-20240328-wa0030.jpg",
+  "dest": "public/_site/media/gallery/4895.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/img_20231203_151128-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/5232.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/img_20231203_155443-scaled.jpg",
+  "dest": "public/_site/media/gallery/5258.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/screenshot_20240617_130017-1.jpg",
+  "dest": "public/_site/media/gallery/5336.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/fb_img_1662541547877.jpg",
+  "dest": "public/_site/media/gallery/5362.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/33584414_981884098637404_1244673645410779136_o.jpg",
+  "dest": "public/_site/media/gallery/5388.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/10/aphkhazeti_640_670.png",
+  "dest": "public/_site/media/gallery/6669.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/09/aphkhazeti-_big_dee_6-1-scaled.jpg",
+  "dest": "public/_site/media/gallery/6696.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/11/izobrazhenie-whatsapp-2024-11-10-v-15.35.39_9e42d085.jpg",
+  "dest": "public/_site/media/gallery/6749.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/11/001-1.jpg",
+  "dest": "public/_site/media/gallery/6768.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/01/al_kirill_tanya_280623_0278-2.jpg",
+  "dest": "public/_site/media/gallery/6947.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/01/mediamodifier_cropped_image97_d2a.2e16d0ba.fill-1408x464-1.png",
+  "dest": "public/_site/media/gallery/7027.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/06/dsc07307-scaled.jpg",
+  "dest": "public/_site/media/gallery/7142.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/06/r1-09396-0006-scaled.jpg",
+  "dest": "public/_site/media/gallery/7151.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/07/640_670_ch-1.png",
+  "dest": "public/_site/media/gallery/7183.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/10/tbb_640_670_soul_mission.png",
+  "dest": "public/_site/media/gallery/7212.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/11/tbb_brno_640_670_text.png",
+  "dest": "public/_site/media/gallery/7227.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/11/01_igororozovic_web_2025119181133.jpg",
+  "dest": "public/_site/media/gallery/7258.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/11/anderson2_640_670-1.png",
+  "dest": "public/_site/media/gallery/7335.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/12/tbb_hk_650_640_v2.png",
+  "dest": "public/_site/media/gallery/7347.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/02/press-photo-ame-live-3-scaled.jpg",
+  "dest": "public/_site/media/gallery/7388.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/02/ame_poster_ver_4_-640-x670_final_with_djs.png",
+  "dest": "public/_site/media/gallery/7416.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/akvarium_26_640_670.png",
+  "dest": "public/_site/media/gallery/7513.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/apkhazety_26_1920_1920-kopiya.png",
+  "dest": "public/_site/media/gallery/7537.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/apkhazety_26_640_670_logo-.png",
+  "dest": "public/_site/media/gallery/7583.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/presun-akce-cekame-na-novy-termin-1.png",
+  "dest": "public/_site/media/gallery/7674.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/06/dila-elf-scaled.jpg",
+  "dest": "public/_site/media/gallery/7735.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/06/790ac136-e860-43ae-853f-8097890e1549-1-scaled.png",
+  "dest": "public/_site/media/gallery/7744.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/07/1399448-800.jpg",
+  "dest": "public/_site/media/gallery/7829.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/07/1005900-800.jpg",
+  "dest": "public/_site/media/gallery/7838.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/dsc01999-1.jpg",
+  "dest": "public/_site/media/gallery/8038.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/dsc01994.jpg",
+  "dest": "public/_site/media/gallery/8047.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/photo-29-09-25-19-04-52-1.jpg",
+  "dest": "public/_site/media/gallery/8147.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/img_8419-2.jpg",
+  "dest": "public/_site/media/gallery/8156.webp",
+  "kind": "gallery",
+  "maxWidth": 1600
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/dolin-alicante-640-x-670.png",
+  "dest": "public/_site/media/poster/1718.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/1080x1080_fedorov2_afisha_insta-1.png",
+  "dest": "public/_site/media/poster/3241.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/1080-x-1080-kino_2ogo.png",
+  "dest": "public/_site/media/poster/3295.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/0gjf1beozi_sq_1x-1.png",
+  "dest": "public/_site/media/poster/3321.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/18-kv-1.png",
+  "dest": "public/_site/media/poster/3347.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/dolin-barcelona-3-1080-x-1080.png",
+  "dest": "public/_site/media/poster/3375.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/dolin-valencia-4-1200-1200.png",
+  "dest": "public/_site/media/poster/3401.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/dolin-marbella-1200-x-1200.png",
+  "dest": "public/_site/media/poster/3454.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/bg_fb_vertical.jpg",
+  "dest": "public/_site/media/poster/3507.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/batagov-10801080-eng.png",
+  "dest": "public/_site/media/poster/3534.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/batagov-2024-4-1080-x-1080-rus-.png",
+  "dest": "public/_site/media/poster/3613.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/600-600-fbs2-brno.png",
+  "dest": "public/_site/media/poster/4998.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/600-600-fbs2-praha.png",
+  "dest": "public/_site/media/poster/5050.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/940-788-fbs2-jaromer.png",
+  "dest": "public/_site/media/poster/5076.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/06/1080-1080-fbs2-pardubice-1-1.png",
+  "dest": "public/_site/media/poster/5128.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/600-600-fbs2-karlovy-vary-.png",
+  "dest": "public/_site/media/poster/5416.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/07/bg_2021.png",
+  "dest": "public/_site/media/poster/5445.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/10/aphkhazeti_640_670.png",
+  "dest": "public/_site/media/poster/6669.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2024/11/izobrazhenie-whatsapp-2024-11-10-v-15.35.39_30ec19a2.jpg",
+  "dest": "public/_site/media/poster/6758.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/01/chigorskaja_brno_670_640_lampyris.png",
+  "dest": "public/_site/media/poster/6967.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/01/chig_prague_640_670.png",
+  "dest": "public/_site/media/poster/6977.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/01/bg_2024_640_670_hybernia_lampyris_2.png",
+  "dest": "public/_site/media/poster/7104.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/02/dolin_madrid_640_670.png",
+  "dest": "public/_site/media/poster/7117.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/06/tj_640_670.png",
+  "dest": "public/_site/media/poster/7133.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/07/640_670_ch_soldout.png",
+  "dest": "public/_site/media/poster/7200.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/11/ander_640_670.png",
+  "dest": "public/_site/media/poster/7316.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/12/tbb_hk_650_640_v2.png",
+  "dest": "public/_site/media/poster/7347.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/11/tbb_brno_650_640_v2.png",
+  "dest": "public/_site/media/poster/7356.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2025/10/tbb_praha_650_640_v2.png",
+  "dest": "public/_site/media/poster/7365.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/02/ame_poster_ver_4_-640-x670_final_with_djs.png",
+  "dest": "public/_site/media/poster/7416.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/akvarium_26_640_670.png",
+  "dest": "public/_site/media/poster/7513.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/apkhazety_26_640_670_logo-.png",
+  "dest": "public/_site/media/poster/7583.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/05/literaturniy_stand_up_16_6_640_670.png",
+  "dest": "public/_site/media/poster/7662.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/03/presun-akce-cekame-na-novy-termin-1.png",
+  "dest": "public/_site/media/poster/7674.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/06/vs_1024_1280.png",
+  "dest": "public/_site/media/poster/7758.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/blues_brother26_1080_1080.png",
+  "dest": "public/_site/media/poster/8002.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/ivo_dimchev_budapest_1080_1080.png",
+  "dest": "public/_site/media/poster/8138.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/ivo_dimchev_vilnius_1080_1080.png",
+  "dest": "public/_site/media/poster/8248.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/copy-of-ivo_dimchev_tour_1080_1080.png",
+  "dest": "public/_site/media/poster/8257.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/bubles_26_1080_1080_all_cities-2.png",
+  "dest": "public/_site/media/poster/9205.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/bubles_26_1080_1080_all_cities-3.png",
+  "dest": "public/_site/media/poster/9219.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/bubles_26_1080_1080_all_cities-1.png",
+  "dest": "public/_site/media/poster/9233.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/bil24-poster-7866-4ed0cf574afc515462c2858618c1e9a6.jpg",
+  "dest": "public/_site/media/poster/9311.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/bil24-poster-7867-58f584bdabbafb31681478d210e01114.jpg",
+  "dest": "public/_site/media/poster/9322.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/06/cory_jam_praha_1080_1080.png",
+  "dest": "public/_site/media/poster/9398.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/cory_jam_tour_praha-1.png",
+  "dest": "public/_site/media/poster/9499.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/sh_26_solo_tour-1.png",
+  "dest": "public/_site/media/poster/9518.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/09/fbs26_1080-x-1080-2.png",
+  "dest": "public/_site/media/poster/9576.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/11/es_flamenca_budapest_1080_1350-3.png",
+  "dest": "public/_site/media/poster/9830.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ },
+ {
+  "src": "media/lampyrisevents.com/wp-content/uploads/2026/11/es_flamenca_tour_1080_1080-3.png",
+  "dest": "public/_site/media/poster/9887.webp",
+  "kind": "poster",
+  "maxWidth": 800
+ }
+]

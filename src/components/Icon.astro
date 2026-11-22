@@ -1,0 +1,10 @@
+---
+/** Small inline icons (24x24 viewBox). */
+interface Props { name: 'facebook' | 'instagram' | 'telegram' | 'menu' | 'close'; }
+const { name } = Astro.props;
+---
+{name === 'facebook' && <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.3c0-.8.3-1.3 1.4-1.3h1.5V5.3C16 5.2 15.2 5 14.3 5 12.2 5 10.8 6.3 10.8 8.6V11H8.4v3h2.4v7z" /></svg>}
+{name === 'instagram' && <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3zm0 1.8A2.7 2.7 0 0 0 4.8 7.5v9a2.7 2.7 0 0 0 2.7 2.7h9a2.7 2.7 0 0 0 2.7-2.7v-9a2.7 2.7 0 0 0-2.7-2.7zM12 7.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm0 1.8a2.7 2.7 0 1 0 0 5.4 2.7 2.7 0 0 0 0-5.4zm4.9-2.5a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1z" /></svg>}
+{name === 'telegram' && <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.4 4.6 2.9 11.7c-.9.4-.9 1.1-.2 1.3l4.7 1.5 1.8 5.5c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.2-2.2 4.6 3.4c.9.5 1.5.2 1.7-.8l3-14.3c.3-1.3-.5-1.8-1.5-1.4zM8.6 13.5l9.7-6.1c.5-.3.9-.1.5.2l-8 7.2-.3 3.3z" /></svg>}
+{name === 'menu' && <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 5h18v2.4H3zm0 5.8h18v2.4H3zM3 16.6h18V19H3z" /></svg>}
+{name === 'close' && <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.3 3.6 12 10.3l6.7-6.7 1.7 1.7-6.7 6.7 6.7 6.7-1.7 1.7-6.7-6.7-6.7 6.7-1.7-1.7 6.7-6.7-6.7-6.7z" /></svg>}

@@ -1,0 +1,17 @@
+---
+/** 404 content in a language: texts from the dictionary. */
+import Base from '../layouts/Base.astro';
+import { pagePath } from '../lib/routes.ts';
+import { ui } from '../lib/i18n.ts';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const t = ui(lang);
+---
+<Base lang={lang} title={t.errors.notFoundTitle} noindex>
+  <div class="lp-container lp-main lp-notfound">
+    <h1>{t.errors.notFoundTitle}</h1>
+    <p>{t.errors.notFoundText}</p>
+    <p><a class="lp-button" href={pagePath('home', lang)}>{t.errors.notFoundLink}</a></p>
+  </div>
+</Base>

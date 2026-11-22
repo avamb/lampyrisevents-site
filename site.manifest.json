@@ -1,0 +1,272 @@
+{
+  "languages": [
+    {
+      "code": "en",
+      "dir": "ltr",
+      "prefix": ""
+    },
+    {
+      "code": "cs",
+      "dir": "ltr",
+      "prefix": "/cs"
+    },
+    {
+      "code": "de",
+      "dir": "ltr",
+      "prefix": "/de"
+    },
+    {
+      "code": "et",
+      "dir": "ltr",
+      "prefix": "/et"
+    },
+    {
+      "code": "fi",
+      "dir": "ltr",
+      "prefix": "/fi"
+    },
+    {
+      "code": "hu",
+      "dir": "ltr",
+      "prefix": "/hu"
+    },
+    {
+      "code": "lt",
+      "dir": "ltr",
+      "prefix": "/lt"
+    },
+    {
+      "code": "lv",
+      "dir": "ltr",
+      "prefix": "/lv"
+    },
+    {
+      "code": "pl",
+      "dir": "ltr",
+      "prefix": "/pl"
+    },
+    {
+      "code": "ru",
+      "dir": "ltr",
+      "prefix": "/ru"
+    },
+    {
+      "code": "uk",
+      "dir": "ltr",
+      "prefix": "/uk"
+    }
+  ],
+  "defaultLanguage": "en",
+  "eventPathSegment": "events",
+  "requiredPages": {
+    "en": [
+      "/",
+      "/tours/",
+      "/past-events/",
+      "/about-us/",
+      "/how-to-buy/",
+      "/frequently-asked-questions/",
+      "/contacts/",
+      "/downloads/",
+      "/terms-of-use/",
+      "/privacy-policy/",
+      "/partnerships/",
+      "/create-event/",
+      "/sell-tickets-with-us/",
+      "/connect-to-stripe/",
+      "/order-status/",
+      "/my-tickets/"
+    ],
+    "cs": [
+      "/cs/",
+      "/cs/tours/",
+      "/cs/projekty/",
+      "/cs/o-nas/",
+      "/cs/jak-nakupovat/",
+      "/cs/casto-kladene-otazky/",
+      "/cs/kontakty/",
+      "/cs/ke-stazeni-na/",
+      "/cs/podminky-pouziti/",
+      "/cs/privacy-policy/",
+      "/cs/partnerstvi/",
+      "/cs/vytvorit-udalost/",
+      "/cs/prodavejte-s-nami-vstupenky/",
+      "/cs/pripojeni-ke-sluzbe-stripe/",
+      "/cs/order-status/",
+      "/cs/my-tickets/"
+    ],
+    "de": [
+      "/de/",
+      "/de/tours/",
+      "/de/projekte/",
+      "/de/ueber-uns/",
+      "/de/wie-sie-kaufen/",
+      "/de/haeufig-gestellte-fragen/",
+      "/de/kontakte/",
+      "/de/downloads/",
+      "/de/terms-of-use/",
+      "/de/privacy-policy/",
+      "/de/partnerschaften/",
+      "/de/ereignis-erstellen/",
+      "/de/verkaufen-sie-tickets-mit-uns/",
+      "/de/mit-stripe-verbinden/",
+      "/de/order-status/",
+      "/de/my-tickets/"
+    ],
+    "et": [
+      "/et/",
+      "/et/tours/",
+      "/et/past-events/",
+      "/et/about-us/",
+      "/et/how-to-buy/",
+      "/et/frequently-asked-questions/",
+      "/et/contacts/",
+      "/et/downloads/",
+      "/et/terms-of-use/",
+      "/et/privacy-policy/",
+      "/et/partnerships/",
+      "/et/create-event/",
+      "/et/sell-tickets-with-us/",
+      "/et/connect-to-stripe/",
+      "/et/order-status/",
+      "/et/my-tickets/"
+    ],
+    "fi": [
+      "/fi/",
+      "/fi/tours/",
+      "/fi/past-events/",
+      "/fi/about-us/",
+      "/fi/how-to-buy/",
+      "/fi/frequently-asked-questions/",
+      "/fi/contacts/",
+      "/fi/downloads/",
+      "/fi/terms-of-use/",
+      "/fi/privacy-policy/",
+      "/fi/partnerships/",
+      "/fi/create-event/",
+      "/fi/sell-tickets-with-us/",
+      "/fi/connect-to-stripe/",
+      "/fi/order-status/",
+      "/fi/my-tickets/"
+    ],
+    "hu": [
+      "/hu/",
+      "/hu/tours/",
+      "/hu/past-events/",
+      "/hu/about-us/",
+      "/hu/how-to-buy/",
+      "/hu/frequently-asked-questions/",
+      "/hu/contacts/",
+      "/hu/downloads/",
+      "/hu/terms-of-use/",
+      "/hu/privacy-policy/",
+      "/hu/partnerships/",
+      "/hu/create-event/",
+      "/hu/sell-tickets-with-us/",
+      "/hu/connect-to-stripe/",
+      "/hu/order-status/",
+      "/hu/my-tickets/"
+    ],
+    "lt": [
+      "/lt/",
+      "/lt/tours/",
+      "/lt/past-events/",
+      "/lt/about-us/",
+      "/lt/how-to-buy/",
+      "/lt/frequently-asked-questions/",
+      "/lt/contacts/",
+      "/lt/downloads/",
+      "/lt/terms-of-use/",
+      "/lt/privacy-policy/",
+      "/lt/partnerships/",
+      "/lt/create-event/",
+      "/lt/sell-tickets-with-us/",
+      "/lt/connect-to-stripe/",
+      "/lt/order-status/",
+      "/lt/my-tickets/"
+    ],
+    "lv": [
+      "/lv/",
+      "/lv/tours/",
+      "/lv/past-events/",
+      "/lv/about-us/",
+      "/lv/how-to-buy/",
+      "/lv/frequently-asked-questions/",
+      "/lv/contacts/",
+      "/lv/downloads/",
+      "/lv/terms-of-use/",
+      "/lv/privacy-policy/",
+      "/lv/partnerships/",
+      "/lv/create-event/",
+      "/lv/sell-tickets-with-us/",
+      "/lv/connect-to-stripe/",
+      "/lv/order-status/",
+      "/lv/my-tickets/"
+    ],
+    "pl": [
+      "/pl/",
+      "/pl/tours/",
+      "/pl/projekty/",
+      "/pl/o-nas/",
+      "/pl/jak-kupic/",
+      "/pl/czesto-zadawane-pytania/",
+      "/pl/kontakty/",
+      "/pl/pliki-do-pobrania/",
+      "/pl/terms-of-use/",
+      "/pl/privacy-policy/",
+      "/pl/partnerstwa/",
+      "/pl/utworz-zdarzenie/",
+      "/pl/sprzedawaj-z-nami-bilety/",
+      "/pl/polaczenie-ze-stripe/",
+      "/pl/order-status/",
+      "/pl/my-tickets/"
+    ],
+    "ru": [
+      "/ru/",
+      "/ru/tours/",
+      "/ru/proekty/",
+      "/ru/o-nas/",
+      "/ru/kak-kupit/",
+      "/ru/chasto-zadavaemye-voprosy/",
+      "/ru/kontakty/",
+      "/ru/skachat/",
+      "/ru/terms-of-use/",
+      "/ru/privacy-policy/",
+      "/ru/partnerskie-otnosheniya/",
+      "/ru/sozdajte-sobytie/",
+      "/ru/prodavajte-bilety-vmeste-s-nami/",
+      "/ru/podklyuchenie-k-stripe/",
+      "/ru/order-status/",
+      "/ru/my-tickets/"
+    ],
+    "uk": [
+      "/uk/",
+      "/uk/tours/",
+      "/uk/proekty/",
+      "/uk/pro-nas/",
+      "/uk/yak-kupyty/",
+      "/uk/poshyreni-zapytannya/",
+      "/uk/kontakty/",
+      "/uk/zavantazhennya/",
+      "/uk/terms-of-use/",
+      "/uk/privacy-policy/",
+      "/uk/partnerstva/",
+      "/uk/stvoryty-podiyu/",
+      "/uk/prodavajte-kvytky-razom-z-namy/",
+      "/uk/pidklyuchitsya-do-stripe/",
+      "/uk/order-status/",
+      "/uk/my-tickets/"
+    ]
+  },
+  "personalPagePatterns": [
+    "/order-status/$",
+    "/my-tickets/$"
+  ],
+  "requiredFiles": [
+    "robots.txt",
+    "sitemap.xml",
+    ".nginx/csp-hashes.conf",
+    ".nginx/redirects.conf",
+    ".nginx/locations.conf"
+  ]
+}

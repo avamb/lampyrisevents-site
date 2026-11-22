@@ -1,0 +1,15 @@
+---
+/** PLACEHOLDER of the home page: title only, lists nothing. Replaced by the real "Actual events" page. */
+import Base from '../layouts/Base.astro';
+import { pageAlternatesMap, pageHreflang } from '../lib/routes.ts';
+import { homeTitle } from '../lib/pages.ts';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const title = homeTitle(lang);
+---
+<Base lang={lang} title={title} alternates={pageHreflang('home', undefined)} switcher={pageAlternatesMap('home')}>
+  <div class="lp-container lp-main">
+    <h1 class="lp-title">{title}</h1>
+  </div>
+</Base>

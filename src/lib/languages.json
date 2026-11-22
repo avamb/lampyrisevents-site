@@ -1,0 +1,13 @@
+[
+  { "code": "en", "name": "English", "dir": "ltr", "intl": "en-GB", "prefix": "" },
+  { "code": "cs", "name": "Čeština", "dir": "ltr", "intl": "cs-CZ", "prefix": "/cs" },
+  { "code": "de", "name": "Deutsch", "dir": "ltr", "intl": "de-DE", "prefix": "/de" },
+  { "code": "et", "name": "Eesti", "dir": "ltr", "intl": "et-EE", "prefix": "/et" },
+  { "code": "fi", "name": "Suomi", "dir": "ltr", "intl": "fi-FI", "prefix": "/fi" },
+  { "code": "hu", "name": "Magyar", "dir": "ltr", "intl": "hu-HU", "prefix": "/hu" },
+  { "code": "lt", "name": "Lietuvių", "dir": "ltr", "intl": "lt-LT", "prefix": "/lt" },
+  { "code": "lv", "name": "Latviešu", "dir": "ltr", "intl": "lv-LV", "prefix": "/lv" },
+  { "code": "pl", "name": "Polski", "dir": "ltr", "intl": "pl-PL", "prefix": "/pl" },
+  { "code": "ru", "name": "Русский", "dir": "ltr", "intl": "ru-RU", "prefix": "/ru" },
+  { "code": "uk", "name": "Українська", "dir": "ltr", "intl": "uk-UA", "prefix": "/uk" }
+]

@@ -1,0 +1,12 @@
+---
+/** Generic content pages in every language (cleaned WordPress HTML). Other pages are separate files in src/pages. */
+import Page from '../layouts/Page.astro';
+import { genericPageList } from '../lib/pages.ts';
+import { toParam } from '../lib/routes.ts';
+
+export function getStaticPaths() {
+  return genericPageList().map((p) => ({ params: { path: toParam(p.path) }, props: { pageKey: p.key, lang: p.lang } }));
+}
+const { pageKey, lang } = Astro.props;
+---
+<Page pageKey={pageKey} lang={lang} />

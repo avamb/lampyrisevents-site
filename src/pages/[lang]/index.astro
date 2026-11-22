@@ -1,0 +1,11 @@
+---
+/** Home pages of the prefixed languages (/cs/ ...). PLACEHOLDER: replaced together with src/pages/index.astro. */
+import HomeStub from '../../components/HomeStub.astro';
+import { languages } from '../../../site.config.ts';
+
+export function getStaticPaths() {
+  return languages.filter((l) => l.prefix).map((l) => ({ params: { lang: l.code }, props: { lang: l.code } }));
+}
+const { lang } = Astro.props;
+---
+<HomeStub lang={lang} />
