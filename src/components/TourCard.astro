@@ -1,0 +1,38 @@
+---
+/**
+ * Card of a tour: poster 4:5, "Tour" badge with the number of cities, name, dates, "from" price per currency.
+ * Cities are listed only when `showCities` is set (the tours page), never on the home list.
+ */
+import '../styles/events.css';
+import type { Tour, SiteEvent } from '../lib/data-source.ts';
+import { tourCard } from '../lib/data-source.ts';
+import { ui, language } from '../lib/i18n.ts';
+import { eventPath } from '../lib/routes.ts';
+import { citiesLabel, citiesOf, dateRange, priceText } from '../lib/view.ts';
+
+interface Props { tour: Tour<SiteEvent>; lang: string; showCities?: boolean; past?: boolean; }
+const { tour, lang, showCities = false, past = false } = Astro.props;
+const t = ui(lang);
+const intl = language(lang).intl;
+const card = tourCard(tour, intl, '');
+const tz = tour.events[0]?.timezone ?? 'Europe/Prague';
+const live = tour.events.filter((e) => !e.past);
+const shown = live.length ? live : tour.events;
+const starts = shown.map((e) => e.primary?.start_at ?? '').filter(Boolean).sort();
+const range = starts.length ? dateRange(starts[0], starts[starts.length - 1], tz, intl) : '';
+const cities = citiesOf(shown);
+const price = past ? '' : priceText(tour.events, intl, t.event.priceFrom);
+const href = eventPath(tour.series.slug, lang);
+---
+<article class="lp-card">
+  <div class="lp-card__poster">
+    {card.posterUrl && <><img class="lp-card__bg" src={card.posterUrl} alt="" aria-hidden="true" loading="lazy" decoding="async" /><img src={card.posterUrl} alt="" width="800" height="1000" loading="lazy" decoding="async" /></>}
+    <span class="lp-card__badge">{t.tour.label} · {citiesLabel(cities.length || tour.events.length, t.tour.cities, intl)}</span>
+  </div>
+  <h3 class="lp-card__title"><a href={href}>{tour.series.name}</a></h3>
+  <ul class="lp-card__meta">
+    {range && <li>{range}</li>}
+    {showCities && cities.length > 0 && <li>{cities.join(' · ')}</li>}
+    {price && <li class="lp-card__price">{price}</li>}
+  </ul>
+</article>

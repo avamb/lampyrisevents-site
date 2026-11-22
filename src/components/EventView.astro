@@ -1,0 +1,145 @@
+---
+/**
+ * Event page /events/<slug>/: poster, name (never translated), date in the session zone, venue, description in the
+ * content language, sessions with their action (partner button, sold out, soon, took place), gallery and video.
+ * No purchase modal: a partner session is one link, a platform session without a ticket office shows a "soon" note.
+ */
+import '../styles/events.css';
+import Base from '../layouts/Base.astro';
+import { directionsLinks } from 'arena-site-kit/lib/directions';
+import { formatMoney, reportPhotos } from 'arena-site-kit/lib/events';
+import { hreflangAlternates } from 'arena-site-kit/lib/seo';
+import { contentLocaleState, loadSiteData } from '../lib/data-source.ts';
+import { eventPath } from '../lib/routes.ts';
+import { fmt, language, ui } from '../lib/i18n.ts';
+import { dateLong, eventJsonLd, priceText, seriesOf, sessionAction } from '../lib/view.ts';
+import { defaultLanguage, languages, siteUrl } from '../../site.config.ts';
+
+interface Props { slug: string; lang: string; }
+const { slug, lang } = Astro.props;
+const t = ui(lang);
+const intl = language(lang).intl;
+const data = await loadSiteData(lang);
+const e = data.routeEvents.find((x) => x.slug === slug);
+if (!e) throw new Error(`event ${slug} not found`);
+const series = seriesOf(e, data.series);
+const state = contentLocaleState(e.raw, lang);
+const textLang = state.locale || lang;
+const note = textLang !== lang ? fmt(t.x.localeNote, languages.some((l) => l.code === textLang) ? language(textLang).name : textLang) : '';
+const primary = e.primary;
+const when = primary ? dateLong(primary.start_at, e.timezone, intl) : null;
+const venue = e.raw.venues.find((v) => primary && v.session_starts.includes(primary.start_at)) ?? e.raw.venues[0];
+const directions = directionsLinks(venue ? { address: venue.address, city: venue.city, geo_lat: venue.geo_lat, geo_lng: venue.geo_lng } : null);
+const price = e.past ? '' : priceText([e], intl, t.event.priceFrom);
+const now = new Date();
+const shownSessions = e.past ? e.sessions : e.sessions.filter((s) => sessionAction(s, now).kind !== 'past');
+const many = shownSessions.length > 1;
+const single = shownSessions.length ? sessionAction(many ? shownSessions[0] : shownSessions[0], now) : { kind: 'past' as const };
+const photos = e.past ? reportPhotos(e) : (e.raw.materials?.gallery ?? []).filter((p) => p?.url).map((p) => ({ url: p.url, caption: p.caption ?? '' }));
+const videos = (e.raw.materials?.videos ?? []).filter((v) => typeof v.embed_url === 'string' && v.embed_url.startsWith('https://'));
+const alternates = hreflangAlternates(state.available, languages, (l) => eventPath(slug, l.code), siteUrl, defaultLanguage);
+const switcher = Object.fromEntries(languages.map((l) => [l.code, eventPath(slug, l.code)]));
+const noindex = e.test || e.raw.visibility === 'unlisted';
+const url = new URL(eventPath(slug, lang), siteUrl).href;
+const ld = eventJsonLd(e, url, e.poster ? new URL(e.poster, siteUrl).href : null, lang);
+const metaDescription = e.descriptionText.replace(/\s+/g, ' ').trim().slice(0, 200) || [e.name, e.venueName, e.venueCity].filter(Boolean).join(', ');
+
+function partnerPrice(a: { priceFrom: number | null; currency: string }): string {
+  return a.priceFrom === null ? '' : fmt(t.event.priceFrom, formatMoney(a.priceFrom, a.currency, intl));
+}
+---
+<Base lang={lang} title={e.name} description={metaDescription} alternates={alternates} switcher={switcher} noindex={noindex} image={e.poster}>
+  <script slot="head" type="application/ld+json" is:inline set:html={ld}></script>
+  <div class="lp-container lp-main">
+    {series && <p class="lp-back"><a href={eventPath(series.slug, lang)}>← {fmt(t.tour.backTour, series.name)}</a></p>}
+    <div class="lp-event">
+      <div class="lp-event__poster">
+        {e.poster && <img src={e.poster} alt={e.name} width="800" height="1000" />}
+      </div>
+      <div>
+        <h1>{e.name}</h1>
+        <ul class="lp-facts">
+          {when && <li><b>{when.date}</b>, {when.time}</li>}
+          {(e.venueName || e.venueCity) && <li>{[e.venueName, e.venueCity].filter(Boolean).join(', ')}</li>}
+          {price && <li class="lp-facts__muted">{price}</li>}
+          {e.past && <li><span class="lp-state">{t.event.past}</span></li>}
+        </ul>
+        {(e.venueAddress || directions) && (
+          <p class="lp-address">
+            {e.venueAddress}
+            {directions && <>{e.venueAddress ? ' · ' : ''}<a href={directions.google} target="_blank" rel="noopener">{t.event.onMap}</a></>}
+          </p>
+        )}
+
+        {!many && (
+          <div class="lp-action">
+            {single.kind === 'partner' && (
+              <>
+                <a class="lp-button lp-button--wide" href={single.url} target="_blank" rel="noopener">{fmt(t.partners.buyAt, single.seller)}</a>
+                {partnerPrice(single) && <p class="lp-note">{partnerPrice(single)}</p>}
+              </>
+            )}
+            {single.kind === 'soon' && (
+              <>
+                <span class="lp-button lp-button--disabled" aria-disabled="true">{t.event.soon}</span>
+                <p class="lp-note">{t.x.notOnSaleHere}</p>
+              </>
+            )}
+            {single.kind === 'soldout' && <span class="lp-button lp-button--disabled" aria-disabled="true">{t.event.soldOut}</span>}
+            {single.kind === 'cancelled' && <span class="lp-button lp-button--disabled" aria-disabled="true">{t.event.cancelled}</span>}
+          </div>
+        )}
+
+        {many && (
+          <>
+            <h2 class="lp-section-title">{t.event.dates}</h2>
+            <ul class="lp-sessions">
+              {shownSessions.map((s) => {
+                const a = sessionAction(s, now);
+                const w = dateLong(s.start_at, s.timezone || e.timezone, intl);
+                const v = e.raw.venues.find((x) => x.session_starts.includes(s.start_at));
+                return (
+                  <li class="lp-session">
+                    <span class="lp-session__when">{w.date}, {w.time}{v && <span class="lp-session__venue">{[v.name, v.city].filter(Boolean).join(', ')}</span>}</span>
+                    <span class="lp-session__act">
+                      {a.kind === 'partner' && (
+                        <>
+                          <a class="lp-button lp-button--small" href={a.url} target="_blank" rel="noopener">{fmt(t.partners.buyAt, a.seller)}</a>
+                          {partnerPrice(a) && <span class="lp-note">{partnerPrice(a)}</span>}
+                        </>
+                      )}
+                      {a.kind === 'soon' && <span class="lp-button lp-button--small lp-button--disabled" aria-disabled="true">{t.event.soon}</span>}
+                      {a.kind === 'soldout' && <span class="lp-state">{t.event.soldOut}</span>}
+                      {a.kind === 'cancelled' && <span class="lp-state">{t.event.cancelled}</span>}
+                      {a.kind === 'past' && <span class="lp-state">{t.event.past}</span>}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </>
+        )}
+
+        {e.descriptionHtml && <div class="lp-prose lp-event__text" lang={textLang} set:html={e.descriptionHtml} />}
+        {note && <p class="lp-note">{note}</p>}
+      </div>
+    </div>
+
+    {videos.length > 0 && (
+      <section class="lp-event__below">
+        <h2>{t.x.video}</h2>
+        {videos.map((v) => (
+          <div class="lp-video"><iframe src={v.embed_url ?? ''} title={e.name} loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+        ))}
+      </section>
+    )}
+    {photos.length > 0 && (
+      <section class="lp-event__below">
+        <h2>{e.past ? t.pastEvents.photoReport : t.x.gallery}</h2>
+        <ul class="lp-gallery">
+          {photos.map((p) => <li><img src={p.url} alt={p.caption || ''} width="400" height="500" loading="lazy" decoding="async" /></li>)}
+        </ul>
+      </section>
+    )}
+  </div>
+</Base>

@@ -1,0 +1,12 @@
+---
+/** /events/<slug>/ in English: one URL space for events and tours (series slug). The prefixed languages: [lang]/events/[slug].astro. */
+import EventView from '../../components/EventView.astro';
+import TourView from '../../components/TourView.astro';
+import { eventRoutes } from '../../lib/listing.ts';
+
+export async function getStaticPaths() {
+  return (await eventRoutes('en')).map((r) => ({ params: { slug: r.slug }, props: r }));
+}
+const { slug, lang, kind } = Astro.props;
+---
+{kind === 'tour' ? <TourView slug={slug} lang={lang} /> : <EventView slug={slug} lang={lang} />}

@@ -1,0 +1,32 @@
+---
+/**
+ * Card of one event in a grid: poster 4:5, name (untranslated), date, venue and city, "from" price.
+ * No buy button: the whole card is the link to the event page. Past events carry the "took place" label.
+ */
+import '../styles/events.css';
+import type { SiteEvent } from 'arena-site-kit/lib/events';
+import { ui } from '../lib/i18n.ts';
+import { language } from '../lib/i18n.ts';
+import { eventPath } from '../lib/routes.ts';
+import { dateShort, priceText } from '../lib/view.ts';
+
+interface Props { event: SiteEvent; lang: string; }
+const { event, lang } = Astro.props;
+const t = ui(lang);
+const intl = language(lang).intl;
+const href = eventPath(event.slug, lang);
+const price = event.past ? '' : priceText([event], intl, t.event.priceFrom);
+const label = event.past ? t.event.past : event.state === 'sold_out' ? t.event.soldOut : event.state === 'cancelled' ? t.event.cancelled : event.state === 'soon' ? t.event.soon : '';
+---
+<article class="lp-card">
+  <div class="lp-card__poster">
+    {event.poster && <><img class="lp-card__bg" src={event.poster} alt="" aria-hidden="true" loading="lazy" decoding="async" /><img src={event.poster} alt="" width="800" height="1000" loading="lazy" decoding="async" /></>}
+    {label && <span class="lp-card__badge lp-card__badge--state">{label}</span>}
+  </div>
+  <h3 class="lp-card__title"><a href={href}>{event.name}</a></h3>
+  <ul class="lp-card__meta">
+    {event.primary && <li>{dateShort(event.primary.start_at, event.timezone, intl)}</li>}
+    {(event.venueName || event.venueCity) && <li>{[event.venueName, event.venueCity].filter(Boolean).join(', ')}</li>}
+    {price && <li class="lp-card__price">{price}</li>}
+  </ul>
+</article>

@@ -1,0 +1,15 @@
+---
+/** "For partners" box: barter and partnership offer, links to the partnerships page. */
+import '../styles/events.css';
+import { ui } from '../lib/i18n.ts';
+import { pagePath } from '../lib/routes.ts';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const t = ui(lang);
+---
+<aside class="lp-partners">
+  <h2>{t.partners.forPartners}</h2>
+  <p>{t.partners.cta}</p>
+  <a class="lp-button" href={pagePath('partnerships', lang)}>{t.partners.ctaButton}</a>
+</aside>

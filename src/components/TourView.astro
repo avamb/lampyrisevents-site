@@ -1,0 +1,136 @@
+---
+/**
+ * Tour page /events/<series-slug>/: hero (portrait poster, or a wide photo / video on desktop when the series has one),
+ * "from" price per currency, the list of city events with their partner buttons, description and partners text.
+ */
+import '../styles/events.css';
+import Base from '../layouts/Base.astro';
+import PartnersBox from './PartnersBox.astro';
+import { sanitizeHtml } from 'arena-site-kit/lib/sanitize';
+import { hreflangAlternates } from 'arena-site-kit/lib/seo';
+import { loadSiteData, tourCard } from '../lib/data-source.ts';
+import { eventPath, pagePath } from '../lib/routes.ts';
+import { fmt, language, ui } from '../lib/i18n.ts';
+import { citiesLabel, citiesOf, dateBlock, dateRange, priceText, sessionAction, dateLong } from '../lib/view.ts';
+import { formatMoney } from 'arena-site-kit/lib/events';
+import { defaultLanguage, languages, siteUrl } from '../../site.config.ts';
+
+interface Props { slug: string; lang: string; }
+const { slug, lang } = Astro.props;
+const t = ui(lang);
+const intl = language(lang).intl;
+const data = await loadSiteData(lang);
+const tour = data.tours.find((x) => x.series.slug === slug);
+if (!tour) throw new Error(`tour ${slug} not found`);
+const { series } = tour;
+const card = tourCard(tour, intl, '');
+const live = tour.events.filter((e) => !e.past);
+const shown = live.length ? live : tour.events;
+const tz = shown[0]?.timezone ?? 'Europe/Prague';
+const starts = shown.map((e) => e.primary?.start_at ?? '').filter(Boolean).sort();
+const range = starts.length ? dateRange(starts[0], starts[starts.length - 1], tz, intl) : '';
+const cities = citiesOf(shown);
+const price = priceText(tour.events, intl, t.event.priceFrom);
+const next = live[0];
+const nextWhen = next?.primary ? dateLong(next.primary.start_at, next.timezone, intl).date : '';
+const wide = Boolean(series.hero_url || series.hero_video_url);
+const description = series.description_html ? sanitizeHtml(series.description_html) : '';
+const partnersHtml = series.partners_text_html ? sanitizeHtml(series.partners_text_html) : '';
+const eyebrow = [t.tour.label, range, citiesLabel(cities.length || tour.events.length, t.tour.cities, intl)].filter(Boolean).join(' · ');
+const alternates = hreflangAlternates(undefined, languages, (l) => eventPath(slug, l.code), siteUrl, defaultLanguage);
+const switcher = Object.fromEntries(languages.map((l) => [l.code, eventPath(slug, l.code)]));
+const metaDescription = (description.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 200)) || t.tour.intro;
+const stateOf = (past: boolean, kind: string) => (past ? ['', t.event.past] : kind === 'soldout' ? ['', t.event.soldOut] : kind === 'cancelled' ? ['', t.event.cancelled] : kind === 'soon' ? ['soon', t.event.soon] : ['open', t.event.onSale]);
+---
+<Base lang={lang} title={series.name} description={metaDescription} alternates={alternates} switcher={switcher} image={card.posterUrl}>
+  <div class="lp-container lp-main">
+    <p class="lp-back"><a href={pagePath('tours', lang)}>← {t.nav.tours}</a></p>
+    <section class={wide ? 'lp-hero lp-hero--wide' : 'lp-hero'}>
+      {wide && (
+        <div class="lp-hero__wide">
+          {series.hero_video_url ? (
+            <video src={series.hero_video_url} poster={series.hero_url ?? undefined} autoplay muted loop playsinline preload="metadata"></video>
+          ) : (
+            <img src={series.hero_url ?? ''} alt="" width="1600" height="640" />
+          )}
+        </div>
+      )}
+      <div class="lp-hero__poster">
+        {card.posterUrl && <img src={card.posterUrl} alt={series.name} width="800" height="1000" />}
+      </div>
+      <div class="lp-hero__text">
+        <p class="lp-hero__eyebrow">{eyebrow}</p>
+        <h1>{series.name}</h1>
+        <p class="lp-hero__facts">
+          {next && <span><b>{t.tour.next}:</b> {next.venueCity}, {nextWhen}</span>}
+          {price && <span>{price}</span>}
+        </p>
+        {live.length > 0 && <a class="lp-button" href="#cities">{t.tour.choose} ↓</a>}
+      </div>
+    </section>
+
+    <div class="lp-cities-head" id="cities">
+      <h2>{t.tour.choose}</h2>
+      <p>{t.tour.hint}</p>
+    </div>
+    {tour.events.length === 0 ? (
+      <p class="lp-empty">{t.tour.noDates}</p>
+    ) : (
+      <ul class="lp-cities">
+        {tour.events.map((e, idx) => {
+          const s = e.primary;
+          const action = s ? sessionAction(s) : { kind: 'past' as const };
+          const [stateClass, stateText] = stateOf(e.past, action.kind);
+          const block = s ? dateBlock(s.start_at, e.timezone, intl) : null;
+          const venue = e.raw.venues.find((v) => s && v.session_starts.includes(s.start_at)) ?? e.raw.venues[0];
+          const partnerPrice = action.kind === 'partner' && action.priceFrom !== null ? fmt(t.event.priceFrom, formatMoney(action.priceFrom, action.currency, intl)) : '';
+          return (
+            <li class={`lp-city${e.past ? ' lp-city--past' : ''}${!e.past && idx === 0 ? ' lp-city--first' : ''}`}>
+              <div class="lp-city__date">
+                {block && (
+                  <>
+                    <span class="lp-city__day">{block.day}</span>
+                    <span class="lp-city__month">{block.month}</span>
+                    <span class="lp-city__time">{block.weekTime}</span>
+                  </>
+                )}
+              </div>
+              <div>
+                <h3 class="lp-city__name">
+                  <a href={eventPath(e.slug, lang)}>{e.venueCity || e.name}</a>
+                  {venue?.country && <span class="lp-city__country">{venue.country}</span>}
+                </h3>
+                {e.venueName && <p class="lp-city__venue">{e.venueName}</p>}
+                {action.kind === 'partner' && action.seller && <p class="lp-city__seller">{fmt(t.partners.soldBy, action.seller)}</p>}
+              </div>
+              <div class="lp-city__side">
+                {partnerPrice && <span class="lp-city__price">{partnerPrice}</span>}
+                {stateText && <span class={stateClass ? `lp-state lp-state--${stateClass}` : 'lp-state'}>{stateText}</span>}
+              </div>
+              <div class="lp-city__action">
+                {action.kind === 'partner' ? (
+                  <a class="lp-button lp-button--small" href={action.url} target="_blank" rel="noopener">{t.event.tickets}</a>
+                ) : action.kind === 'soon' ? (
+                  <span class="lp-button lp-button--small lp-button--disabled" aria-disabled="true">{t.event.soon}</span>
+                ) : null}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+    )}
+
+    <div class="lp-about">
+      <div>
+        {description && (
+          <>
+            <h2>{t.tour.about}</h2>
+            <div class="lp-prose" set:html={description} />
+          </>
+        )}
+        {partnersHtml && <div class="lp-prose" set:html={partnersHtml} />}
+      </div>
+      <PartnersBox lang={lang} />
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,47 @@
+---
+/**
+ * Home page "Actual events": upcoming events and tours in one chronological list.
+ * Children of a tour that hides them are left out (data.upcoming), tours are cards with a "Tour" badge.
+ * h1 and an optional intro come from content/pages/<lang>/actual-events.html (the loop-grid marker is the list).
+ */
+import '../styles/events.css';
+import Base from '../layouts/Base.astro';
+import EventCard from './EventCard.astro';
+import TourCard from './TourCard.astro';
+import { loadSiteData, tourCard } from '../lib/data-source.ts';
+import { pageAlternatesMap, pageHreflang } from '../lib/routes.ts';
+import { homeTitle } from '../lib/pages.ts';
+import { ui, language } from '../lib/i18n.ts';
+import { firstUpcomingStart, pageIntro } from '../lib/view.ts';
+
+interface Props { lang: string; }
+const { lang } = Astro.props;
+const t = ui(lang);
+const data = await loadSiteData(lang);
+const title = homeTitle(lang);
+const intro = pageIntro('actual-events', lang);
+const intl = language(lang).intl;
+
+type Item = { start: string; kind: 'event'; event: (typeof data.upcoming)[number] } | { start: string; kind: 'tour'; tour: (typeof data.upcomingTours)[number] };
+const items: Item[] = [
+  ...data.upcoming.map((event): Item => ({ start: event.primary?.start_at ?? '', kind: 'event', event })),
+  ...data.upcomingTours.map((tour): Item => ({ start: tourCard(tour, intl, '').firstStartAt ?? firstUpcomingStart(tour) ?? '', kind: 'tour', tour })),
+].sort((a, b) => a.start.localeCompare(b.start));
+---
+<Base lang={lang} title={title} description={t.x.homeDescription} alternates={pageHreflang('home', undefined)} switcher={pageAlternatesMap('home')}>
+  <div class="lp-container lp-main">
+    <h1 class="lp-title">{title}</h1>
+    {intro && <div class="lp-prose lp-intro" set:html={intro} />}
+    {items.length === 0 ? (
+      <p class="lp-empty">{t.home.empty}</p>
+    ) : (
+      <ul class="lp-grid">
+        {items.map((i) => (
+          <li>
+            {i.kind === 'tour' ? <TourCard tour={i.tour} lang={lang} /> : <EventCard event={i.event} lang={lang} />}
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>

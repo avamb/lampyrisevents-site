@@ -1,12 +1,19 @@
 ---
-/** Generic content pages in every language (cleaned WordPress HTML). Other pages are separate files in src/pages. */
+/**
+ * Generic content pages in every language (cleaned WordPress HTML), the tours list and the past events list.
+ * Other pages are separate files in src/pages.
+ */
 import Page from '../layouts/Page.astro';
+import ListPage from '../components/ListPage.astro';
 import { genericPageList } from '../lib/pages.ts';
+import { listRoutes } from '../lib/listing.ts';
 import { toParam } from '../lib/routes.ts';
 
-export function getStaticPaths() {
-  return genericPageList().map((p) => ({ params: { path: toParam(p.path) }, props: { pageKey: p.key, lang: p.lang } }));
+export async function getStaticPaths() {
+  const generic = genericPageList().map((p) => ({ params: { path: toParam(p.path) }, props: { kind: 'page', pageKey: p.key, lang: p.lang, page: 1 } }));
+  const lists = (await listRoutes()).map((r) => ({ params: { path: toParam(r.path) }, props: { kind: r.kind, pageKey: '', lang: r.lang, page: r.page } }));
+  return [...generic, ...lists];
 }
-const { pageKey, lang } = Astro.props;
+const { kind, pageKey, lang, page } = Astro.props;
 ---
-<Page pageKey={pageKey} lang={lang} />
+{kind === 'page' ? <Page pageKey={pageKey} lang={lang} /> : <ListPage kind={kind as 'tours' | 'past'}lang={lang} page={page} />}

@@ -1,0 +1,17 @@
+---
+/** /<lang>/events/<slug>/: events and tours of a prefixed language. */
+import EventView from '../../../components/EventView.astro';
+import TourView from '../../../components/TourView.astro';
+import { eventRoutes } from '../../../lib/listing.ts';
+import { languages } from '../../../../site.config.ts';
+
+export async function getStaticPaths() {
+  const out = [];
+  for (const l of languages.filter((x) => x.prefix)) {
+    for (const r of await eventRoutes(l.code)) out.push({ params: { lang: l.code, slug: r.slug }, props: r });
+  }
+  return out;
+}
+const { slug, lang, kind } = Astro.props;
+---
+{kind === 'tour' ? <TourView slug={slug} lang={lang} /> : <EventView slug={slug} lang={lang} />}

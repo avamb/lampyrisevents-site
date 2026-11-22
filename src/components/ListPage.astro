@@ -1,0 +1,81 @@
+---
+/** The tours list (current tours first, then past tours) and one page of the past events list. */
+import '../styles/events.css';
+import Base from '../layouts/Base.astro';
+import EventCard from './EventCard.astro';
+import TourCard from './TourCard.astro';
+import PartnersBox from './PartnersBox.astro';
+import { loadSiteData } from '../lib/data-source.ts';
+import { PAST_PAGE_SIZE, listHreflang, pastItems, pastPageCount, pastPagePath } from '../lib/listing.ts';
+import { pageH1 } from '../lib/pages.ts';
+import { pagePath } from '../lib/routes.ts';
+import { fmt, ui } from '../lib/i18n.ts';
+import { pageIntro } from '../lib/view.ts';
+import { languages } from '../../site.config.ts';
+
+interface Props { kind: 'tours' | 'past'; lang: string; page: number; }
+const { kind, lang, page } = Astro.props;
+const t = ui(lang);
+const data = await loadSiteData(lang);
+const isPast = kind === 'past';
+const key = isPast ? 'past-events' : 'tours';
+const h1 = isPast ? pageH1('past-events', lang) || t.nav.pastEvents : t.nav.tours;
+const intro = pageIntro(key, lang);
+const total = isPast ? pastPageCount(data) : 1;
+const items = isPast ? pastItems(data).slice((page - 1) * PAST_PAGE_SIZE, page * PAST_PAGE_SIZE) : [];
+const pathFor = (l: string) => (isPast ? pastPagePath(l, page) : pagePath('tours', l));
+const switcher = Object.fromEntries(languages.map((l) => [l.code, pathFor(l.code)]));
+const title = page > 1 ? `${h1} – ${fmt(t.x.page, page)}` : h1;
+const description = isPast ? t.x.pastDescription : t.tour.intro;
+const prevHref = page > 1 ? pastPagePath(lang, page - 1) : null;
+const nextHref = page < total ? pastPagePath(lang, page + 1) : null;
+const pageNumbers = Array.from({ length: total }, (_, i) => i + 1);
+---
+<Base lang={lang} title={title} description={description} alternates={listHreflang(pathFor)} switcher={switcher}>
+  {prevHref && <link slot="head" rel="prev" href={prevHref} />}
+  {nextHref && <link slot="head" rel="next" href={nextHref} />}
+  <div class="lp-container lp-main">
+    {isPast ? (
+      <>
+        <h1 class="lp-title">{h1}</h1>
+        {intro && <div class="lp-prose lp-intro" set:html={intro} />}
+        {items.length === 0 ? (
+          <p class="lp-empty">{t.pastEvents.empty}</p>
+        ) : (
+          <ul class="lp-grid lp-grid--past">
+            {items.map((i) => (
+              <li>{i.kind === 'tour' ? <TourCard tour={i.tour} lang={lang} past showCities /> : <EventCard event={i.event} lang={lang} />}</li>
+            ))}
+          </ul>
+        )}
+        {total > 1 && (
+          <nav class="lp-pager" aria-label={h1}>
+            {prevHref ? <a href={prevHref} rel="prev">{t.x.prev}</a> : <span class="lp-note">{t.x.prev}</span>}
+            {pageNumbers.map((n) => (n === page ? <span aria-current="page">{n}</span> : <a href={pastPagePath(lang, n)}>{n}</a>))}
+            {nextHref ? <a href={nextHref} rel="next">{t.x.next}</a> : <span class="lp-note">{t.x.next}</span>}
+          </nav>
+        )}
+      </>
+    ) : (
+      <>
+        <h1 class="lp-page-title">{h1}</h1>
+        <div class="lp-tours-box">
+          {intro ? <div class="lp-prose" set:html={intro} /> : <p>{t.tour.intro}</p>}
+          {data.upcomingTours.length === 0 && <p class="lp-empty">{t.tour.noDates}</p>}
+          <ul class="lp-grid lp-grid--tours">
+            {data.upcomingTours.map((tour) => <li><TourCard tour={tour} lang={lang} showCities /></li>)}
+          </ul>
+          {data.pastTours.length > 0 && (
+            <>
+              <h2 class="lp-section-title">{t.tour.pastTours}</h2>
+              <ul class="lp-grid lp-grid--tours lp-grid--past">
+                {data.pastTours.map((tour) => <li><TourCard tour={tour} lang={lang} showCities past /></li>)}
+              </ul>
+            </>
+          )}
+          <PartnersBox lang={lang} />
+        </div>
+      </>
+    )}
+  </div>
+</Base>

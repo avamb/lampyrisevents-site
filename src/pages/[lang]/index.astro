@@ -1,6 +1,6 @@
 ---
-/** Home pages of the prefixed languages (/cs/ ...). PLACEHOLDER: replaced together with src/pages/index.astro. */
-import HomeStub from '../../components/HomeStub.astro';
+/** Home pages of the prefixed languages (/cs/ ...): the "Actual events" list. */
+import HomeList from '../../components/HomeList.astro';
 import { languages } from '../../../site.config.ts';
 
 export function getStaticPaths() {
@@ -8,4 +8,4 @@ export function getStaticPaths() {
 }
 const { lang } = Astro.props;
 ---
-<HomeStub lang={lang} />
+<HomeList lang={lang} />

@@ -4,6 +4,7 @@
  */
 import { createI18n } from 'arena-site-kit/lib/i18n';
 import { languages } from '../../site.config.ts';
+import { uiExtra, type UiExtra } from './ui-extra.ts';
 import en from '../../i18n/en.json';
 import cs from '../../i18n/cs.json';
 import de from '../../i18n/de.json';
@@ -16,11 +17,12 @@ import pl from '../../i18n/pl.json';
 import ru from '../../i18n/ru.json';
 import uk from '../../i18n/uk.json';
 
-export type UiStrings = typeof en;
+export type UiStrings = typeof en & { x: UiExtra };
 
-const i18n = createI18n<UiStrings>(languages, { en, cs, de, et, fi, hu, lt, lv, pl, ru, uk } as unknown as Record<string, UiStrings>);
+const i18n = createI18n<typeof en>(languages, { en, cs, de, et, fi, hu, lt, lv, pl, ru, uk } as unknown as Record<string, typeof en>);
 
-export const ui = (lang: string): UiStrings => i18n.ui(lang);
+/** Dictionary of a language; `x` holds the keys of src/lib/ui-extra.ts. */
+export const ui = (lang: string): UiStrings => ({ ...i18n.ui(lang), x: uiExtra[lang] ?? uiExtra.en });
 export const language = (lang: string) => i18n.language(lang);
 
 /** "from %s" style placeholder fill: replaces the first %s / %d. */
