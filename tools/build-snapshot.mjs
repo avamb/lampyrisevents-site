@@ -316,12 +316,15 @@ function buildSeries(g, lang, childIds) {
   const meta = o.meta_raw || {};
   const partnersHtml = cleanHtml(meta.lampyris_tour_partners_text || '');
   if (meta.lampyris_tour_hero_wide) warn('tour hero_wide is set but not mapped:', o.slug, meta.lampyris_tour_hero_wide);
+  // Owner-verified text of a tour in this language (data/verified/<slug>.<lang>.html, made by tools/gen-verified.mjs) beats any machine translation.
+  const verifiedFile = join('data', 'verified', `${o.slug}.${lang}.html`);
+  const verified = existsSync(verifiedFile) ? readFileSync(verifiedFile, 'utf8').trim() : null;
   const video = meta.lampyris_tour_hero_video ? videoOf(meta.lampyris_tour_hero_video) : null;
   return {
     id: tourIds.get(o.id),
     slug: o.slug,
     name: o.name,
-    description_html: cleanHtml(post.description_html),
+    description_html: verified ?? cleanHtml(post.description_html),
     poster_url: posterOf(o),
     hero_url: null,
     hero_video_url: video ? video.url : null,
@@ -329,7 +332,7 @@ function buildSeries(g, lang, childIds) {
     hide_children_in_lists: meta.lampyris_tour_hide_children !== '0',
     event_ids: childIds,
     // site extras: the feed's series answer carries the same two fields as an event
-    content_locale: contentLocale,
+    content_locale: verified ? lang : contentLocale,
     available_locales: available,
   };
 }
