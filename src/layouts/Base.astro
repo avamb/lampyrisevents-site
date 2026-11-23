@@ -54,7 +54,10 @@ const fullTitle = title.includes(brand.name) ? title : `${title} – ${brand.nam
     <meta property="og:url" content={canonical} />
     {image && <meta property="og:image" content={new URL(image, siteUrl).href} />}
     <meta property="og:locale" content={l.intl.replace('-', '_')} />
-    <link rel="icon" href="/_site/img/logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/_site/img/favicon-32x32.png" type="image/png" sizes="32x32" />
+    <link rel="icon" href="/_site/img/favicon-192x192.png" type="image/png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/_site/img/favicon-180x180.png" />
     <link rel="preload" href="/_site/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin />
     {(lang === 'ru' || lang === 'uk') && <link rel="preload" href="/_site/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin />}
     <slot name="head" />
