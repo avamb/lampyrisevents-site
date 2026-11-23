@@ -147,6 +147,10 @@ for (const w of [
 for (const g of ['/xmlrpc.php', '/wp-sitemap.xml']) line('gone', { from: g, code: 410 });
 line('gone', { from: '/sitemap-*.xml', code: 410, note: 'Slim SEO sub-sitemaps; /sitemap.xml is rebuilt' });
 
+// A translated slug that equals the slug of ANOTHER event in the same language (WP data collision): that address is a built page, so it stays a 200 and loses the 301.
+const builtEvents = new Set([...eventPath.values()].map(dec));
+out.events = out.events.filter((o) => !(o.code === 301 && builtEvents.has(dec(o.from))));
+
 // Collapse 301 chains (a translated slug that equals another group's slug in the WP data): point at the final target.
 const moved = new Map(out.events.filter((o) => o.code === 301).map((o) => [dec(o.from), o.to]));
 for (const o of out.events) {

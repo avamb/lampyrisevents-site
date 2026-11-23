@@ -262,21 +262,19 @@ events:
   - { from: "/past-event/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-3/", code: 301, to: "/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-3/" }
   - { from: "/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/", code: 200 }
   - { from: "/past-event/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/", code: 301, to: "/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
-  - { from: "/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
   - { from: "/cs/past-event/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
   - { from: "/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/", code: 200 }
   - { from: "/past-event/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/", code: 301, to: "/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/" }
-  - { from: "/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
-  - { from: "/cs/past-event/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
+  - { from: "/cs/past-event/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/", code: 301, to: "/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/" }
   - { from: "/ru/events/teatr-mylnyh-puzyrej-tajna-puzyrya-schastya-2/", code: 301, to: "/ru/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/" }
   - { from: "/ru/past-event/teatr-mylnyh-puzyrej-tajna-puzyrya-schastya-2/", code: 301, to: "/ru/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/" }
   - { from: "/uk/events/teatr-mylnyh-bulbashok-tayemnyczya-bulbashky-shhastya-2/", code: 301, to: "/uk/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/" }
   - { from: "/uk/past-event/teatr-mylnyh-bulbashok-tayemnyczya-bulbashky-shhastya-2/", code: 301, to: "/uk/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti-2/" }
   - { from: "/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/", code: 200 }
   - { from: "/past-event/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/", code: 301, to: "/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/" }
-  - { from: "/cs/events/divadlo-mýdlových-bublin-tajemství-bubliny-štěstí/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
-  - { from: "/cs/events/divadlo-m%c3%bddlov%c3%bdch-bublin-tajemstv%c3%ad-bubliny-%c5%a1t%c4%9bst%c3%ad/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/", note: "percent-encoded form" }
-  - { from: "/cs/past-event/divadlo-mýdlových-bublin-tajemství-bubliny-štěstí/", code: 301, to: "/cs/events/the-soap-bubble-theatre-the-secret-of-the-bubble-of-happiness-2/" }
+  - { from: "/cs/events/divadlo-mýdlových-bublin-tajemství-bubliny-štěstí/", code: 301, to: "/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/" }
+  - { from: "/cs/events/divadlo-m%c3%bddlov%c3%bdch-bublin-tajemstv%c3%ad-bubliny-%c5%a1t%c4%9bst%c3%ad/", code: 301, to: "/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/", note: "percent-encoded form" }
+  - { from: "/cs/past-event/divadlo-mýdlových-bublin-tajemství-bubliny-štěstí/", code: 301, to: "/cs/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/" }
   - { from: "/ru/events/teatr-mylnyh-puzyrej-tajna-puzyrya-schastya/", code: 301, to: "/ru/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/" }
   - { from: "/ru/past-event/teatr-mylnyh-puzyrej-tajna-puzyrya-schastya/", code: 301, to: "/ru/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/" }
   - { from: "/uk/events/teatr-mylnyh-bulbashok-tayemnyczya-bulbashky-shhastya/", code: 301, to: "/uk/events/divadlo-mydlovych-bublin-tajemstvi-bubliny-stesti/" }

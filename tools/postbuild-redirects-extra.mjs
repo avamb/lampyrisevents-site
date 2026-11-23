@@ -26,5 +26,13 @@ if (ids.length) {
   for (const r of ids) lines.push(`  if ($arg_id = "${r.id}") { return 301 ${r.to}; }`);
   lines.push('}');
 }
+// after_t2: Traefik keeps requests WITH order or reset parameters on WordPress (spec 63 section 7.3), so the site only ever sees the
+// parameter-free old shop pages. They answer 301 from T0, not a 404 for a customer's bookmark.
+let afterT2 = 0;
+for (const r of doc.after_t2 ?? []) {
+  if (r.from.endsWith('/*')) lines.push(`location ^~ ${r.from.slice(0, -1)} { return 301 ${r.to}; }`);
+  else lines.push(`location = ${r.from} { if ($args = "") { return 301 ${r.to}; } }`);
+  afterT2++;
+}
 appendFileSync(file, lines.join('\n') + '\n');
-console.log(`postbuild-redirects-extra: ${(doc.tags ?? []).length} tag rules, ${ids.length} ticket id rules`);
+console.log(`postbuild-redirects-extra: ${(doc.tags ?? []).length} tag rules, ${ids.length} ticket id rules, ${afterT2} old shop page rules`);
