@@ -34,6 +34,9 @@ const columns = [
   },
 ];
 const copyright = t.footer.copyright.replace('{year}', String(new Date().getFullYear()));
+// "Ticket processing by ArenaSoldOut.com": only the platform name is a link.
+const PROCESSOR = 'ArenaSoldOut.com';
+const processing = t.footer.processing.split(PROCESSOR);
 ---
 <div class="lp-partner">
   <a href={brand.partnerLogo.href} target="_blank" rel="noopener" title="Kudyznudy.cz">
@@ -58,7 +61,10 @@ const copyright = t.footer.copyright.replace('{year}', String(new Date().getFull
   </div>
   <div class="lp-footer__bar">
     <div class="lp-container lp-footer__bar-inner">
-      <p class="lp-footer__copy">{copyright} · IČO {brand.registryCode} · DIČ {brand.vat}</p>
+      <div>
+        <p class="lp-footer__copy">{copyright} · IČO {brand.registryCode} · DIČ {brand.vat}</p>
+        <p class="lp-footer__copy lp-footer__processing">{processing[0]}<a href="https://arenasoldout.com/" target="_blank" rel="noopener">{PROCESSOR}</a>{processing.slice(1).join(PROCESSOR)}</p>
+      </div>
       <div class="lp-social">
         <a href={brand.facebook} target="_blank" rel="noopener" aria-label="Facebook"><Icon name="facebook" /></a>
         <a href={brand.instagram} target="_blank" rel="noopener" aria-label="Instagram"><Icon name="instagram" /></a>

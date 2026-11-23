@@ -1,6 +1,6 @@
 ---
 /**
- * Site header: logo, main menu (actual events, tours, past events), language switcher, burger below 1025 px.
+ * Site header: logo, main menu (actual events, tours, past events, about us), language switcher, burger below 1025 px.
  * `switcher` = address of this page in every language (default: the home page of that language).
  */
 import { languages, brand } from '../../site.config.ts';
@@ -20,6 +20,7 @@ const items = [
   { key: 'home', label: homeTitle(lang) },
   { key: 'tours', label: t.nav.tours },
   { key: 'past-events', label: t.nav.pastEvents },
+  { key: 'about-us', label: t.nav.aboutUs },
 ];
 const here = language(lang);
 const href = (code: string) => switcher[code] ?? pagePath('home', code);
