@@ -22,3 +22,11 @@ services:
     ports:
       - "${WEB_PORT:-8080}:80"
     restart: unless-stopped
+    networks:
+      - default
+      - dokploy-network
+
+# The server's Traefik reaches the container by name over this shared network (file-provider route of the domain switch).
+networks:
+  dokploy-network:
+    external: true
