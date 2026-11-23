@@ -50,9 +50,40 @@ function requireCompany(form: HTMLFormElement): void {
   });
 }
 
+// The platform takes a message of 10 to 2000 characters or none. A shorter one comes back as 400 and the site used to show
+// «fill in the required fields». Say what is wrong before anything is sent.
+const SHORT_MESSAGE: Record<string, string> = {
+  en: 'The message must be at least 10 characters long, or leave it empty.',
+  cs: 'Zpráva musí mít alespoň 10 znaků, nebo ji nechte prázdnou.',
+  de: 'Die Nachricht muss mindestens 10 Zeichen lang sein, oder lassen Sie sie leer.',
+  et: 'Sõnum peab olema vähemalt 10 tähemärki pikk või jäta see tühjaks.',
+  fi: 'Viestin on oltava vähintään 10 merkkiä pitkä, tai jätä se tyhjäksi.',
+  hu: 'Az üzenet legalább 10 karakter hosszú legyen, vagy hagyja üresen.',
+  lt: 'Žinutė turi būti bent 10 simbolių arba palikite ją tuščią.',
+  lv: 'Ziņojumam jābūt vismaz 10 rakstzīmju garam, vai atstājiet to tukšu.',
+  pl: 'Wiadomość musi mieć co najmniej 10 znaków lub zostaw to pole puste.',
+  ru: 'Сообщение должно быть не короче 10 символов, или оставьте поле пустым.',
+  uk: 'Повідомлення має містити щонайменше 10 символів, або залиште поле порожнім.',
+};
+
+function requireMessageLength(form: HTMLFormElement): void {
+  form.addEventListener('submit', (ev) => {
+    const len = value(form, 'message').length;
+    if (len === 0 || len >= 10) return;
+    ev.preventDefault();
+    ev.stopImmediatePropagation();
+    const status = form.querySelector<HTMLElement>('[data-form-status]');
+    if (!status) return;
+    status.textContent = SHORT_MESSAGE[form.dataset.lang ?? 'en'] ?? SHORT_MESSAGE.en;
+    status.dataset.state = 'error';
+    status.hidden = false;
+  });
+}
+
 export function startPageForms(): void {
   document.querySelectorAll<HTMLFormElement>('form[data-form-kind]').forEach((form) => {
     if (form.dataset.partnership === 'true') requireCompany(form);
+    requireMessageLength(form);
     const base = createArenaClient({ apiBase: form.dataset.api ?? '', feedToken: form.dataset.feed ?? '' });
     initSiteForm(form, {
       client: form.dataset.partnership === 'true' ? partnershipClient(base, form) : base,
