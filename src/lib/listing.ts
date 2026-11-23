@@ -7,6 +7,7 @@ import { hreflangAlternates, type HreflangAlternate } from 'arena-site-kit/lib/s
 import { languages, defaultLanguage, siteUrl } from '../../site.config.ts';
 import { loadSiteData, type SiteData, type SiteEvent, type Tour } from './data-source.ts';
 import { pagePath } from './routes.ts';
+import { hasTicketsPage } from './tickets.ts';
 
 export const PAST_PAGE_SIZE = 12;
 
@@ -72,4 +73,11 @@ export async function eventRoutes(lang: string): Promise<EventRoute[]> {
     out.set(t.series.slug, { slug: t.series.slug, lang, kind: 'tour' });
   }
   return [...out.values()];
+}
+
+/** Events with a sales page /tickets/<slug>/: upcoming, with a sellable (non-partner, not cancelled) session. */
+export async function ticketsRoutes(lang: string): Promise<{ slug: string; lang: string }[]> {
+  const data = await loadSiteData(lang);
+  const now = new Date();
+  return data.routeEvents.filter((e) => hasTicketsPage(e, now)).map((e) => ({ slug: e.slug, lang }));
 }

@@ -27,6 +27,15 @@ export const arena = {
   testFeedToken: (env.PUBLIC_TEST_FEED_TOKEN || '').trim(),
 };
 
+/**
+ * Inline ticket widget (the sales page /tickets/<slug>/): script address and the API base the BROWSER calls.
+ * PUBLIC_ARENA_WIDGET_API unset = arena.apiBase; set but empty = same-origin relative calls.
+ */
+export const widget = {
+  url: env.PUBLIC_ARENA_WIDGET_URL || 'https://tickets.arenasoldout.com/widget/v1/arena-tickets.js',
+  apiBase: env.PUBLIC_ARENA_WIDGET_API === undefined ? arena.apiBase : env.PUBLIC_ARENA_WIDGET_API.trim(),
+};
+
 /** Tracking ids (notice mode: loaded until the visitor declines). Empty = no calls at all. */
 export const tracking = {
   metaPixelId: env.PUBLIC_META_PIXEL_ID || '',

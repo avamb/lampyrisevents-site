@@ -75,6 +75,7 @@ export type SessionAction =
   | { kind: 'cancelled' }
   | { kind: 'soldout' }
   | { kind: 'partner'; url: string; seller: string; priceFrom: number | null; currency: string }
+  | { kind: 'buy' }
   | { kind: 'soon' };
 
 export function sessionAction(s: FeedSession, now: Date = new Date()): SessionAction {
@@ -83,7 +84,9 @@ export function sessionAction(s: FeedSession, now: Date = new Date()): SessionAc
   const p = partnerButton(s);
   if (p) return { kind: 'partner', url: p.url, seller: p.sellerName, priceFrom: p.priceFrom, currency: p.currency };
   if (s.sales_state === 'sold_out') return { kind: 'soldout' };
-  // A platform session without tiers is a fixture, and a platform checkout is not built on this site yet.
+  // A platform session with tiers is sold inline on the sales page /tickets/<slug>/.
+  if (s.tiers?.length) return { kind: 'buy' };
+  // A platform session without tiers is a fixture (nothing to sell yet).
   return { kind: 'soon' };
 }
 

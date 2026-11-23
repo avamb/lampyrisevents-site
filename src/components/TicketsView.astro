@@ -1,0 +1,169 @@
+---
+/**
+ * Sales page /tickets/<slug>/ (Ticket Tailor layout, Lampyris look): own minimal top bar, slider (poster + gallery),
+ * name, date line, venue, "Buy tickets", then the Arena widget INLINE (no modal), description, video, map, sticky card
+ * with share links, footer row. The page brings its own chrome (Base chrome="tickets").
+ */
+import '../styles/tickets.css';
+import Base from '../layouts/Base.astro';
+import Icon from './Icon.astro';
+import { hreflangAlternates } from 'arena-site-kit/lib/seo';
+import { contentLocaleState, loadSiteData } from '../lib/data-source.ts';
+import { eventPath, pagePath, ticketsPath } from '../lib/routes.ts';
+import { fmt, language, ui } from '../lib/i18n.ts';
+import { dateLine, mapCoords, osmEmbedUrl, osmSearchUrl, shareLinks, ticketSession, venueLine, venueOf } from '../lib/tickets.ts';
+import { brand, defaultLanguage, languages, siteUrl, widget } from '../../site.config.ts';
+
+interface Props { slug: string; lang: string; }
+const { slug, lang } = Astro.props;
+const t = ui(lang);
+const intl = language(lang).intl;
+const data = await loadSiteData(lang);
+const e = data.routeEvents.find((x) => x.slug === slug);
+if (!e) throw new Error(`event ${slug} not found`);
+const session = ticketSession(e);
+if (!session) throw new Error(`event ${slug} has no sellable session`);
+const state = contentLocaleState(e.raw, lang);
+const textLang = state.locale || lang;
+const venue = venueOf(e, session);
+const when = dateLine(session.start_at, session.end_at, session.timezone || e.timezone, intl);
+const where = venueLine(venue, e.venueName);
+const address = venueLine(venue ? { ...venue, name: '' } : undefined);
+const coords = mapCoords(venue, e.raw.materials?.map_point);
+const mapQuery = [e.venueName, address].filter(Boolean).join(', ') || where;
+
+// Slides: the poster, then the gallery (each file once).
+const seen = new Set<string>();
+const slides: { url: string; alt: string }[] = [];
+for (const [url, alt] of [[e.poster, e.name] as const, ...(e.raw.materials?.gallery ?? []).map((p) => [p?.url, p?.caption || e.name] as const)]) {
+  if (!url || seen.has(url)) continue;
+  seen.add(url);
+  slides.push({ url, alt });
+}
+const videos = (e.raw.materials?.videos ?? []).filter((v) => typeof v.embed_url === 'string' && v.embed_url.startsWith('https://'));
+
+const here = ticketsPath(slug, lang);
+const url = new URL(here, siteUrl).href;
+const share = shareLinks(url, e.name);
+const note = textLang !== lang ? fmt(t.x.localeNote, languages.some((l) => l.code === textLang) ? language(textLang).name : textLang) : '';
+const alternates = hreflangAlternates(state.available, languages, (l) => ticketsPath(slug, l.code), siteUrl, defaultLanguage);
+const switcher = Object.fromEntries(languages.map((l) => [l.code, ticketsPath(slug, l.code)]));
+const metaDescription = e.descriptionText.replace(/\s+/g, ' ').trim().slice(0, 200) || [e.name, when, where].filter(Boolean).join(', ');
+const noindex = e.test || e.raw.visibility === 'unlisted';
+---
+<Base lang={lang} title={e.name} description={metaDescription} alternates={alternates} switcher={switcher} noindex={noindex} image={e.poster} chrome="tickets">
+  <script slot="head" is:inline type="module" src={widget.url}></script>
+  <div class="tk-page" id="top">
+    <header class="tk-top">
+      <div class="tk-container tk-top__in">
+        <a class="tk-top__logo" href={pagePath('home', lang)} aria-label={brand.name}>
+          <img src="/_site/img/logo.svg" alt={brand.name} width="160" height="40" />
+        </a>
+        <a class="tk-pill tk-pill--outline" href={pagePath('myTickets', lang)}>{t.account.myTickets}</a>
+      </div>
+    </header>
+
+    <div class="tk-container">
+      {slides.length > 0 && (
+        <section class="tk-slider" data-tk-slider aria-roledescription="carousel" aria-label={e.name}>
+          <div class="tk-slider__viewport">
+            {slides.map((s, i) => (
+              <figure class="tk-slide" data-tk-slide data-active={i === 0 ? 'true' : undefined} aria-hidden={i === 0 ? undefined : 'true'}>
+                <img class="tk-slide__bg" src={s.url} alt="" aria-hidden="true" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" />
+                <img class="tk-slide__img" src={s.url} alt={s.alt} loading={i === 0 ? 'eager' : 'lazy'} decoding="async" />
+              </figure>
+            ))}
+          </div>
+          {slides.length > 1 && (
+            <>
+              <button type="button" class="tk-slider__nav tk-slider__nav--prev" data-tk-prev aria-label={t.x.prev}><Icon name="chevron-left" /></button>
+              <button type="button" class="tk-slider__nav tk-slider__nav--next" data-tk-next aria-label={t.x.next}><Icon name="chevron-right" /></button>
+              <div class="tk-slider__dots">
+                {slides.map((_s, i) => <button type="button" class="tk-slider__dot" data-tk-dot={i} aria-label={fmt(t.x.slideN, i + 1)} aria-current={i === 0 ? 'true' : undefined}></button>)}
+              </div>
+            </>
+          )}
+        </section>
+      )}
+
+      <div class="tk-hero">
+        <div class="tk-hero__text">
+          <h1>{e.name}</h1>
+          <p class="tk-when">{when}</p>
+          {where && <p class="tk-where"><Icon name="pin" /><span>{where}</span></p>}
+        </div>
+        <a class="tk-pill tk-pill--buy" href="#tickets">{t.event.buy}</a>
+      </div>
+      <hr class="tk-rule" />
+
+      <div class="tk-cols">
+        <div class="tk-main">
+          <section id="tickets" class="tk-widget" aria-label={t.event.tickets}>
+            <arena-tickets data-order-status={pagePath('orderStatus', lang)} data-event-slug={slug} feed-token={e.feedToken} event-id={e.raw.id} locale={lang} api-base={widget.apiBase} cover="hidden" materials="hidden" frame="hidden"></arena-tickets>
+          </section>
+
+          {e.descriptionHtml && <div class="lp-prose tk-text" lang={textLang} set:html={e.descriptionHtml} />}
+          {note && <p class="tk-note">{note}</p>}
+
+          {videos.length > 0 && (
+            <section class="tk-block">
+              <h2>{t.x.video}</h2>
+              {videos.map((v) => (
+                <div class="tk-video"><iframe src={v.embed_url ?? ''} title={e.name} loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+              ))}
+            </section>
+          )}
+
+          {(where || coords) && (
+            <section class="tk-block">
+              <h2>{t.event.venue}</h2>
+              {where && <p class="tk-address">{where}</p>}
+              {coords ? (
+                <iframe class="tk-map" src={osmEmbedUrl(coords)} title={where || e.name} loading="lazy" referrerpolicy="no-referrer"></iframe>
+              ) : (
+                <p><a class="tk-link" href={osmSearchUrl(mapQuery)} target="_blank" rel="noopener">{t.x.openInMap}</a></p>
+              )}
+            </section>
+          )}
+        </div>
+
+        <aside class="tk-side">
+          <div class="tk-card">
+            <h2 class="tk-card__name">{e.name}</h2>
+            <p class="tk-when">{when}</p>
+            {where && <p class="tk-where"><Icon name="pin" /><span>{where}</span></p>}
+            <a class="tk-pill tk-pill--buy tk-pill--block" href="#tickets">{t.event.buy}</a>
+            <div class="tk-share">
+              <p class="tk-share__title">{t.x.shareEvent}</p>
+              <ul class="tk-share__list">
+                <li><a href={share.facebook} target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><Icon name="facebook" /></a></li>
+                <li><a href={share.x} target="_blank" rel="noopener" aria-label="X" title="X"><Icon name="x" /></a></li>
+                <li><a href={share.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" /></a></li>
+                <li><button type="button" data-tk-copy={url} data-copied={t.thankyou.copied} aria-label={t.thankyou.copyLink} title={t.thankyou.copyLink}><Icon name="link" /></button></li>
+              </ul>
+              <p class="tk-share__status" data-tk-copy-status role="status"></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <footer class="tk-foot">
+      <div class="tk-container tk-foot__in">
+        <div class="tk-foot__help">
+          <span class="tk-foot__label">{t.x.needHelp}</span>
+          <a href={pagePath('contacts', lang)}>{t.x.contactOrganiser}</a>
+          <a href={pagePath('privacy-policy', lang)}>{t.footer.privacy}</a>
+        </div>
+        <div class="tk-foot__by">
+          <span class="tk-foot__label">{t.x.ticketingBy}</span>
+          <a href="https://arenasoldout.com/" target="_blank" rel="noopener" aria-label="Arena"><img src="/_site/img/arena-logo.svg" alt="Arena" height="20" width="48" /></a>
+          <a class="tk-foot__top" href="#top">{t.x.backToTop} <Icon name="arrow-up" /></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    import '../scripts/tickets-page.ts';
+  </script>
+</Base>

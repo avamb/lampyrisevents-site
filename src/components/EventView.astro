@@ -10,7 +10,7 @@ import { directionsLinks } from 'arena-site-kit/lib/directions';
 import { formatMoney, reportPhotos } from 'arena-site-kit/lib/events';
 import { hreflangAlternates } from 'arena-site-kit/lib/seo';
 import { contentLocaleState, loadSiteData } from '../lib/data-source.ts';
-import { eventPath } from '../lib/routes.ts';
+import { eventPath, ticketsPath } from '../lib/routes.ts';
 import { fmt, language, ui } from '../lib/i18n.ts';
 import { dateLong, eventJsonLd, priceText, seriesOf, sessionAction } from '../lib/view.ts';
 import { defaultLanguage, languages, siteUrl } from '../../site.config.ts';
@@ -76,6 +76,7 @@ function partnerPrice(a: { priceFrom: number | null; currency: string }): string
 
         {!many && (
           <div class="lp-action">
+            {single.kind === 'buy' && <a class="lp-button lp-button--wide" href={ticketsPath(slug, lang)}>{t.event.buy}</a>}
             {single.kind === 'partner' && (
               <>
                 <a class="lp-button lp-button--wide" href={single.url} target="_blank" rel="noopener">{fmt(t.partners.buyAt, single.seller)}</a>
@@ -112,6 +113,7 @@ function partnerPrice(a: { priceFrom: number | null; currency: string }): string
                           {partnerPrice(a) && <span class="lp-note">{partnerPrice(a)}</span>}
                         </>
                       )}
+                      {a.kind === 'buy' && <a class="lp-button lp-button--small" href={ticketsPath(slug, lang)}>{t.event.buy}</a>}
                       {a.kind === 'soon' && <span class="lp-button lp-button--small lp-button--disabled" aria-disabled="true">{t.event.soon}</span>}
                       {a.kind === 'soldout' && <span class="lp-state">{t.event.soldOut}</span>}
                       {a.kind === 'cancelled' && <span class="lp-state">{t.event.cancelled}</span>}

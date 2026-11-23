@@ -6,14 +6,35 @@
 import '../styles/personal.css';
 import Base from '../layouts/Base.astro';
 import OrderStatus from './islands/OrderStatus.svelte';
+import EventCard from './EventCard.astro';
+import Icon from './Icon.astro';
 import { ui, language } from '../lib/i18n.ts';
 import { pagePath, pageAlternatesMap } from '../lib/routes.ts';
-import { arena, brand, siteUrl } from '../../site.config.ts';
+import { arena, brand, siteUrl, turnstile } from '../../site.config.ts';
+import { loadSiteData } from '../lib/data-source.ts';
+import { otherEvents } from '../lib/thank-you.ts';
 
 interface Props { lang: string; }
 const { lang } = Astro.props;
 const t = ui(lang);
 const title = t.mailer.ticket.order;
+// Thank-you blocks (shown by src/scripts/thank-you.ts once the order is paid). Five cards: the one just bought is hidden in the browser, four stay.
+const data = await loadSiteData(lang);
+const more = otherEvents(data.upcoming, '', 5);
+const social = [
+  { name: 'facebook', label: 'Facebook', href: brand.facebook },
+  { name: 'instagram', label: 'Instagram', href: brand.instagram },
+  { name: 'telegram', label: 'Telegram', href: brand.telegram },
+] as const;
+const f = t.forms;
+const formTexts = {
+  unavailable: t.errors.unavailable,
+  sending: f.sending,
+  sent: t.x.newsletterSent,
+  captchaWait: f.errors.captcha,
+  errors: { ...t.errors, ...f.errors, invalid: f.errors.fillRequired, notAvailable: t.errors.unavailable },
+};
+const consent = t.x.newsletterConsent.split(/({privacy})/);
 ---
 <Base lang={lang} title={title} switcher={pageAlternatesMap('orderStatus')} personal>
   <div class="lp-container lp-main">
@@ -36,7 +57,57 @@ const title = t.mailer.ticket.order;
           contactEmail={brand.email}
           intl={language(lang).intl}
         />
+        <div class="lp-ty" data-ty hidden>
+          <section class="lp-ty__block">
+            <h3>{t.x.followUs}</h3>
+            <ul class="lp-ty__social">
+              {social.map((x) => x.href && <li><a class="lp-ty__pill" href={x.href} target="_blank" rel="noopener"><Icon name={x.name} />{x.label}</a></li>)}
+            </ul>
+          </section>
+          {more.length > 0 && (
+            <section class="lp-ty__block" data-ty-more>
+              <h3>{t.x.mayAlsoLike}</h3>
+              <ul class="lp-grid lp-ty__events">
+                {more.map((e) => <li data-ty-event={e.slug}><EventCard event={e} lang={lang} /></li>)}
+              </ul>
+            </section>
+          )}
+          <section class="lp-ty__block">
+            <h3>{t.x.newsletterTitle}</h3>
+            <p>{t.x.newsletterText}</p>
+            <form class="lp-form lp-ty__form" data-ty-newsletter data-lang={lang} data-api={arena.apiBase} data-feed={arena.feedToken} data-sitekey={turnstile.siteKey} data-texts={JSON.stringify(formTexts)} novalidate>
+              <div class="lp-form__field lp-form__field--full">
+                <label class="is-required" for="lp-ty-email">{f.email}</label>
+                <input type="email" id="lp-ty-email" name="email" required autocomplete="email" />
+              </div>
+              <div class="lp-form__field lp-form__field--full lp-form__consent">
+                <label>
+                  <input type="checkbox" name="consent" required />
+                  <span>{consent.map((part) => (part === '{privacy}' ? <a href={pagePath('privacy-policy', lang)}>{t.footer.privacy}</a> : part))}</span>
+                </label>
+              </div>
+              <div class="lp-form__field lp-form__field--full lp-form__turnstile" data-turnstile></div>
+              <p class="lp-form__status lp-form__field--full" data-form-status role="status" hidden></p>
+              <div class="lp-form__field lp-form__field--full lp-form__actions">
+                <button type="submit" class="lp-button">{t.x.subscribe}</button>
+              </div>
+            </form>
+          </section>
+          <section class="lp-ty__promo" data-ty-promo data-api={arena.apiBase} data-feed={arena.feedToken} hidden>
+            <h3 data-ty-promo-title></h3>
+            <p data-ty-promo-text></p>
+            <div class="lp-ty__code" data-ty-promo-codebox hidden>
+              <code data-ty-promo-code></code>
+              <button type="button" class="lp-ty__copy" data-ty-promo-copy data-label={t.x.copyCode} data-done={t.thankyou.copied}>{t.x.copyCode}</button>
+            </div>
+            <a class="lp-button" data-ty-promo-link hidden>{t.thankyou.toEvents}</a>
+          </section>
+        </div>
       </div>
     </section>
   </div>
 </Base>
+
+<script>
+  import '../scripts/thank-you.ts';
+</script>

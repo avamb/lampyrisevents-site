@@ -43,3 +43,27 @@
   .lp-personal__box { padding: 16px; }
   .lp-mt__tickets li { flex-direction: column; align-items: flex-start; }
 }
+
+/* Thank-you blocks under the paid order (OrderStatusPage.astro, src/scripts/thank-you.ts) */
+.lp-ty { margin-top: 8px; }
+.lp-ty[hidden], .lp-ty [hidden] { display: none; }
+.lp-ty__block { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--lp-border); }
+.lp-ty__block h3 { margin-top: 0; }
+.lp-ty__social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.lp-ty__pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: var(--lp-radius-pill); background: var(--lp-soft-bg); color: var(--lp-ink); font-weight: 600; text-decoration: none; }
+.lp-ty__pill:hover { background: var(--lp-soft-bg-hover); }
+.lp-ty__pill svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+.lp-ty__events { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.lp-ty__events .lp-card__title { font-size: 15px; line-height: 20px; }
+.lp-ty__form { grid-template-columns: minmax(0, 1fr); }
+.lp-ty__promo { margin-top: 32px; padding: 20px; border-radius: var(--lp-radius); background: var(--lp-yellow); color: var(--lp-ink); }
+.lp-ty__promo h3 { margin-top: 0; }
+.lp-ty__promo p:empty, .lp-ty__promo h3:empty { display: none; }
+.lp-ty__code { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 16px; padding: 6px 6px 6px 20px; border-radius: var(--lp-radius-pill); background: var(--lp-white); }
+.lp-ty__code code { font-size: 18px; font-weight: 700; letter-spacing: .04em; }
+.lp-ty__copy { cursor: pointer; border: 0; border-radius: var(--lp-radius-pill); padding: 8px 16px; background: var(--lp-ink); color: var(--lp-white); font: inherit; font-size: 14px; }
+.lp-ty__promo .lp-button { display: inline-block; }
+@media (max-width: 767px) {
+  .lp-ty__events { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lp-ty__promo { padding: 16px; }
+}
