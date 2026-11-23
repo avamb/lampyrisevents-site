@@ -44,6 +44,12 @@ const alternates = hreflangAlternates(undefined, languages, (l) => eventPath(slu
 const switcher = Object.fromEntries(languages.map((l) => [l.code, eventPath(slug, l.code)]));
 const metaDescription = (description.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 200)) || t.tour.intro;
 const stateOf = (past: boolean, kind: string) => (past ? ['', t.event.past] : kind === 'soldout' ? ['', t.event.soldOut] : kind === 'cancelled' ? ['', t.event.cancelled] : kind === 'soon' ? ['soon', t.event.soon] : ['open', t.event.onSale]);
+
+/** Names typed in capitals in the source (WARSZAWA, DIVADLO BROADWAY,) are shown in normal case, without a trailing comma. */
+const tidy = (v?: string | null) => {
+  const t = (v ?? '').trim().replace(/[,;]+$/, '');
+  return t.length > 1 && t === t.toUpperCase() && t !== t.toLowerCase() ? t.toLowerCase().replace(/(^|[\s-])(\p{L})/gu, (_m, a, b) => a + b.toUpperCase()) : t;
+};
 ---
 <Base lang={lang} title={series.name} description={metaDescription} alternates={alternates} switcher={switcher} image={card.posterUrl}>
   <div class="lp-container lp-main">
@@ -104,10 +110,10 @@ const stateOf = (past: boolean, kind: string) => (past ? ['', t.event.past] : ki
               </div>
               <div>
                 <h3 class="lp-city__name">
-                  <a href={eventPath(e.slug, lang)}>{e.venueCity || e.name}</a>
+                  <a href={eventPath(e.slug, lang)}>{tidy(e.venueCity) || e.name}</a>
                   {venue?.country && <span class="lp-city__country">{venue.country}</span>}
                 </h3>
-                {e.venueName && <p class="lp-city__venue">{e.venueName}</p>}
+                {e.venueName && <p class="lp-city__venue">{tidy(e.venueName)}</p>}
                 {action.kind === 'partner' && action.seller && <p class="lp-city__seller">{action.seller === 'Lampyris Tickets' ? t.x.soldByOrganiser : fmt(t.partners.soldBy, action.seller)}</p>}
               </div>
               <div class="lp-city__side">
