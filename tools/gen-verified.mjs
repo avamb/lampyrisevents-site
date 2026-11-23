@@ -21,7 +21,7 @@ for (let i = 1; i < parts.length; i += 2) {
       continue;
     }
     flush();
-    const heading = !/^[„“"]/.test(l) && (l.length < 120 && !/[.!?]$/.test(l));
+    const heading = !/^[„“"«‚]/.test(l) && (l.length < 120 && !/[.!?]$/.test(l));
     out.push(heading ? `<p><strong>${esc(l)}</strong></p>` : `<p>${esc(l)}</p>`);
   }
   flush();
