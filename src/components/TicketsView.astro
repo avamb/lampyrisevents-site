@@ -99,7 +99,7 @@ const noindex = e.test || e.raw.visibility === 'unlisted';
       <div class="tk-cols">
         <div class="tk-main">
           <section id="tickets" class="tk-widget" aria-label={t.event.tickets}>
-            <arena-tickets data-order-status={pagePath('orderStatus', lang)} data-event-slug={slug} feed-token={e.feedToken} event-id={e.raw.id} locale={lang} api-base={widget.apiBase} cover="hidden" materials="hidden" frame="hidden"></arena-tickets>
+            <arena-tickets data-order-status={pagePath('orderStatus', lang)} data-event-slug={slug} feed-token={e.feedToken} event-id={e.raw.id} locale={lang} api-base={widget.apiBase} cover="hidden" materials="hidden" frame="hidden" checkout="one-step"></arena-tickets>
           </section>
 
           {e.descriptionHtml && <div class="lp-prose tk-text" lang={textLang} set:html={e.descriptionHtml} />}

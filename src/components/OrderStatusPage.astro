@@ -72,6 +72,8 @@ const consent = t.x.newsletterConsent.split(/({privacy})/);
               </ul>
             </section>
           )}
+          {/* No Turnstile key, no subscription: a block that can only say "unavailable" is left out. */}
+          {turnstile.siteKey && (
           <section class="lp-ty__block">
             <h3>{t.x.newsletterTitle}</h3>
             <p>{t.x.newsletterText}</p>
@@ -93,6 +95,7 @@ const consent = t.x.newsletterConsent.split(/({privacy})/);
               </div>
             </form>
           </section>
+          )}
           <section class="lp-ty__promo" data-ty-promo data-api={arena.apiBase} data-feed={arena.feedToken} hidden>
             <h3 data-ty-promo-title></h3>
             <p data-ty-promo-text></p>
