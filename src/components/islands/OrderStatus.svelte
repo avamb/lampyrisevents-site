@@ -8,6 +8,7 @@
   import { onDestroy, onMount } from 'svelte';
   import { createOrderStatus } from 'arena-site-kit/headless/order-status';
   import { createArenaClient, storageKeys } from '../../lib/platform.ts';
+  import { shareIcons } from './share-icons.ts';
 
   type Strings = Record<string, string>;
   interface Props {
@@ -102,7 +103,14 @@
     <p>{t.shareText}</p>
     <ul class="lp-order__share">
       {#each links as l (l.name)}
-        <li><a href={l.href} target="_blank" rel="noopener">{l.name}</a></li>
+        {@const icon = shareIcons[l.name.toLowerCase()]}
+        <li>
+          {#if icon}
+            <a class="lp-order__share-icon" href={l.href} target="_blank" rel="noopener" aria-label={l.name} title={l.name}><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={icon} /></svg></a>
+          {:else}
+            <a href={l.href} target="_blank" rel="noopener">{l.name}</a>
+          {/if}
+        </li>
       {/each}
     </ul>
   {:else if s.view === 'failed'}

@@ -5,7 +5,10 @@
 .lp-personal__status { font-weight: 600; }
 .lp-order__event { display: flex; flex-direction: column; gap: 2px; }
 .lp-order__tickets, .lp-order__share, .lp-mt__tickets { list-style: none; margin: 0 0 16px; padding: 0; }
-.lp-order__share { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.lp-order__share { display: flex; flex-wrap: wrap; gap: 12px; }
+.lp-order__share-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--lp-border); border-radius: 50%; background: var(--lp-white); color: var(--lp-ink); text-decoration: none; }
+.lp-order__share-icon:hover { background: var(--lp-soft-bg-hover); }
+.lp-order__share-icon svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
 .lp-mt__order { border-top: 1px solid var(--lp-border); padding-top: 16px; margin-top: 16px; }
 .lp-mt__order:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
 .lp-mt__tickets li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; }
