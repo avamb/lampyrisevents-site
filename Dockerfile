@@ -25,7 +25,10 @@ ENV PUBLIC_ARENA_WIDGET_URL=$PUBLIC_ARENA_WIDGET_URL PUBLIC_ARENA_WIDGET_API=$PU
     PUBLIC_FEED_TOKEN=$PUBLIC_FEED_TOKEN PUBLIC_META_PIXEL_ID=$PUBLIC_META_PIXEL_ID \
     PUBLIC_GA4_ID=$PUBLIC_GA4_ID PUBLIC_TURNSTILE_SITE_KEY=$PUBLIC_TURNSTILE_SITE_KEY DATA_SOURCE=$DATA_SOURCE
 # Snapshots, resized media (committed in public/_site/media, originals are fetched only when a file is missing) and fonts.
-RUN npm run prepare:data && npm run build
+# DATA_REFRESH: a new value (for example a timestamp) makes Docker run this step again, so the feed snapshot is fresh.
+# Without it a rebuild of the same commit reuses the cached layer and keeps the old events.
+ARG DATA_REFRESH=
+RUN echo "data refresh: ${DATA_REFRESH:-none}" && npm run prepare:data && npm run build
 
 FROM nginx:1.27-alpine AS web
 ARG KIT=/app/node_modules/arena-site-kit
