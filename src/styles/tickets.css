@@ -34,6 +34,9 @@ arena-tickets {
 .tk-pill--outline:hover { background: rgba(255, 255, 255, 0.12); }
 .tk-pill--buy { background: var(--lp-yellow); color: #101010; padding: 14px 36px; font-size: 18px; }
 .tk-pill--buy:hover { background: var(--lp-yellow-hover); }
+/* While the buyer is in the widget's checkout sheet (the widget sets data-cart-open on itself) the page's
+   own "Buy tickets" is hidden: it would only scroll back to the plan behind the open payment window. */
+.tk-page:has(arena-tickets[data-cart-open]) .tk-pill--buy { visibility: hidden; }
 .tk-pill--block { display: flex; width: 100%; margin-top: 16px; }
 .tk-pill:focus-visible, .tk-slider__nav:focus-visible, .tk-slider__dot:focus-visible { outline: 3px solid var(--lp-link); outline-offset: 2px; }
 
