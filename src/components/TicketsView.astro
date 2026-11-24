@@ -47,9 +47,15 @@ const alternates = hreflangAlternates(state.available, languages, (l) => tickets
 const switcher = Object.fromEntries(languages.map((l) => [l.code, ticketsPath(slug, l.code)]));
 const metaDescription = e.descriptionText.replace(/\s+/g, ' ').trim().slice(0, 200) || [e.name, when, where].filter(Boolean).join(', ');
 const noindex = e.test || e.raw.visibility === 'unlisted';
+// Embedded Stripe payment (build arg EMBEDDED_PAYMENT=1): open the Stripe connections early and let the widget load
+// Stripe.js when the checkout opens, so "Pay" does not wait for it (measured 24.11: 4.4-5.4 s from "Pay" to the card form).
+const embeddedPayment = process.env.EMBEDDED_PAYMENT === '1';
 ---
 <Base lang={lang} title={e.name} description={metaDescription} alternates={alternates} switcher={switcher} noindex={noindex} image={e.poster} chrome="tickets">
   <script slot="head" is:inline type="module" src={widget.url}></script>
+  {embeddedPayment && <link slot="head" rel="preconnect" href="https://js.stripe.com" />}
+  {embeddedPayment && <link slot="head" rel="preconnect" href="https://api.stripe.com" crossorigin />}
+  {embeddedPayment && <link slot="head" rel="preconnect" href="https://m.stripe.network" crossorigin />}
   <div class="tk-page" id="top">
     <header class="tk-top">
       <div class="tk-container tk-top__in">
@@ -96,7 +102,7 @@ const noindex = e.test || e.raw.visibility === 'unlisted';
       <div class="tk-cols">
         <div class="tk-main">
           <section id="tickets" class="tk-widget" aria-label={t.event.tickets}>
-            <arena-tickets data-order-status={pagePath('orderStatus', lang)} data-event-slug={slug} feed-token={e.feedToken} event-id={e.raw.id} locale={lang} api-base={widget.apiBase} cover="hidden" materials="hidden" frame="hidden" checkout="one-step"></arena-tickets>
+            <arena-tickets data-order-status={pagePath('orderStatus', lang)} data-event-slug={slug} feed-token={e.feedToken} event-id={e.raw.id} locale={lang} api-base={widget.apiBase} cover="hidden" materials="hidden" frame="hidden" checkout="one-step" preload-payment={embeddedPayment ? 'stripe' : undefined}></arena-tickets>
           </section>
 
           {e.descriptionHtml && <div class="lp-prose tk-text" lang={textLang} set:html={e.descriptionHtml} />}
