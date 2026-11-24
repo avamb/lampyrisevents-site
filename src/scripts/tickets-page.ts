@@ -1,14 +1,28 @@
 /** Sales page: the slider (arrows, dots, swipe, keys) and the redirect to the thank-you page. No framework, no inline code. */
 import { orderStatusAddress } from '../lib/thank-you.ts';
 
+/** Gives the slider frame the shape of the picture of slide `slide` (once the picture has loaded). */
+function fitFrame(root: HTMLElement, slide: HTMLElement | undefined) {
+  const viewport = root.querySelector<HTMLElement>('.tk-slider__viewport');
+  const img = slide?.querySelector<HTMLImageElement>('.tk-slide__img');
+  if (!viewport || !img) return;
+  const apply = () => {
+    if (img.naturalWidth > 0 && img.naturalHeight > 0) viewport.style.setProperty('--tk-ratio', `${img.naturalWidth} / ${img.naturalHeight}`);
+  };
+  if (img.complete) apply();
+  else img.addEventListener('load', apply, { once: true });
+}
+
 function initSlider(root: HTMLElement) {
   const slides = [...root.querySelectorAll<HTMLElement>('[data-tk-slide]')];
   const dots = [...root.querySelectorAll<HTMLElement>('[data-tk-dot]')];
+  fitFrame(root, slides[0]);
   if (slides.length < 2) return;
   let index = 0;
 
   const show = (n: number) => {
     index = (n + slides.length) % slides.length;
+    fitFrame(root, slides[index]);
     slides.forEach((s, i) => {
       if (i === index) {
         s.setAttribute('data-active', 'true');

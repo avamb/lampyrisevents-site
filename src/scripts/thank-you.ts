@@ -10,6 +10,8 @@ import { parseThankYou } from '../lib/thank-you.ts';
 
 const NEWSLETTER_TEXT_VERSION = 'thanks-2026-11';
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+/** "You may also like" shows one event: a hint, not a catalogue (owner decision 24.11). */
+const MORE_EVENTS_SHOWN = 1;
 
 /** One Idempotency-Key per identical body: pressing again after a lost answer replays the first submission. */
 function createAttemptKeys() {
@@ -29,7 +31,7 @@ function showCurrentEventExcluded(root: HTMLElement) {
   const items = [...root.querySelectorAll<HTMLElement>('[data-ty-event]')];
   let shown = 0;
   for (const li of items) {
-    const hide = (slug !== '' && li.dataset.tyEvent === slug) || shown >= 4;
+    const hide = (slug !== '' && li.dataset.tyEvent === slug) || shown >= MORE_EVENTS_SHOWN;
     li.hidden = hide;
     if (!hide) shown += 1;
   }

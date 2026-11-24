@@ -39,8 +39,9 @@ arena-tickets {
 
 /* Slider */
 .tk-slider { position: relative; margin-top: 24px; border-radius: var(--lp-radius); overflow: hidden; background: var(--lp-soft-bg); }
-.tk-slider__viewport { position: relative; width: 100%; aspect-ratio: 16 / 9; }
-@media (min-width: 768px) { .tk-slider__viewport { aspect-ratio: 1172 / 373; } }
+/* The frame takes the shape of the shown picture (--tk-ratio, set by tickets-page.ts from the image), so a wide banner
+   is a low strip and a portrait poster is tall; the height is capped so a portrait poster never fills the whole screen. */
+.tk-slider__viewport { position: relative; width: 100%; aspect-ratio: var(--tk-ratio, 16 / 9); max-height: min(75vh, 720px); transition: aspect-ratio 0.25s ease; }
 .tk-slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity 0.35s ease; overflow: hidden; }
 .tk-slide[data-active='true'] { opacity: 1; visibility: visible; }
 .tk-slide__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(28px) brightness(0.9); transform: scale(1.15); }
