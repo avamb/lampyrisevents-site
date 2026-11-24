@@ -36,8 +36,10 @@ RUN sed -i -e "s#https://www.youtube-nocookie.com#https://www.youtube-nocookie.c
 # Embedded Stripe payment (spec 65 paragraphs 5 and 9): with EMBEDDED_PAYMENT=1 the CSP also allows Stripe and the Arena widget script. Off by default, so staging keeps the kit's strict CSP.
 ARG EMBEDDED_PAYMENT=
 ARG PUBLIC_ARENA_WIDGET_API=https://api.arenasoldout.com
+ARG PUBLIC_ARENA_WIDGET_URL=https://tickets.arenasoldout.com/widget/v1/arena-tickets.js
 RUN if [ "$EMBEDDED_PAYMENT" = "1" ]; then f=/etc/nginx/templates/default.conf.template \
-    && sed -i -e "s#script-src 'self' \$csp_script_hashes#script-src 'self' \$csp_script_hashes https://js.stripe.com https://tickets.arenasoldout.com#" \
+    && s=$(printf '%s' "$PUBLIC_ARENA_WIDGET_URL" | sed -En 's#^(https://[^/]*).*#\1#p') \
+    && sed -i -e "s#script-src 'self' \$csp_script_hashes#script-src 'self' \$csp_script_hashes https://js.stripe.com ${s:-https://tickets.arenasoldout.com}#" \
        -e "s#connect-src 'self' \$site_api#connect-src 'self' \$site_api https://api.stripe.com#" \
        -e "s#frame-src https://challenges.cloudflare.com#frame-src https://js.stripe.com https://hooks.stripe.com https://challenges.cloudflare.com#" $f \
     && w=$(printf '%s' "$PUBLIC_ARENA_WIDGET_API" | sed -En 's#^(https?://[^/]*).*#\1#p') \

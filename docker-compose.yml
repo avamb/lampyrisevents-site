@@ -16,6 +16,8 @@ services:
         PUBLIC_TURNSTILE_SITE_KEY: ${PUBLIC_TURNSTILE_SITE_KEY:-}
         DATA_SOURCE: ${DATA_SOURCE:-fixture}
         EMBEDDED_PAYMENT: ${EMBEDDED_PAYMENT:-}
+        PUBLIC_ARENA_WIDGET_URL: ${PUBLIC_ARENA_WIDGET_URL:-https://tickets.arenasoldout.com/widget/v1/arena-tickets.js}
+        PUBLIC_ARENA_WIDGET_API: ${PUBLIC_ARENA_WIDGET_API:-${PUBLIC_ARENA_API:-https://api.arenasoldout.com}}
     environment:
       ARENA_API_ORIGIN: ${PUBLIC_ARENA_API:-https://api.arenasoldout.com}
       SITE_INDEXING: ${SITE_INDEXING:-false}
