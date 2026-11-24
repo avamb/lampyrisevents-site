@@ -1,8 +1,8 @@
 ---
 /**
  * Sales page /tickets/<slug>/ (Ticket Tailor layout, Lampyris look): own minimal top bar, slider (poster + gallery),
- * name, date line, venue, "Buy tickets", then the Arena widget INLINE (no modal), description, video, map, sticky card
- * with share links, footer row. The page brings its own chrome (Base chrome="tickets").
+ * name, date line, venue, "Buy tickets", then the Arena widget INLINE (no modal) at full width, description, video, map,
+ * footer row. No side card: its "Buy tickets" duplicated the one above (owner decision 24.11). The page brings its own chrome (Base chrome="tickets").
  */
 import '../styles/tickets.css';
 import Base from '../layouts/Base.astro';
@@ -11,7 +11,7 @@ import { hreflangAlternates } from 'arena-site-kit/lib/seo';
 import { contentLocaleState, loadSiteData } from '../lib/data-source.ts';
 import { eventPath, pagePath, ticketsPath } from '../lib/routes.ts';
 import { fmt, language, ui } from '../lib/i18n.ts';
-import { dateLine, mapCoords, osmEmbedUrl, osmSearchUrl, shareLinks, ticketSession, venueLine, venueOf } from '../lib/tickets.ts';
+import { dateLine, mapCoords, osmEmbedUrl, osmSearchUrl, ticketSession, venueLine, venueOf } from '../lib/tickets.ts';
 import { brand, defaultLanguage, languages, siteUrl, widget } from '../../site.config.ts';
 
 interface Props { slug: string; lang: string; }
@@ -42,9 +42,6 @@ for (const [url, alt] of [[e.poster, e.name] as const, ...(e.raw.materials?.gall
 }
 const videos = (e.raw.materials?.videos ?? []).filter((v) => typeof v.embed_url === 'string' && v.embed_url.startsWith('https://'));
 
-const here = ticketsPath(slug, lang);
-const url = new URL(here, siteUrl).href;
-const share = shareLinks(url, e.name);
 const note = textLang !== lang ? fmt(t.x.localeNote, languages.some((l) => l.code === textLang) ? language(textLang).name : textLang) : '';
 const alternates = hreflangAlternates(state.available, languages, (l) => ticketsPath(slug, l.code), siteUrl, defaultLanguage);
 const switcher = Object.fromEntries(languages.map((l) => [l.code, ticketsPath(slug, l.code)]));
@@ -126,25 +123,6 @@ const noindex = e.test || e.raw.visibility === 'unlisted';
             </section>
           )}
         </div>
-
-        <aside class="tk-side">
-          <div class="tk-card">
-            <h2 class="tk-card__name">{e.name}</h2>
-            <p class="tk-when">{when}</p>
-            {where && <p class="tk-where"><Icon name="pin" /><span>{where}</span></p>}
-            <a class="tk-pill tk-pill--buy tk-pill--block" href="#tickets">{t.event.buy}</a>
-            <div class="tk-share">
-              <p class="tk-share__title">{t.x.shareEvent}</p>
-              <ul class="tk-share__list">
-                <li><a href={share.facebook} target="_blank" rel="noopener" aria-label="Facebook" title="Facebook"><Icon name="facebook" /></a></li>
-                <li><a href={share.x} target="_blank" rel="noopener" aria-label="X" title="X"><Icon name="x" /></a></li>
-                <li><a href={share.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" /></a></li>
-                <li><button type="button" data-tk-copy={url} data-copied={t.thankyou.copied} aria-label={t.thankyou.copyLink} title={t.thankyou.copyLink}><Icon name="link" /></button></li>
-              </ul>
-              <p class="tk-share__status" data-tk-copy-status role="status"></p>
-            </div>
-          </div>
-        </aside>
       </div>
     </div>
 

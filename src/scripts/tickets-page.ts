@@ -1,4 +1,4 @@
-/** Sales page: the slider (arrows, dots, swipe, keys) and the copy-link button. No framework, no inline code. */
+/** Sales page: the slider (arrows, dots, swipe, keys) and the redirect to the thank-you page. No framework, no inline code. */
 import { orderStatusAddress } from '../lib/thank-you.ts';
 
 function initSlider(root: HTMLElement) {
@@ -37,22 +37,7 @@ function initSlider(root: HTMLElement) {
   });
 }
 
-function initCopy(button: HTMLButtonElement) {
-  const status = document.querySelector<HTMLElement>('[data-tk-copy-status]');
-  button.addEventListener('click', async () => {
-    const link = button.getAttribute('data-tk-copy') ?? location.href;
-    try {
-      await navigator.clipboard.writeText(link);
-      if (status) status.textContent = button.getAttribute('data-copied') ?? '';
-      window.setTimeout(() => { if (status) status.textContent = ''; }, 2500);
-    } catch {
-      window.prompt('', link);
-    }
-  });
-}
-
 document.querySelectorAll<HTMLElement>('[data-tk-slider]').forEach(initSlider);
-document.querySelectorAll<HTMLButtonElement>('[data-tk-copy]').forEach(initCopy);
 
 /** After the payment the buyer lands on the thank-you page (/order-status/): on return from the payment page and when the widget confirms inline. */
 function initThankYouRedirect(widget: HTMLElement) {

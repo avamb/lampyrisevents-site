@@ -66,9 +66,8 @@ arena-tickets {
 .tk-hero > .tk-pill { flex: none; }
 .tk-rule { border: 0; border-top: 1px solid var(--lp-border); margin: 24px 0; }
 
-/* Two columns */
+/* One column: the seat plan gets the full width */
 .tk-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; padding-bottom: 40px; }
-@media (min-width: 1025px) { .tk-cols { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 40px; } }
 .tk-main > * + * { margin-top: 32px; }
 .tk-widget { scroll-margin-top: 16px; min-height: 120px; }
 .tk-text { overflow-wrap: anywhere; }
@@ -82,22 +81,6 @@ arena-tickets {
 .tk-map { display: block; width: 100%; height: 300px; border: 0; border-radius: var(--lp-radius); }
 .tk-link { color: var(--lp-link); font-weight: 600; }
 
-/* Sticky card */
-.tk-card { background: #fff; border: 1px solid var(--lp-border); border-radius: var(--lp-radius-card); padding: 24px; }
-@media (min-width: 1025px) { .tk-card { position: sticky; top: 24px; } }
-.tk-card__name { margin: 0 0 12px; font-size: 20px; line-height: 28px; font-weight: 800; color: var(--lp-ink); overflow-wrap: anywhere; }
-.tk-share { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--lp-border); }
-.tk-share__title { margin: 0 0 12px; font-weight: 700; color: var(--lp-ink); }
-.tk-share__list { display: flex; gap: 12px; margin: 0; padding: 0; list-style: none; }
-.tk-share__list a, .tk-share__list button {
-  display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; padding: 0;
-  border: 1px solid var(--lp-border); border-radius: 50%; background: #fff; color: var(--lp-ink); cursor: pointer;
-}
-.tk-share__list a:hover, .tk-share__list button:hover { background: var(--lp-soft-bg-hover); }
-.tk-share__list svg { width: 20px; height: 20px; fill: currentColor; }
-.tk-share__list button svg { fill: none; }
-.tk-share__status { min-height: 20px; margin: 8px 0 0; color: var(--lp-muted); font-size: var(--lp-fs-small); }
-
 /* Footer row */
 .tk-foot { border-top: 1px solid var(--lp-border); }
 .tk-foot__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-top: 20px; padding-bottom: 28px; font-size: 14px; }
@@ -109,10 +92,6 @@ arena-tickets {
 .tk-foot__top { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; }
 .tk-foot__top svg { width: 16px; height: 16px; }
 
-/* Narrow screens: one column, full-width buy button, the Buy button of the card is redundant */
-@media (max-width: 1024px) {
-  .tk-card .tk-pill--buy { display: none; }
-}
 @media (max-width: 767px) {
   .tk-hero { flex-direction: column; gap: 16px; }
   .tk-hero > .tk-pill { width: 100%; }
