@@ -2,13 +2,14 @@
  * The sales page /tickets/<slug>/ (Ticket Tailor layout, inline Arena widget): which events get one, the date line,
  * the venue line, the map and the share links. Pure functions, the page component decides the markup.
  */
-import { sessionEndsAt } from 'arena-site-kit/arena';
 import type { FeedSession, FeedVenue } from 'arena-site-kit/arena';
 import type { SiteEvent } from 'arena-site-kit/lib/events';
+import { sessionAction } from './view.ts';
 
-/** A session the widget can sell: not over, not cancelled, not a partner's (a partner session is only a link). */
+/** A session the widget can sell: exactly the sessions with the "Buy" button (sessionAction), so a page of an event
+ * never gets a sales page it does not link to. A platform session without price categories has neither. */
 export function isSellableSession(s: FeedSession, now: Date = new Date()): boolean {
-  return sessionEndsAt(s) >= now && s.status !== 'cancelled' && s.sales_mode !== 'external';
+  return sessionAction(s, now).kind === 'buy';
 }
 
 /** The session the page shows: the first upcoming sellable one, null when there is none. */

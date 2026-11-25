@@ -52,6 +52,18 @@ describe('route filter', () => {
     expect(hasTicketsPage(event([session({ start_at: '2026-01-01T18:00:00Z', end_at: '2026-01-01T20:00:00Z' })]), NOW)).toBe(false);
   });
 
+  it('a platform session without tiers produces no tickets page, like it shows no Buy button', () => {
+    const e = event([session({ tiers: [] })]);
+    expect(sessionAction(session({ tiers: [] }), NOW).kind).not.toBe('buy');
+    expect(hasTicketsPage(e, NOW)).toBe(false);
+    expect(hasTicketsPage(event([session({ tiers: undefined })]), NOW)).toBe(false);
+  });
+
+  it('an external session with tiers gets neither Buy nor a tickets page', () => {
+    expect(sessionAction(session({ sales_mode: 'external' }), NOW).kind).not.toBe('buy');
+    expect(hasTicketsPage(event([session({ sales_mode: 'external' })]), NOW)).toBe(false);
+  });
+
   it('shows the first upcoming sellable session of several', () => {
     const e = event([
       session({ id: 'late', start_at: '2027-04-01T18:00:00Z', end_at: '2027-04-01T20:00:00Z' }),
