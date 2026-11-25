@@ -1,0 +1,11 @@
+---
+/** /tickets/<slug>/ in English: the sales page of an event (inline Arena widget). The prefixed languages: [lang]/tickets/[slug].astro. */
+import TicketsView from '../../components/TicketsView.astro';
+import { ticketsRoutes } from '../../lib/listing.ts';
+
+export async function getStaticPaths() {
+  return (await ticketsRoutes('en')).map((r) => ({ params: { slug: r.slug }, props: r }));
+}
+const { slug, lang } = Astro.props;
+---
+<TicketsView slug={slug} lang={lang} />

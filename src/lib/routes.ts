@@ -7,6 +7,7 @@
  * sell-tickets-with-us, connect-to-stripe, payment-success, payment-failed,
  * orderStatus, myTickets.
  * Events: eventPath(slug, lang) -> /events/<slug>/ (en) and /<lang>/events/<slug>/.
+ * Sales page of an event: ticketsPath(slug, lang) -> /tickets/<slug>/ and /<lang>/tickets/<slug>/.
  */
 import { createRoutes, toParam } from 'arena-site-kit/lib/routes';
 import { hreflangAlternates, type HreflangAlternate } from 'arena-site-kit/lib/seo';
@@ -27,6 +28,12 @@ export const routes = createRoutes({
 });
 
 export const { pagePath, eventPath, notFoundPath, personalPages } = routes;
+
+/** Sales page of an event with the inline ticket widget (src/lib/tickets.ts decides which events have one). */
+export function ticketsPath(slug: string, lang: string): string {
+  const prefix = languages.find((l) => l.code === lang)?.prefix ?? '';
+  return `${prefix}/tickets/${slug}/`;
+}
 
 export function isPersonal(key: string): boolean {
   return personalPages.includes(key);

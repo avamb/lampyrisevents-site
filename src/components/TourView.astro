@@ -9,7 +9,7 @@ import PartnersBox from './PartnersBox.astro';
 import { sanitizeHtml } from 'arena-site-kit/lib/sanitize';
 import { hreflangAlternates } from 'arena-site-kit/lib/seo';
 import { loadSiteData, tourCard } from '../lib/data-source.ts';
-import { eventPath, pagePath } from '../lib/routes.ts';
+import { eventPath, pagePath, ticketsPath } from '../lib/routes.ts';
 import { fmt, language, ui } from '../lib/i18n.ts';
 import { citiesLabel, citiesOf, dateBlock, dateRange, priceText, sessionAction, dateLong } from '../lib/view.ts';
 import { formatMoney } from 'arena-site-kit/lib/events';
@@ -123,6 +123,8 @@ const tidy = (v?: string | null) => {
               <div class="lp-city__action">
                 {action.kind === 'partner' ? (
                   <a class="lp-button lp-button--small" href={action.url} target="_blank" rel="noopener">{t.event.tickets}</a>
+                ) : action.kind === 'buy' ? (
+                  <a class="lp-button lp-button--small" href={ticketsPath(e.slug, lang)}>{t.event.buy}</a>
                 ) : action.kind === 'soon' ? (
                   <span class="lp-button lp-button--small lp-button--disabled" aria-disabled="true">{t.event.soon}</span>
                 ) : null}

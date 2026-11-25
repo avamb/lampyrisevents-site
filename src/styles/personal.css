@@ -5,7 +5,10 @@
 .lp-personal__status { font-weight: 600; }
 .lp-order__event { display: flex; flex-direction: column; gap: 2px; }
 .lp-order__tickets, .lp-order__share, .lp-mt__tickets { list-style: none; margin: 0 0 16px; padding: 0; }
-.lp-order__share { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.lp-order__share { display: flex; flex-wrap: wrap; gap: 12px; }
+.lp-order__share-icon { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--lp-border); border-radius: 50%; background: var(--lp-white); color: var(--lp-ink); text-decoration: none; }
+.lp-order__share-icon:hover { background: var(--lp-soft-bg-hover); }
+.lp-order__share-icon svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
 .lp-mt__order { border-top: 1px solid var(--lp-border); padding-top: 16px; margin-top: 16px; }
 .lp-mt__order:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
 .lp-mt__tickets li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 8px 0; }
@@ -42,4 +45,41 @@
   .lp-form { grid-template-columns: minmax(0, 1fr); }
   .lp-personal__box { padding: 16px; }
   .lp-mt__tickets li { flex-direction: column; align-items: flex-start; }
+}
+
+/* Thank-you blocks under the paid order (OrderStatusPage.astro, src/scripts/thank-you.ts) */
+.lp-ty { margin-top: 8px; }
+.lp-ty[hidden], .lp-ty [hidden] { display: none; }
+.lp-ty__block { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--lp-border); }
+.lp-ty__block h3 { margin-top: 0; }
+.lp-ty__social { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.lp-ty__pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: var(--lp-radius-pill); background: var(--lp-soft-bg); color: var(--lp-ink); font-weight: 600; text-decoration: none; }
+.lp-ty__pill:hover { background: var(--lp-soft-bg-hover); }
+.lp-ty__pill svg { width: 20px; height: 20px; fill: currentColor; flex: none; }
+/* Brand marks in their own colours (owner 25.11): a white glyph on the brand circle, in the share row and in the follow pills. */
+.lp-brand--facebook { --lp-brand: #1877F2; }
+.lp-brand--instagram { --lp-brand: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%); }
+.lp-brand--telegram { --lp-brand: #229ED9; }
+.lp-brand--whatsapp { --lp-brand: #25D366; }
+.lp-brand--linkedin { --lp-brand: #0A66C2; }
+.lp-brand--reddit { --lp-brand: #FF4500; }
+.lp-brand--threads, .lp-brand--x { --lp-brand: #000; }
+.lp-brand--email { --lp-brand: #5F6B7A; }
+.lp-order__share-icon.lp-brand { background: var(--lp-brand, var(--lp-ink)); border-color: transparent; color: #fff; }
+.lp-order__share-icon.lp-brand:hover { background: var(--lp-brand, var(--lp-ink)); filter: brightness(.9); }
+.lp-ty__pill .lp-brand { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--lp-brand, var(--lp-ink)); color: #fff; flex: none; }
+.lp-ty__pill .lp-brand svg { width: 16px; height: 16px; }
+/* .lp-grid of events.css is loaded after this file and has three columns: the double class keeps one 280px card. */
+.lp-grid.lp-ty__events { grid-template-columns: minmax(0, 1fr); gap: 16px; max-width: 280px; }
+.lp-ty__events .lp-card__title { font-size: 15px; line-height: 20px; }
+.lp-ty__form { grid-template-columns: minmax(0, 1fr); }
+.lp-ty__promo { margin-top: 32px; padding: 20px; border-radius: var(--lp-radius); background: var(--lp-yellow); color: var(--lp-ink); }
+.lp-ty__promo h3 { margin-top: 0; }
+.lp-ty__promo p:empty, .lp-ty__promo h3:empty { display: none; }
+.lp-ty__code { display: inline-flex; align-items: center; gap: 12px; margin: 0 0 16px; padding: 6px 6px 6px 20px; border-radius: var(--lp-radius-pill); background: var(--lp-white); }
+.lp-ty__code code { font-size: 18px; font-weight: 700; letter-spacing: .04em; }
+.lp-ty__copy { cursor: pointer; border: 0; border-radius: var(--lp-radius-pill); padding: 8px 16px; background: var(--lp-ink); color: var(--lp-white); font: inherit; font-size: 14px; }
+.lp-ty__promo .lp-button { display: inline-block; }
+@media (max-width: 767px) {
+  .lp-ty__promo { padding: 16px; }
 }

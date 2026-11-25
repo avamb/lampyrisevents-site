@@ -1,0 +1,16 @@
+---
+/** /<lang>/tickets/<slug>/: the sales page of an event in a prefixed language. */
+import TicketsView from '../../../components/TicketsView.astro';
+import { ticketsRoutes } from '../../../lib/listing.ts';
+import { languages } from '../../../../site.config.ts';
+
+export async function getStaticPaths() {
+  const out = [];
+  for (const l of languages.filter((x) => x.prefix)) {
+    for (const r of await ticketsRoutes(l.code)) out.push({ params: { lang: l.code, slug: r.slug }, props: r });
+  }
+  return out;
+}
+const { slug, lang } = Astro.props;
+---
+<TicketsView slug={slug} lang={lang} />

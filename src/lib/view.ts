@@ -75,15 +75,25 @@ export type SessionAction =
   | { kind: 'cancelled' }
   | { kind: 'soldout' }
   | { kind: 'partner'; url: string; seller: string; priceFrom: number | null; currency: string }
+  | { kind: 'buy' }
   | { kind: 'soon' };
 
+/** A session this site sells itself: a platform session (not a partner's) with price categories. */
+export function sellsOnSite(s: FeedSession): boolean {
+  return s.sales_mode !== 'external' && (s.tiers?.length ?? 0) > 0;
+}
+
+/** The ONE rule for "Buy": the event and tour pages show the button and the sales page /tickets/<slug>/ is built
+ * exactly when this returns 'buy' (src/lib/tickets.ts uses it), so the two can never disagree. */
 export function sessionAction(s: FeedSession, now: Date = new Date()): SessionAction {
   if (sessionEndsAt(s) < now) return { kind: 'past' };
   if (s.status === 'cancelled' || s.sales_state === 'cancelled') return { kind: 'cancelled' };
   const p = partnerButton(s);
   if (p) return { kind: 'partner', url: p.url, seller: p.sellerName, priceFrom: p.priceFrom, currency: p.currency };
   if (s.sales_state === 'sold_out') return { kind: 'soldout' };
-  // A platform session without tiers is a fixture, and a platform checkout is not built on this site yet.
+  // A platform session with tiers is sold inline on the sales page /tickets/<slug>/.
+  if (sellsOnSite(s)) return { kind: 'buy' };
+  // A platform session without tiers is a fixture (nothing to sell yet).
   return { kind: 'soon' };
 }
 

@@ -18,22 +18,41 @@ ARG PUBLIC_FEED_TOKEN=
 ARG PUBLIC_META_PIXEL_ID=
 ARG PUBLIC_GA4_ID=
 ARG PUBLIC_TURNSTILE_SITE_KEY=
+ARG PUBLIC_ARENA_WIDGET_URL=https://tickets.arenasoldout.com/widget/v1/arena-tickets.js
+ARG PUBLIC_ARENA_WIDGET_API=$PUBLIC_ARENA_API
 ARG DATA_SOURCE=fixture
-ENV SITE_URL=$SITE_URL SITE_INDEXING=$SITE_INDEXING PUBLIC_ARENA_API=$PUBLIC_ARENA_API \
+# EMBEDDED_PAYMENT=1 also tells the sales page to preload Stripe.js when the checkout opens (see the web stage for the CSP).
+ARG EMBEDDED_PAYMENT=
+ENV EMBEDDED_PAYMENT=$EMBEDDED_PAYMENT
+ARG PRELOAD_PAYMENT=
+ENV PRELOAD_PAYMENT=$PRELOAD_PAYMENT
+ENV PUBLIC_ARENA_WIDGET_URL=$PUBLIC_ARENA_WIDGET_URL PUBLIC_ARENA_WIDGET_API=$PUBLIC_ARENA_WIDGET_API SITE_URL=$SITE_URL SITE_INDEXING=$SITE_INDEXING PUBLIC_ARENA_API=$PUBLIC_ARENA_API \
     PUBLIC_FEED_TOKEN=$PUBLIC_FEED_TOKEN PUBLIC_META_PIXEL_ID=$PUBLIC_META_PIXEL_ID \
     PUBLIC_GA4_ID=$PUBLIC_GA4_ID PUBLIC_TURNSTILE_SITE_KEY=$PUBLIC_TURNSTILE_SITE_KEY DATA_SOURCE=$DATA_SOURCE
 # Snapshots, resized media (committed in public/_site/media, originals are fetched only when a file is missing) and fonts.
-RUN npm run prepare:data && npm run build
+# DATA_REFRESH: a new value (for example a timestamp) makes Docker run this step again, so the feed snapshot is fresh.
+# Without it a rebuild of the same commit reuses the cached layer and keeps the old events.
+ARG DATA_REFRESH=
+RUN echo "data refresh: ${DATA_REFRESH:-none}" && npm run prepare:data && npm run build
 
 FROM nginx:1.27-alpine AS web
 ARG KIT=/app/node_modules/arena-site-kit
 COPY --from=deps ${KIT}/nginx/default.conf.template /etc/nginx/templates/default.conf.template
-# Embedded Stripe payment (spec 65 paragraphs 5 and 9): with EMBEDDED_PAYMENT=1 the CSP also allows Stripe and the Arena widget script. Off by default, so staging keeps the kit's strict CSP.
+# The sales page embeds an OpenStreetMap map (no cookies): the kit's frame-src gets it in every build.
+RUN sed -i -e "s#https://www.youtube-nocookie.com#https://www.youtube-nocookie.com https://www.openstreetmap.org#" /etc/nginx/templates/default.conf.template \
+    && grep -c 'www.openstreetmap.org' /etc/nginx/templates/default.conf.template
+# Embedded Stripe payment (spec 65 paragraphs 5 and 9): with EMBEDDED_PAYMENT=1 the CSP also allows Stripe and the Arena widget script, and inline styles: the widget writes its styles into its shadow root at run time, and a hash list makes browsers ignore 'unsafe-inline'. Off by default, so staging keeps the kit's strict CSP.
 ARG EMBEDDED_PAYMENT=
+ARG PUBLIC_ARENA_WIDGET_API=https://api.arenasoldout.com
+ARG PUBLIC_ARENA_WIDGET_URL=https://tickets.arenasoldout.com/widget/v1/arena-tickets.js
 RUN if [ "$EMBEDDED_PAYMENT" = "1" ]; then f=/etc/nginx/templates/default.conf.template \
-    && sed -i -e "s#script-src 'self' \$csp_script_hashes#script-src 'self' \$csp_script_hashes https://js.stripe.com https://tickets.arenasoldout.com#" \
+    && s=$(printf '%s' "$PUBLIC_ARENA_WIDGET_URL" | sed -En 's#^(https://[^/]*).*#\1#p') \
+    && sed -i -e "s#script-src 'self' \$csp_script_hashes#script-src 'self' \$csp_script_hashes https://js.stripe.com ${s:-https://tickets.arenasoldout.com}#" \
+       -e "s#style-src 'self' \$csp_style_hashes#style-src 'self' 'unsafe-inline'#" \
        -e "s#connect-src 'self' \$site_api#connect-src 'self' \$site_api https://api.stripe.com#" \
        -e "s#frame-src https://challenges.cloudflare.com#frame-src https://js.stripe.com https://hooks.stripe.com https://challenges.cloudflare.com#" $f \
+    && w=$(printf '%s' "$PUBLIC_ARENA_WIDGET_API" | sed -En 's#^(https?://[^/]*).*#\1#p') \
+    && if [ -n "$w" ]; then sed -i -e "s#connect-src 'self' \$site_api#connect-src 'self' \$site_api $w#" $f; fi \
     && grep -c 'js.stripe.com' $f && grep -c 'api.stripe.com' $f && grep -c 'hooks.stripe.com' $f; fi
 COPY --from=deps ${KIT}/nginx/headers.conf ${KIT}/nginx/headers-personal.conf /etc/nginx/snippets/
 COPY --from=deps ${KIT}/nginx/15-site-root.envsh ${KIT}/nginx/40-watch-release.sh /docker-entrypoint.d/

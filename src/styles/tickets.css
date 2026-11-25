@@ -1,0 +1,107 @@
+/* Sales page /tickets/<slug>/ (Ticket Tailor layout, Lampyris tokens). No inline styles anywhere: CSP. */
+
+/* The Arena widget is themed from the site tokens. */
+arena-tickets {
+  display: block;
+  --arena-font-family: var(--lp-font);
+  --arena-accent: #101010;
+  --arena-button-bg: var(--lp-yellow);
+  --arena-button-bg-hover: var(--lp-yellow-hover);
+  --arena-button-text: #101010;
+  --arena-radius: 12px;
+  --arena-border-color: var(--lp-border);
+  --arena-color-primary: var(--lp-text);
+  --arena-color-secondary: var(--lp-muted);
+}
+
+.tk-page { background: #fff; color: var(--lp-text); min-height: 100vh; }
+.tk-container { width: 100%; max-width: 1172px; margin: 0 auto; padding-left: 16px; padding-right: 16px; box-sizing: border-box; }
+@media (min-width: 768px) { .tk-container { padding-left: 24px; padding-right: 24px; } }
+
+/* Top bar: the logo is light, so the bar is dark. */
+.tk-top { background: var(--lp-ink); }
+.tk-top__in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 64px; }
+.tk-top__logo { display: inline-flex; }
+.tk-top__logo img { display: block; height: 36px; width: auto; }
+
+/* Pills */
+.tk-pill {
+  display: inline-flex; align-items: center; justify-content: center; box-sizing: border-box;
+  padding: 10px 22px; border-radius: var(--lp-radius-pill); border: 2px solid transparent;
+  font-family: var(--lp-font); font-size: 15px; font-weight: 700; line-height: 22px; text-decoration: none; cursor: pointer;
+}
+.tk-pill--outline { color: #fff; border-color: #fff; background: transparent; }
+.tk-pill--outline:hover { background: rgba(255, 255, 255, 0.12); }
+.tk-pill--buy { background: var(--lp-yellow); color: #101010; padding: 14px 36px; font-size: 18px; }
+.tk-pill--buy:hover { background: var(--lp-yellow-hover); }
+/* While the buyer is in the widget's checkout sheet (the widget sets data-cart-open on itself) the page's
+   own "Buy tickets" is hidden: it would only scroll back to the plan behind the open payment window. */
+.tk-page:has(arena-tickets[data-cart-open]) .tk-pill--buy { display: none; }
+.tk-pill--block { display: flex; width: 100%; margin-top: 16px; }
+.tk-pill:focus-visible, .tk-slider__nav:focus-visible, .tk-slider__dot:focus-visible { outline: 3px solid var(--lp-link); outline-offset: 2px; }
+
+/* Slider */
+.tk-slider { position: relative; margin-top: 24px; border-radius: var(--lp-radius); overflow: hidden; background: var(--lp-soft-bg); }
+/* The frame takes the shape of the shown picture (--tk-ratio, set by tickets-page.ts from the image), so a wide banner
+   is a low strip and a portrait poster is tall; the height is capped so a portrait poster never fills the whole screen. */
+.tk-slider__viewport { position: relative; width: 100%; aspect-ratio: var(--tk-ratio, 16 / 9); max-height: min(75vh, 720px); transition: aspect-ratio 0.25s ease; }
+.tk-slide { position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden; transition: opacity 0.35s ease; overflow: hidden; }
+.tk-slide[data-active='true'] { opacity: 1; visibility: visible; }
+.tk-slide__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: blur(28px) brightness(0.9); transform: scale(1.15); }
+.tk-slide__img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; }
+.tk-slider__nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 40px; height: 40px; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 50%;
+  background: #fff; color: #101010; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); cursor: pointer;
+}
+.tk-slider__nav svg { width: 22px; height: 22px; }
+.tk-slider__nav--prev { left: 12px; }
+.tk-slider__nav--next { right: 12px; }
+.tk-slider__dots { position: absolute; left: 0; right: 0; bottom: 10px; z-index: 2; display: flex; justify-content: center; gap: 8px; }
+.tk-slider__dot { width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.6); box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25); cursor: pointer; }
+.tk-slider__dot[aria-current='true'] { background: #fff; transform: scale(1.25); }
+
+/* Name, date, venue, buy */
+.tk-hero { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; padding-top: 24px; }
+.tk-hero h1 { margin: 0 0 8px; font-size: 32px; line-height: 40px; font-weight: 800; color: var(--lp-ink); overflow-wrap: anywhere; }
+.tk-when { margin: 0 0 8px; font-weight: 800; color: var(--lp-ink); }
+.tk-where { display: flex; align-items: flex-start; gap: 8px; margin: 0; color: var(--lp-muted); }
+.tk-where svg { flex: none; width: 20px; height: 20px; margin-top: 2px; }
+.tk-hero > .tk-pill { flex: none; }
+.tk-rule { border: 0; border-top: 1px solid var(--lp-border); margin: 24px 0; }
+
+/* One column: the seat plan gets the full width */
+.tk-cols { display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; padding-bottom: 40px; }
+.tk-main > * + * { margin-top: 32px; }
+.tk-widget { scroll-margin-top: 16px; min-height: 120px; }
+.tk-text { overflow-wrap: anywhere; }
+.tk-text img { max-width: 100%; height: auto; }
+.tk-note { color: var(--lp-muted); font-size: var(--lp-fs-small); }
+.tk-block h2 { margin: 0 0 12px; font-size: 22px; line-height: 30px; color: var(--lp-ink); }
+.tk-address { margin: 0 0 16px; }
+.tk-video { position: relative; aspect-ratio: 16 / 9; border-radius: var(--lp-radius); overflow: hidden; }
+.tk-video + .tk-video { margin-top: 16px; }
+.tk-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.tk-map { display: block; width: 100%; height: 300px; border: 0; border-radius: var(--lp-radius); }
+.tk-link { color: var(--lp-link); font-weight: 600; }
+
+/* Footer row */
+.tk-foot { border-top: 1px solid var(--lp-border); }
+.tk-foot__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; padding-top: 20px; padding-bottom: 28px; font-size: 14px; }
+.tk-foot__help, .tk-foot__by { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+.tk-foot__label { color: var(--lp-muted); }
+.tk-foot a { color: var(--lp-ink); text-decoration: underline; text-underline-offset: 3px; }
+.tk-foot__by a[aria-label='Arena'] { display: inline-flex; text-decoration: none; }
+.tk-foot__by img { display: block; height: 20px; width: auto; }
+.tk-foot__top { display: inline-flex; align-items: center; gap: 4px; font-weight: 700; }
+.tk-foot__top svg { width: 16px; height: 16px; }
+
+@media (max-width: 767px) {
+  .tk-hero { flex-direction: column; gap: 16px; }
+  .tk-hero > .tk-pill { width: 100%; }
+  .tk-hero h1 { font-size: 26px; line-height: 34px; }
+  .tk-slider__nav { width: 34px; height: 34px; }
+  .tk-slider__nav--prev { left: 8px; }
+  .tk-slider__nav--next { right: 8px; }
+  .tk-foot__in { flex-direction: column; align-items: flex-start; }
+}
