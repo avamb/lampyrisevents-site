@@ -34,7 +34,8 @@ export function parseThankYou(body: unknown): ThankYou | null {
   return { title, text, promoCode, url };
 }
 
-/** Events to offer: on sale (not cancelled, not past), not the one just bought, at most `limit`. */
-export function otherEvents<T extends { slug: string; state?: string; past?: boolean }>(events: T[], currentSlug: string, limit = 4): T[] {
-  return events.filter((e) => e.slug !== currentSlug && e.state !== 'cancelled' && !e.past).slice(0, limit);
+/** Events to offer: on sale (not cancelled, not past), not the one just bought, those with a poster first, at most `limit`. */
+export function otherEvents<T extends { slug: string; state?: string; past?: boolean; poster?: string | null }>(events: T[], currentSlug: string, limit = 4): T[] {
+  const open = events.filter((e) => e.slug !== currentSlug && e.state !== 'cancelled' && !e.past);
+  return [...open.filter((e) => e.poster), ...open.filter((e) => !e.poster)].slice(0, limit);
 }

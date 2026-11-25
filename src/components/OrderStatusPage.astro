@@ -61,7 +61,7 @@ const consent = t.x.newsletterConsent.split(/({privacy})/);
           <section class="lp-ty__block">
             <h3>{t.x.followUs}</h3>
             <ul class="lp-ty__social">
-              {social.map((x) => x.href && <li><a class="lp-ty__pill" href={x.href} target="_blank" rel="noopener"><Icon name={x.name} />{x.label}</a></li>)}
+              {social.map((x) => x.href && <li><a class="lp-ty__pill" href={x.href} target="_blank" rel="noopener"><span class={`lp-brand lp-brand--${x.name}`}><Icon name={x.name} /></span>{x.label}</a></li>)}
             </ul>
           </section>
           {more.length > 0 && (

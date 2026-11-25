@@ -30,7 +30,8 @@
 
   // svelte-ignore state_referenced_locally
   const ctrl = createOrderStatus({
-    client: createArenaClient({ apiBase, feedToken, timeoutMs: 20_000 }),
+    // This page shows no "Refer a friend" block, so the offer is never asked for: without the programme the platform answers 404 (referral.not_available) and the browser logs it as an error.
+    client: { ...createArenaClient({ apiBase, feedToken, timeoutMs: 20_000 }), referral: async () => null },
     shareUrl,
     intl,
     storageKeys,
@@ -106,7 +107,7 @@
         {@const icon = shareIcons[l.name.toLowerCase()]}
         <li>
           {#if icon}
-            <a class="lp-order__share-icon" href={l.href} target="_blank" rel="noopener" aria-label={l.name} title={l.name}><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={icon} /></svg></a>
+            <a class="lp-order__share-icon lp-brand lp-brand--{l.name.toLowerCase()}" href={l.href} target="_blank" rel="noopener" aria-label={l.name} title={l.name}><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={icon} /></svg></a>
           {:else}
             <a href={l.href} target="_blank" rel="noopener">{l.name}</a>
           {/if}

@@ -34,4 +34,8 @@ describe('otherEvents', () => {
     const list = [{ slug: 'a', state: 'cancelled' }, { slug: 'b', past: true }, { slug: 'c', state: 'on_sale' }];
     expect(otherEvents(list, '').map((e) => e.slug)).toEqual(['c']);
   });
+  it('puts events with a poster first and keeps the order otherwise', () => {
+    const list = [{ slug: 'a' }, { slug: 'b', poster: '/b.jpg' }, { slug: 'c', poster: null }, { slug: 'd', poster: '/d.jpg' }];
+    expect(otherEvents(list, '').map((e) => e.slug)).toEqual(['b', 'd', 'a', 'c']);
+  });
 });
